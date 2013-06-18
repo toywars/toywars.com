@@ -615,6 +615,7 @@ progress[aria-valuenow]:before  {
 			background: url("../images/background-footer.png");
 			height: 358px;
 			width: 100%;
+			float:left;
 		}
 			div#container div#footer div#footerContent
 			{

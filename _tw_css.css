@@ -1,0 +1,15 @@
+.catBrowseSidebar{
+	float: left;
+    margin-right: 10px;
+    width: 20%;
+}
+.catPageContent{
+	float: left;
+    width: 79%;
+}
+.categoryTemplate {
+	background-color:#b7a58b;
+	background-image:none;
+}
+.fsCatTitle{
+}
