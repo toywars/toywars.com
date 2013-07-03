@@ -1,26 +1,19 @@
-/* ToyWars ChangeLog
-
-Version 20130123144900 (AnyCommerce Branch 201252)
-
-- app.rq.push (_init.js line 24)
-	- Changed 'quickstart.js' reference to '_quickstart.js'
-*/
-
 var app = app || {vars:{},u:{}}; //make sure app exists.
 app.rq = app.rq || []; //ensure array is defined. rq = resource queue.
 
 
 
+app.rq.push(['extension',0,'orderCreate','extensions/checkout/extension.js']);
+app.rq.push(['extension',0,'cco','extensions/cart_checkout_order.js']);
 
-//app.rq.push(['extension',0,'convertSessionToOrder','extensions/checkout_passive/extension.js']);
-app.rq.push(['extension',0,'convertSessionToOrder','extensions/checkout_nice/extension.js']);
-app.rq.push(['extension',0,'store_checkout','extensions/store_checkout.js']);
+
 app.rq.push(['extension',0,'store_prodlist','extensions/store_prodlist.js']);
 app.rq.push(['extension',0,'store_navcats','extensions/store_navcats.js']);
 app.rq.push(['extension',0,'store_search','extensions/store_search.js']);
 app.rq.push(['extension',0,'store_product','extensions/store_product.js']);
 app.rq.push(['extension',0,'store_cart','extensions/store_cart.js']);
 app.rq.push(['extension',0,'store_crm','extensions/store_crm.js']);
+<<<<<<< HEAD
 app.rq.push(['extension',0,'myRIA','_quickstart.js','startMyProgram']);
 
 app.rq.push(['extension',0,'store_filter','extensions/_store_filtered_search.js']);
@@ -30,25 +23,204 @@ app.rq.push(['extension',1,'analytics_google','extensions/analytics_google.js','
 //app.rq.push(['extension',1,'powerReviews','extensions/reviews_powerreviews.js','startExtension']);
 //app.rq.push(['extension',0,'magicToolBox','extensions/imaging_magictoolbox.js','startExtension']); // (not working yet - ticket in to MTB)
 
+=======
+app.rq.push(['extension',0,'myRIA','app-quickstart.js','startMyProgram']);
+app.rq.push(['extension',0,'store_filter','extensions/_store_filtered_search.js']);
+app.rq.push(['extension',0,'prodlist_infinite','extensions/prodlist_infinite.js']);
+app.rq.push(['extension',0,'store_toywars','extensions/_store_toywars.js','startExtension']);
+//app.rq.push(['extension',0,'partner_addthis','extensions/partner_addthis.js']);
+//app.rq.push(['extension',1,'google_analytics','extensions/partner_google_analytics.js','startExtension']);
+//app.rq.push(['extension',1,'tools_ABtesting','extensions/tools_ABtesting.js']);
+//app.rq.push(['extension',0,'partner_addthis','extensions/partner_addthis.js','startExtension']);
+//app.rq.push(['extension',1,'resellerratings_survey','extensions/partner_buysafe_guarantee.js','startExtension']); /// !!! needs testing.
+//app.rq.push(['extension',1,'buysafe_guarantee','extensions/partner_buysafe_guarantee.js','startExtension']);
+//app.rq.push(['extension',1,'powerReviews_reviews','extensions/partner_powerreviews_reviews.js','startExtension']);
+//app.rq.push(['extension',0,'magicToolBox_mzp','extensions/partner_magictoolbox_mzp.js','startExtension']);
 
-//spec_LLTRSHIRT017_0
-//add tabs to product data.
-//tabs are handled this way because jquery UI tabs REALLY wants an id and this ensures unique id's between product
+app.rq.push(['script',0,(document.location.protocol == 'file:') ? app.vars.testURL+'jquery/config.js' : app.vars.baseURL+'jquery/config.js']); //The config.js is dynamically generated.
+app.rq.push(['script',0,app.vars.baseURL+'model.js']); //'validator':function(){return (typeof zoovyModel == 'function') ? true : false;}}
+app.rq.push(['script',0,app.vars.baseURL+'includes.js']); //','validator':function(){return (typeof handlePogs == 'function') ? true : false;}})
+>>>>>>> origin/zoovy-201314
 
-app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/carouFredSel-6.2.0/jquery.carouFredSel-6.2.0.js']);	
-	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
-}]);
+app.rq.push(['script',0,app.vars.baseURL+'controller.js']);
 
-app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
-	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
+app.rq.push(['script',0,app.vars.baseURL+'resources/jquery.showloading-v1.0.jt.js']); //used pretty early in process..
+app.rq.push(['script',0,app.vars.baseURL+'resources/jquery.ui.anyplugins.js']); //in zero pass in case product page is first page.
+app.rq.push(['script',1,app.vars.baseURL+'site/scripts/carouFredSel-6.2.0/jquery.carouFredSel-6.2.0-packed.js']);
+app.rq.push(['script',0,app.vars.baseURL+'jquery.select2Buttons/jQuery.select2Buttons.js']);
+
+app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {	
+	//app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
+	
+	var $context = $(app.u.jqSelector('#',P.parentID));
+	
+	//RANDOM SHIPPING LOGO GENERATOR
+	$(".shipLogo1").hide();
+	$(".shipLogo2").hide();
+	$(".shipLogo3").hide();
+	$(".shipLogo4").hide();
+	
+	var  randomLogo = Math.floor((Math.random()*4)+1);
+	if(randomLogo === 1){
+		$(".shipLogo1").show();
+	}else if(randomLogo === 2){
+		$(".shipLogo2").show();
+		}else if(randomLogo === 3){
+			$(".shipLogo3").show();
+			}else if(randomLogo === 4){
+				$(".shipLogo4").show();
+			}
+			
+	//TOP SLIDESHOW BANNER
+	var carouselHPBanner;
+	function foo1(){ $("#wideSlideshow").carouFredSel
+	({
+		width   : 620,
+		height	: 340,
+		items   : 1,
+		scroll: 1,
+		auto : {
+			duration    : 500,
+			timeoutDuration: 5000,
+			pauseOnHover: true
+		},
+		pagination  : "#slideshowNav"
+	});
+	}
+	carouselHPBanner = foo1;
+	setTimeout(carouselHPBanner, 2000);
+	
+	
+	
+		function foo2(){
+			var incrementPage = 1;
+			$("#slideshowNav").children().each(function() {
+				$(this).addClass("hpSSTopPage" + incrementPage);
+				incrementPage = incrementPage + 1;
+				$(this).children().remove();
+			})
+		}
+		carouselPaginationClasses = foo2;
+		setTimeout(carouselPaginationClasses, 2100);
+		
+		
+		
+	//**MID HOMEPAGE BESTSELLER/NEW/PREORDER CAROUSELSS**
+	
+	//**BEST SELLERS/HOT ITEMS**
+	var carouselHPBestseller;
+	function foo3(){ $("#homeProdSearchBestSellers").carouFredSel
+	({
+		width   : 220,
+		height	: 235,
+		items   : 1,
+		scroll: 1,
+		auto : false,
+		next: ".hotItemsNext",
+		prev: ".hotItemsPrev",
+		pagination  : "#homeProdSearchBestSellersPage"
+	});
+	}
+	carouselHPBestseller = foo3;
+	setTimeout(carouselHPBestseller, 2000);
+	
+	//**NEW ITEMS**
+	var carouselHPNewItems;
+	function foo4(){ $("#homeProdSearchFresh").carouFredSel
+	({
+		width   : 220,
+		height	: 235,
+		items   : 1,
+		scroll: 1,
+		auto : false,
+		next: ".freshItemsNext",
+		prev: ".freshItemsPrev",
+		pagination  : "#homeProdSearchFreshPage"
+	});
+	}
+	carouselHPNewItems = foo4;
+	setTimeout(carouselHPNewItems, 2000);
+	
+	//**PRE-ORDER ITEMS**
+	var carouselHPPreItems;
+	function foo5(){ $("#homeProdSearchPreorder").carouFredSel
+	({
+		width   : 220,
+		height	: 235,
+		items   : 1,
+		scroll: 1,
+		auto : false,
+		next: ".preorderItemsNext",
+		prev: ".preorderItemsPrev",
+		pagination  : "#homeProdSearchPreorderPage"
+	});
+	}
+	carouselHPPreItems = foo5;
+	setTimeout(carouselHPPreItems, 2000);
+		
+		
+		
+	//**HOMEPAGE BOTTOM CATEGORY CAROUSEL**
+	var carouselBottomCats;
+	function foo6(){ $(".catCarousel").carouFredSel({
+			auto : false,
+			items   : 1,
+			scroll: 1
+	});}
+	carouselBottomCats = foo6;
+	setTimeout(carouselBottomCats, 2000);
+	
+	var carouselBottomCatTitles;
+	function foo7(){ $(".catNavContent").carouFredSel({
+			auto : false,
+			items   : 3,
+			height: 63,
+			scroll: 1
+	});}
+	carouselBottomCatTitles = foo7;
+	setTimeout(carouselBottomCatTitles, 2000);
+	
+	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL
+	$(".btnCatNext").click(function() {
+    	$(".catNavContent").trigger("next", 1);
+		$(".catCarousel").trigger("next", 1);
+    });
+	$(".btnCatBack").click(function() {
+    	$(".catNavContent").trigger("prev", 1);
+		$(".catCarousel").trigger("prev", 1);
+    });
+	
+	$(".btnCatBack").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".btnCatNext").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".btnCatBack").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});	
+	$(".btnCatNext").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});		
+	
 }]);
 
 app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
+<<<<<<< HEAD
 	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
 
 var $context = $(app.u.jqSelector('#',P.parentID));
 	//**COMMENT TO REMOVE AUTO-RESETTING WHEN LEAVING CAT PAGE FOR FILTERED SEARCH**
+=======
+	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
+	
+	
+	var $context = $(app.u.jqSelector('#',P.parentID));
+>>>>>>> origin/zoovy-201314
 	
 	app.ext.store_filter.vars.catPageID = $(app.u.jqSelector('#',P.parentID));  
 	
@@ -76,10 +248,16 @@ var $context = $(app.u.jqSelector('#',P.parentID));
 			$(":checkbox",$form).off('click.formSubmit').on('click.formSubmit',function() {
 				$form.submit();      
 				});
+<<<<<<< HEAD
+=======
+				
+				$form.submit();
+>>>>>>> origin/zoovy-201314
 			}
 		}
 		
 		
+<<<<<<< HEAD
 		
 		//selector function for filtered search that displays appropriate wood menu options when wood is selected.	
 		/*$('.woodPieces:checkbox').click(function() {
@@ -94,68 +272,258 @@ var $context = $(app.u.jqSelector('#',P.parentID));
 			}
 		});*/
 		
+=======
+>>>>>>> origin/zoovy-201314
 		$('.resetButton', $context).click(function(){
 		$context.empty().remove();
 		showContent('category',{'navcat':P.navcat});
 		});
+<<<<<<< HEAD
 }]);
 
 app.rq.push(['templateFunction','categoryTemplate','onDeparts',function(P) {
+=======
+		
+		
+}]);
+	
+	//**COMMENT TO REMOVE AUTO-RESETTING WHEN LEAVING CAT PAGE FOR FILTERED SEARCH**
+	
+	app.rq.push(['templateFunction','categoryTemplate','onDeparts',function(P) {
+>>>>>>> origin/zoovy-201314
 		if(app.ext.store_filter.vars.catPageID.empty && typeof app.ext.store_filter.vars.catPageID.empty === 'function'){
     		app.ext.store_filter.vars.catPageID.empty().remove();
 		}	
 }]);
 
 app.rq.push(['templateFunction','companyTemplate','onCompletes',function(P) {
+<<<<<<< HEAD
 	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
 }]);	
 	
+=======
+	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
+	
+	
+	//**COMPANY PAGE BOTTOM CATEGORY CAROUSEL**
+	var carouselBottomCats;
+	function foo1(){ $(".companyCarousel").carouFredSel({
+			auto : false,
+			items   : 1,
+			scroll: 1
+	});}
+	carouselBottomCats = foo1;
+	setTimeout(carouselBottomCats, 2000);
+	
+	var carouselBottomCatTitles;
+	function foo2(){ $(".companyNavContent").carouFredSel({
+			auto : false,
+			items   : 3,
+			height: 63,
+			scroll: 1
+	});}
+	carouselBottomCatTitles = foo2;
+	setTimeout(carouselBottomCatTitles, 2000);
+	
+	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL
+	$(".btnCatNext").click(function() {
+    	$(".companyNavContent").trigger("next", 1);
+		$(".companyCarousel").trigger("next", 1);
+    });
+	$(".btnCatBack").click(function() {
+    	$(".companyNavContent").trigger("prev", 1);
+		$(".companyCarousel").trigger("prev", 1);
+    });
+	
+	$(".btnCatBack").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".btnCatNext").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".btnCatBack").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});	
+	$(".btnCatNext").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});		
+}]);
+>>>>>>> origin/zoovy-201314
 
 app.rq.push(['templateFunction','customerTemplate','onCompletes',function(P) {
-	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
+	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
 }]);
 
 app.rq.push(['templateFunction','searchTemplate','onCompletes',function(P) {
-	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
+	if(P.preservePage){ alert("You hit the back button");}
+	
+	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
+	
+	var $context = $(app.u.jqSelector('#',P.parentID));
+	var $page = $(app.u.jqSelector('#',P.parentID));
+	
+	//****FILTERED SEARCH CODE****
+	$('.fsCheckbox').attr('checked', false);
+	$("#resultsProductListContainer").show(); 
+	$(".searchFilterResults").hide();    
+	app.u.dump("BEGIN searchTemplate onCompletes for filtering");
+	var $form = $("[name='searchPageForm']",'#appFilters').clone().appendTo($('.filterContainerSearch',$page));
+	$form.on('submit.filterSearch',function(event){
+		event.preventDefault()
+		app.u.dump(" -> Filter form submitted.");
+		app.ext.store_filter.a.execFilter($form,$page);
+				});
+	
+		if(typeof app.ext.store_filter.filterMap["searchPage"].exec == 'function')	{
+			app.ext.store_filter.filterMap["searchPage"].exec($form,P)
+			}
+	
+	//make all the checkboxes auto-submit the form.
+		$(":checkbox",$form).off('click.formSubmit').on('click.formSubmit',function() {
+			$form.submit(); 
+			//app.u.dump("Filter search actvated");
+			$("#resultsProductListContainer").hide();  
+			
+			$group1 = $('.fsCheckbox');
+			if($group1.filter(':checked').length === 0){
+				//app.u.dump("All checkboxes removed. Filter search deactivated.");
+				$("#resultsProductListContainer").show(); 
+				$(".searchFilterResults").hide();    
+			}
+			else{
+				//app.u.dump("All checkboxes removed. Filter search still active.");
+				$("#resultsProductListContainer").hide(); 
+				$(".searchFilterResults").show();    
+			}  
+		});
+				
+			
+		
+		$('.resetButtonSearchPage', $context).click(function(){
+			$('.fsCheckbox').attr('checked', false);
+			$("#resultsProductListContainer").show(); 
+			$(".searchFilterResults").hide();    
+		});
 }]);
 
-app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {	
-	var safePID = app.u.makeSafeHTMLId(P.pid); //can't use jqSelector because productTEmplate_pid still used makesafe. planned Q1-2012 update ###
-	var $tabContainer = $( ".tabbedProductContent",$('#productTemplate_'+safePID));
+
+
+
+app.rq.push(['script',1,app.vars.baseURL+'cycle-2.9999.81.js']);//','validator':function(){return (jQuery().cycle) ? true : false;}});
+
+app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
+		}]);
+//add tabs to product data.
+//tabs are handled this way because jquery UI tabs REALLY wants an id and this ensures unique id's between product
+app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
+	var $context = $(app.u.jqSelector('#',P.parentID));
+	var $tabContainer = $( ".tabbedProductContent",$context);
 		if($tabContainer.length)	{
-			if($tabContainer.data("tabs")){} //tabs have already been instantiated. no need to be redundant.
+			if($tabContainer.data("widget") == 'anytabs'){} //tabs have already been instantiated. no need to be redundant.
 			else	{
-				$("div.tabContent",$tabContainer).each(function (index) {
-					$(this).attr("id", "spec_"+safePID+"_" + index.toString());
-					})
-				$(".tabs li a",$tabContainer).each(function (index) {
-					$(this).attr('id','href_'+safePID+"_" + index.toString());
-					if( $.browser.msie){
-						$(this).attr("href", "#spec_"+safePID+"_" + index.toString());            
-					} else {
-						$(this).attr("href", "app://#spec_"+safePID+"_" + index.toString());            
-					}
-					});
-				$tabContainer.localtabs();
+				$tabContainer.anytabs();
 				}
 			}
 		else	{} //couldn't find the tab to tabificate.
-		app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
+		
+		//CONVERT CODE FOR LIMITED EDITION CONVERT SELECT TO BUTTONS
+	$('select[name=#Z]').select2Buttons();
+	
+	
+	//BEGIN CAROUSEL CODE FOR RECENTLY VIEWED/RELATED ITEMS
+	var carouselPPTitle;
+	function foo1(){ $(".prodPageCarouselTitles").carouFredSel
+	({
+		width   : 1020,
+		height	: 60,
+		align: "left",
+		items   : 3,
+		scroll: 1,
+		infinite: true,
+		auto : false
+	});
 	}
-]);
-
-app.rq.push(['script',0,(document.location.protocol == 'file:') ? app.vars.httpURL+'jquery/config.js' : app.vars.baseURL+'jquery/config.js']); //The config.js is dynamically generated.
-app.rq.push(['script',0,app.vars.baseURL+'model.js']); //'validator':function(){return (typeof zoovyModel == 'function') ? true : false;}}
-app.rq.push(['script',0,app.vars.baseURL+'includes.js']); //','validator':function(){return (typeof handlePogs == 'function') ? true : false;}})
-app.rq.push(['script',1,app.vars.baseURL+'jeditable.js']); //used for making text editable (customer address). non-essential. loaded late.
-app.rq.push(['script',0,app.vars.baseURL+'controller.js']);
-
+	carouselPPTitle = foo1;
+	setTimeout(carouselPPTitle, 2000);
+	
+	
+	var carouselPPContent;
+	function foo2(){ $(".prodPageCarouselContent").carouFredSel
+	({
+		width   : 1020,
+		height	: 500,
+		items   : 1,
+		scroll: 1,
+		auto : false
+	});
+	}
+	carouselPPContent = foo2;
+	setTimeout(carouselPPContent, 2000);
+	
+	
+	
+	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL
+	$(".nextPPCaro").click(function() {
+    	$(".prodPageCarouselTitles").trigger("next", 1);
+		$(".prodPageCarouselContent").trigger("next", 1);
+    });
+	$(".prevPPCaro").click(function() {
+    	$(".prodPageCarouselTitles").trigger("prev", 1);
+		$(".prodPageCarouselContent").trigger("prev", 1);
+    });
+	
+	$(".nextPPCaro").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".prevPPCaro").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".nextPPCaro").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});	
+	$(".prevPPCaro").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});		
+	
+	
+	/*
+	var carouselImageSlider;
+	function foo3(){ $(".prodThumbsNormalMode").carouFredSel
+	({
+		width   : 300,
+		height	: 71,
+		items   : 3,
+		scroll: 1,
+		auto : false,
+		next: ".thumbPageNext",
+		prev: ".thumbPagePrev"
+	});
+	}
+	
+	carouselImageSlider = foo3;
+	setTimeout(carouselImageSlider, 2000);
+	
+	*/
+	}]);
+	
+app.rq.push(['templateFunction','productTemplate','onDeparts',function(P) {	
+	$(".select2Buttons").remove();
+	$('select[name=#Z]').show();
+}]);
 //sample of an onDeparts. executed any time a user leaves this page/template type.
 app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {app.u.dump("just left the homepage")}]);
 
 
 //group any third party files together (regardless of pass) to make troubleshooting easier.
-app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/jquery-ui.js']);
+app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js']);
 
 
 /*
@@ -186,22 +554,20 @@ app.u.howManyPassZeroResourcesAreLoaded = function(debug)	{
 
 app.u.initMVC = function(attempts){
 //	app.u.dump("app.u.initMVC activated ["+attempts+"]");
-	var includesAreDone = true;
+	var includesAreDone = true,
+	percentPerInclude = (100 / app.vars.rq.length),   //what percentage of completion a single include represents (if 10 includes, each is 10%).
+	resourcesLoaded = app.u.howManyPassZeroResourcesAreLoaded(),
+	percentComplete = Math.round(resourcesLoaded * percentPerInclude); //used to sum how many includes have successfully loaded.
 
-//what percentage of completion a single include represents (if 10 includes, each is 10%).
-	var percentPerInclude = (100 / app.vars.rq.length);  
-	var resourcesLoaded = app.u.howManyPassZeroResourcesAreLoaded();
-	var percentComplete = Math.round(resourcesLoaded * percentPerInclude); //used to sum how many includes have successfully loaded.
-	//make sure precentage is never over 100
+//make sure precentage is never over 100
 	if(percentComplete > 100 )	{
 		percentComplete = 100;
 		}
-	
-	$('#appPreViewProgressBar').val(percentComplete);
-	$('#appPreViewProgressText').empty().append(percentComplete+"% Complete");
+
+	$('#appPreViewProgressBar','#appPreView').val(percentComplete);
+	$('#appPreViewProgressText','#appPreView').empty().append(percentComplete+"% Complete");
 
 	if(resourcesLoaded == app.vars.rq.length)	{
-
 		var clickToLoad = false;
 		if(clickToLoad){
 			$('#loader').fadeOut(1000);
@@ -228,86 +594,25 @@ app.u.loadApp = function() {
 //instantiate controller. handles all logic and communication between model and view.
 //passing in app will extend app so all previously declared functions will exist in addition to all the built in functions.
 //tmp is a throw away variable. app is what should be used as is referenced within the mvc.
-		app.vars.rq = null; //to get here, all these resources have been loaded. nuke record to keep DOM clean and avoid any duplication.
-		var tmp = new zController(app);
+	app.vars.rq = null; //to get here, all these resources have been loaded. nuke record to keep DOM clean and avoid any duplication.
+	var tmp = new zController(app);
 //instantiate wiki parser.
-		myCreole = new Parse.Simple.Creole();
-}
+	myCreole = new Parse.Simple.Creole();
+	}
 
 
 //Any code that needs to be executed after the app init has occured can go here.
 //will pass in the page info object. (pageType, templateID, pid/navcat/show and more)
 app.u.appInitComplete = function(P)	{
 	app.u.dump("Executing myAppIsLoaded code...");
-		app.renderFormats.addToCartButton = function($tag,data)	{
-//				app.u.dump("BEGIN store_product.renderFunctions.addToCartButton");
-
-//if price is not set, item isn't purchaseable. buttonState is set to 'disabled' if item isn't purchaseable or is out of stock.
-				
-				var className, price, buttonState, buttonText = 'Add to Cart',
-				pid = data.value.pid, //...pid set in both elastic and appProductGet
-				inv = app.ext.store_product.u.getProductInventory(pid);
-				
-//				if(app.model.fetchData('appProductGet|'+pid))	{}
-				if(data.bindData.isElastic)	{
-					price = data.value.base_price;
-					if(data.value.tags.indexOf('IS_PREORDER') > -1)	{buttonText = 'Preorder'; className = 'preorder';}
-					else if(data.value.tags.indexOf('IS_COLORFUL') > -1)	{buttonText = 'Choose Color'; className = 'variational colorful';}
-					else if(data.value.tags.indexOf('IS_SIZEABLE') > -1)	{buttonText = 'Choose Size'; className = 'variational sizeable;'}
-					else if(data.value.pogs.length > 0)	{buttonText = 'Choose Options'; className = 'variational';}
-					else	{}
-					//look in tags for tags. indexOf
-					}
-				else	{
-					var pData = data.value['%attribs']; //shortcut
-					price = pData['zoovy:base_price'];
-					if(pData['is:preorder'])	{
-						buttonText = 'Preorder'; className = 'preorder';
-						}
-					else if(pData['is:colorful'])	{
-						buttonText = 'Choose Color'; className = 'variational colorful';
-						}
-					else if(pData['is:sizeable'])	{
-						buttonText = 'Choose Size'; className = 'variational sizeable';
-						}
-					else if(!$.isEmptyObject(pData['@variations']))	{
-						buttonText = 'Choose Options'; className = 'variational';
-						}
-					else	{
-						}
-					
-					}
-
-//no price and/or no inventory mean item is not purchaseable.
-				if(!price)	{
-					buttonState = 'disable';
-					}
-				else if(inv && inv <= 0)	{buttonState = 'disable';}
-				else{}
-				
-//				app.u.dump(" -> inv: "+inv);
-				$tag.addClass(className).text(buttonText);
-				$tag.button();
-				if(buttonState)	{$tag.button(buttonState)}
-				else	{
-					if(buttonText.toLowerCase() == 'add to cart')	{
-						$tag.on('click.detailsOrAdd',function(event){
-							event.preventDefault();
-							app.ext.myRIA.u.handleAddToCart($(this).closest('form'),{'action':'modal'}); 
-							})
-						}
-					else	{
-						$tag.on('click.detailsOrAdd',function(event){
-							event.preventDefault();
-							showContent('product',{'pid':pid}); 
-							})
-						}
-					}
-//				app.u.dump(" -> ID at end: "+$tag.attr('id'));
-				}
 	}
 
-
+app.rq.push(['templateFunction','productTemplate','onDeparts',function(P) {
+var $container = $('#recentlyViewedItemsContainer');
+$container.show();
+//$("ul",$container).empty(); //empty product list
+$container.anycontent({data:app.ext.myRIA.vars.session}); //build product list
+}]);
 
 
 //don't execute script till both jquery AND the dom are ready.
