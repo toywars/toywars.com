@@ -1,10 +1,6 @@
 /* **************************************************************
 
    Copyright 2011 Zoovy, Inc.
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/zoovy-201314
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
    You may obtain a copy of the License at
@@ -41,15 +37,6 @@ var store_filter = function() {
 //key is safe id. value is name of the filter form.
 	filterMap : {
 		
-<<<<<<< HEAD
-			//****CHESS PIECES****
-			
-			//**Wood Chess Pieces**
-			".batman":{
-			"filter": "batmanForm",
-			"exec" : function($form,infoObj){app.ext.store_filter.u.renderSlider($form, infoObj, {MIN:0,MAX:5000});}
-			}
-=======
 		//EXAMPLE:
 		
 		/*".":{
@@ -375,7 +362,6 @@ var store_filter = function() {
 			
 			
 			                
->>>>>>> origin/zoovy-201314
 		},
 
 					////////////////////////////////////   CALLBACKS    \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
@@ -448,11 +434,7 @@ var store_filter = function() {
 
 app.u.dump("BEGIN store_filter.a.filter");
 var $prodlist = $("[data-app-role='productList']",$page).first().empty();
-<<<<<<< HEAD
-
-=======
 app.u.dump($prodlist);
->>>>>>> origin/zoovy-201314
 
 $('.categoryList',$page).hide(); //hide any subcategory lists in the main area so customer can focus on results
 $('.categoryText',$page).hide(); //hide any text blocks.
@@ -484,11 +466,7 @@ if(app.ext.store_filter.u.validateFilterProperties($form))	{
 				}
 			
 			},'datapointer':'appPublicSearch|elasticFiltering',
-<<<<<<< HEAD
-			'templateID': $form.data('loadstemplate') || 'productListTemplateResultsFilter'
-=======
 			'templateID': $form.data('loadstemplate') || 'productListTemplateResults'
->>>>>>> origin/zoovy-201314
 			});
 			app.u.dump(JSON.stringify(query));
 		app.model.dispatchThis();

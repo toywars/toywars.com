@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-.catBrowseSidebar{
-	float: left;
-    margin-right: 10px;
-    width: 20%;
-}
-.catPageContent{
-	float: left;
-    width: 79%;
-}
-.categoryTemplate {
-	background-color:#b7a58b;
-	background-image:none;
-}
-.fsCatTitle{
-}
-=======
 /***TRANFERRED CODE FROM OLD CSS BEFORE FRAMEWORK RESTORE**/
 body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif;}
 
@@ -2255,4 +2238,3 @@ div#slideshowContainer div.caroufredsel_wrapper{
 
 
 
->>>>>>> origin/zoovy-201314

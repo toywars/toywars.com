@@ -13,17 +13,6 @@ app.rq.push(['extension',0,'store_search','extensions/store_search.js']);
 app.rq.push(['extension',0,'store_product','extensions/store_product.js']);
 app.rq.push(['extension',0,'store_cart','extensions/store_cart.js']);
 app.rq.push(['extension',0,'store_crm','extensions/store_crm.js']);
-<<<<<<< HEAD
-app.rq.push(['extension',0,'myRIA','_quickstart.js','startMyProgram']);
-
-app.rq.push(['extension',0,'store_filter','extensions/_store_filtered_search.js']);
-
-app.rq.push(['extension',1,'analytics_google','extensions/analytics_google.js','startExtension']);
-//app.rq.push(['extension',1,'bonding_buysafe','extensions/bonding_buysafe.js','startExtension']);
-//app.rq.push(['extension',1,'powerReviews','extensions/reviews_powerreviews.js','startExtension']);
-//app.rq.push(['extension',0,'magicToolBox','extensions/imaging_magictoolbox.js','startExtension']); // (not working yet - ticket in to MTB)
-
-=======
 app.rq.push(['extension',0,'myRIA','app-quickstart.js','startMyProgram']);
 app.rq.push(['extension',0,'store_filter','extensions/_store_filtered_search.js']);
 app.rq.push(['extension',0,'prodlist_infinite','extensions/prodlist_infinite.js']);
@@ -40,7 +29,6 @@ app.rq.push(['extension',0,'store_toywars','extensions/_store_toywars.js','start
 app.rq.push(['script',0,(document.location.protocol == 'file:') ? app.vars.testURL+'jquery/config.js' : app.vars.baseURL+'jquery/config.js']); //The config.js is dynamically generated.
 app.rq.push(['script',0,app.vars.baseURL+'model.js']); //'validator':function(){return (typeof zoovyModel == 'function') ? true : false;}}
 app.rq.push(['script',0,app.vars.baseURL+'includes.js']); //','validator':function(){return (typeof handlePogs == 'function') ? true : false;}})
->>>>>>> origin/zoovy-201314
 
 app.rq.push(['script',0,app.vars.baseURL+'controller.js']);
 
@@ -210,17 +198,10 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 }]);
 
 app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
-<<<<<<< HEAD
-	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
-
-var $context = $(app.u.jqSelector('#',P.parentID));
-	//**COMMENT TO REMOVE AUTO-RESETTING WHEN LEAVING CAT PAGE FOR FILTERED SEARCH**
-=======
 	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
 	
 	
 	var $context = $(app.u.jqSelector('#',P.parentID));
->>>>>>> origin/zoovy-201314
 	
 	app.ext.store_filter.vars.catPageID = $(app.u.jqSelector('#',P.parentID));  
 	
@@ -248,41 +229,16 @@ var $context = $(app.u.jqSelector('#',P.parentID));
 			$(":checkbox",$form).off('click.formSubmit').on('click.formSubmit',function() {
 				$form.submit();      
 				});
-<<<<<<< HEAD
-=======
 				
 				$form.submit();
->>>>>>> origin/zoovy-201314
 			}
 		}
 		
 		
-<<<<<<< HEAD
-		
-		//selector function for filtered search that displays appropriate wood menu options when wood is selected.	
-		/*$('.woodPieces:checkbox').click(function() {
-    		var woodPieces = $(this);
-			// $this will contain a reference to the checkbox   
-			if (woodPieces.is(':checked')) {
-				 $(".woodType").show();
-				 $(".kingHeight").show();
-			} else {
-				$(".woodType").hide();
-				$(".kingHeight").hide();
-			}
-		});*/
-		
-=======
->>>>>>> origin/zoovy-201314
 		$('.resetButton', $context).click(function(){
 		$context.empty().remove();
 		showContent('category',{'navcat':P.navcat});
 		});
-<<<<<<< HEAD
-}]);
-
-app.rq.push(['templateFunction','categoryTemplate','onDeparts',function(P) {
-=======
 		
 		
 }]);
@@ -290,18 +246,12 @@ app.rq.push(['templateFunction','categoryTemplate','onDeparts',function(P) {
 	//**COMMENT TO REMOVE AUTO-RESETTING WHEN LEAVING CAT PAGE FOR FILTERED SEARCH**
 	
 	app.rq.push(['templateFunction','categoryTemplate','onDeparts',function(P) {
->>>>>>> origin/zoovy-201314
 		if(app.ext.store_filter.vars.catPageID.empty && typeof app.ext.store_filter.vars.catPageID.empty === 'function'){
     		app.ext.store_filter.vars.catPageID.empty().remove();
 		}	
 }]);
 
 app.rq.push(['templateFunction','companyTemplate','onCompletes',function(P) {
-<<<<<<< HEAD
-	app.rq.push(['script',1,app.vars.baseURL+'site/scripts/app_actions.js']);
-}]);	
-	
-=======
 	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
 	
 	
@@ -352,7 +302,6 @@ app.rq.push(['templateFunction','companyTemplate','onCompletes',function(P) {
 		$(this).css("opacity","1");
 	});		
 }]);
->>>>>>> origin/zoovy-201314
 
 app.rq.push(['templateFunction','customerTemplate','onCompletes',function(P) {
 	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
