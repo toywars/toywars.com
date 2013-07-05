@@ -41,23 +41,6 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 	//app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
 	
 	var $context = $(app.u.jqSelector('#',P.parentID));
-	
-	//RANDOM SHIPPING LOGO GENERATOR
-	$(".shipLogo1").hide();
-	$(".shipLogo2").hide();
-	$(".shipLogo3").hide();
-	$(".shipLogo4").hide();
-	
-	var  randomLogo = Math.floor((Math.random()*4)+1);
-	if(randomLogo === 1){
-		$(".shipLogo1").show();
-	}else if(randomLogo === 2){
-		$(".shipLogo2").show();
-		}else if(randomLogo === 3){
-			$(".shipLogo3").show();
-			}else if(randomLogo === 4){
-				$(".shipLogo4").show();
-			}
 			
 	//TOP SLIDESHOW BANNER
 	var carouselHPBanner;
@@ -468,8 +451,34 @@ app.rq.push(['templateFunction','productTemplate','onDeparts',function(P) {
 	$('select[name=#Z]').show();
 }]);
 //sample of an onDeparts. executed any time a user leaves this page/template type.
-app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {app.u.dump("just left the homepage")}]);
+app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {
+	app.u.dump("just left the homepage")
+}]);
 
+
+
+//**ALL PAGES BASIC FUNCTIONS**
+
+//RANDOM SHIPPING LOGO GENERATOR
+	var  randomLogo = 1;
+	function logoRandomizer() {
+	$(".shipLogo1").hide( "fade","slow");
+	$(".shipLogo2").hide( "fade","slow");
+	$(".shipLogo3").hide( "fade","slow");
+	$(".shipLogo4").hide( "fade","slow");
+	randomLogo = Math.floor((Math.random()*4)+1);
+	if(randomLogo === 1){
+		$(".shipLogo1").show( "fade","slow");
+	}else if(randomLogo === 2){
+		$(".shipLogo2").show( "fade","slow");
+		}else if(randomLogo === 3){
+			$(".shipLogo3").show( "fade","slow");
+			}else if(randomLogo === 4){
+				$(".shipLogo4").show( "fade","slow");
+			}
+	}
+	
+	setInterval('logoRandomizer()',5000);
 
 //group any third party files together (regardless of pass) to make troubleshooting easier.
 app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js']);
