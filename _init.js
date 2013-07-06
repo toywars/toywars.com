@@ -340,6 +340,35 @@ app.rq.push(['templateFunction','searchTemplate','onCompletes',function(P) {
 			$("#resultsProductListContainer").show(); 
 			$(".searchFilterResults").hide();    
 		});
+		
+		
+		//**SEARCH COLLAPSE/EXPAND DATA**//
+		
+		//characterLegend
+		if($('.characterLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+		else {
+		 $('.characterLegend',$context).data('collapseOrExpanded',true).append();
+		 }
+		 
+		 //themeLegend
+		if($('.themeLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+		else {
+		 $('.themeLegend',$context).data('collapseOrExpanded',true).append();
+		 }
+		 
+		 //productLegend
+		if($('.productLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+		else {
+		 $('.productLegend',$context).data('collapseOrExpanded',true).append();
+		 }
+		 
+		  //ManufacturerLegend
+		if($('.ManufacturerLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+		else {
+		 $('.ManufacturerLegend',$context).data('collapseOrExpanded',true).append();
+		 }
+		 
+		 //**END SEARCH COLLAPSE/EXPAND DATA**//
 }]);
 
 
@@ -462,19 +491,20 @@ app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {
 //RANDOM SHIPPING LOGO GENERATOR
 	var  randomLogo = 1;
 	function logoRandomizer() {
-	$(".shipLogo1").hide( "fade","slow");
-	$(".shipLogo2").hide( "fade","slow");
-	$(".shipLogo3").hide( "fade","slow");
-	$(".shipLogo4").hide( "fade","slow");
+	$(".shipLogo1").fadeOut(1000);
+	$(".shipLogo2").fadeOut(1000);
+	$(".shipLogo3").fadeOut(1000);
+	$(".shipLogo4").fadeOut(1000);
 	randomLogo = Math.floor((Math.random()*4)+1);
 	if(randomLogo === 1){
-		$(".shipLogo1").show( "fade","slow");
+		//$(".shipLogo1").delay(1000).fadeIn(1000);
+		$(".shipLogo1").fadeIn(1000);
 	}else if(randomLogo === 2){
-		$(".shipLogo2").show( "fade","slow");
+		$(".shipLogo2").fadeIn(1000);
 		}else if(randomLogo === 3){
-			$(".shipLogo3").show( "fade","slow");
+			$(".shipLogo3").fadeIn(1000);
 			}else if(randomLogo === 4){
-				$(".shipLogo4").show( "fade","slow");
+				$(".shipLogo4").fadeIn(1000);
 			}
 	}
 	

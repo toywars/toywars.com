@@ -1389,10 +1389,9 @@ div ul .filterSearchResults3{
 	background-color: white;
 }
 .layeredSearch legend{
-	background-image: url("images/filterSearchCat.png");
+	background-image:url(images/filterSearchCatOpen.png);
     height: 30px;
     margin-left: -3px;
-    padding-left: 40px;
     padding-top: 8px;
     width: 162px;
 	color:white;
@@ -1717,7 +1716,8 @@ div.container div.nav div.navContent > ul > li{
     width: 220px;
 }
 .layeredSearch legend.searchPageFSLegend{
-	width: 185px;
+	width: 223px;
+	text-align:center;
 }
 .searchFilterResults{
 	float: left;

@@ -1501,10 +1501,10 @@ subscribeListsArticle is used for authenticated buyers
 	<div class='previewListContainer'>
     
     <!--**FILTERED SEARCH FORM**-->
-    <!--<div class="filterContainerSearch"></div>-->
+    <div class="filterContainerSearch"></div>
   
 		<!-- productListTemplateResults gets loaded into here -->
-        	<ul style="float: right; margin-right: 14px; width: 979px;" id='resultsProductListContainer' class='listStyleNone fluidList productList'></ul>
+        	<ul style="float: right; margin-right: 14px; width: 745px;" id='resultsProductListContainer' class='listStyleNone fluidList productList'></ul>
     		<ul class="searchFilterResults productList" data-app-role='productList'>
         	</ul>
     </div>
@@ -2450,7 +2450,7 @@ put all filters into the appFilters container.
         <button class="resetButtonSearchPage"> Reset</button>
         
         <fieldset class="filterSliderImage" data-elastic-key="base_price" data-filtertype="slider">
-            <legend class="searchPageFSLegend">SORT BY PRICE</legend>
+            <legend class="searchPageFSLegend">PRICE RANGE</legend>
             <input type="text" disabled="disabled" class='sliderValue' />
             <div class="slider-range"></div>
         </fieldset>
@@ -2461,8 +2461,8 @@ put all filters into the appFilters container.
         </fieldset>-->
         
         <fieldset data-elastic-key="prod_character" data-filtertype="checkboxes">
-            <legend class="searchPageFSLegend">SORT BY CHARACTERS</legend>
-            <div>
+            <legend class="searchPageFSLegend characterLegend" onClick="app.ext.store_filter.a.toggleHideShowCharCat()">CHARACTER</legend>
+            <div class="characterCont">
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='batman' />Batman</label>
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='captain+america' />Captain America</label>
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='darth+vader' />Darth Vader</label>
@@ -2475,8 +2475,8 @@ put all filters into the appFilters container.
             </div>
         </fieldset>
          <fieldset data-elastic-key="prod_theme" data-filtertype="checkboxes">
-            <legend class="searchPageFSLegend">SORT BY THEME</legend>
-            <div>
+            <legend class="searchPageFSLegend themeLegend" onClick="app.ext.store_filter.a.toggleHideShowThemeCat()">THEME/GENRE</legend>
+            <div class="themeCont">
                 
                 <!--<label class='break'><input class="fsCheckbox" type='checkbox' value='24' />24</label>
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='300' />300</label>
@@ -2553,8 +2553,8 @@ put all filters into the appFilters container.
             </div>
         </fieldset>
         <fieldset class="productTypes" data-elastic-key="prod_types" data-filtertype="checkboxes">
-            <legend class="searchPageFSLegend">SORT BY TYPE</legend>
-            <div>
+            <legend class="searchPageFSLegend productLegend" onClick="app.ext.store_filter.a.toggleHideShowProductCat()">ITEM TYPE</legend>
+            <div  class="productCont">
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='comic' />Comics</label>
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='action+figure' />Figures</label>
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='toy' />Toys</label>
@@ -2569,8 +2569,8 @@ put all filters into the appFilters container.
             </div>
         </fieldset>
         <fieldset class="productManufacturer" data-elastic-key="prod_mfgr" data-filtertype="checkboxes">
-            <legend class="searchPageFSLegend">SORT BY MFGR.</legend>
-            <div>
+            <legend class="searchPageFSLegend ManufacturerLegend" onClick="app.ext.store_filter.a.toggleHideShowManufacturerCat()">MANUFACTURER</legend>
+            <div class="manufacturerCont">
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='marvel+select' />Marvel Select</label>
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='enterbay' />Enterbay</label>
                 <label class='break'><input class="fsCheckbox" type='checkbox' value='mcfarlane' />McFarlane</label>
