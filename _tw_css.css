@@ -307,7 +307,7 @@ PRODUCT DETAIL PAGE (productTemplate)
 
 ***************************************************/
 .container{ max-width:1000px; margin:0px auto;}
-.prodViewerContainer{width:938px; margin:20px auto 28px;}
+.prodViewerContainer{width:655px; margin:20px auto 28px;}
 .breadAndAddThisContainer{margin-bottom:8px; padding-bottom:8px; border-bottom:1px dotted #b6b6b6;}
 
 /* primary image and thumbnails */
@@ -2236,6 +2236,17 @@ div#slideshowContainer div.caroufredsel_wrapper{
 }
 .layeredSearch legend.priceLegend{
 	background-image:url(images/filterSearchCat.png);
+}
+table.prodViewerContainer tbody tr td.imageContainer div{
+	position:relative;
+}
+table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
+	position:absolute;
+	right: 20px;
+}
+
+.productPage table.prodViewerContainer{
+	width:940px;
 }
 
 
