@@ -1201,11 +1201,13 @@ app.ext.myRIA.pageTransition($old,$('#'+infoObj.parentID));
 					$buttonBar.data('page-in-focus',$('#resultsProductListContainer').data('page-in-focus')); //used to determine if a page change has occured in next/prev product buttons.
 					
 /***TOY WARS***/	$(".filterContainerSearch").hide();
+/***TOY WARS***/	$("#resultsProductListContainer").css({'width':'240px'});
 					
 //button for turning off preview mode. returns li's to normal state and animates the two 'panes'.
 					$("<button \/>").button().text('close preview').on('click',function(event){
 						app.ext.myRIA.u.revertPageFromPreviewMode($parent);
 /***TOY WARS***/		$(".filterContainerSearch").show();
+/***TOY WARS***/	$("#resultsProductListContainer").css({'width':'745px'});
 						}).prependTo($buttonBar);
 
 

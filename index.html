@@ -936,8 +936,8 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 		<div class='prodThumbContainer' style="height:120px; text-align:center; margin-top:2px;">
 			<img src='blank.gif' class='prodThumb' alt='' data-bind='var: product(images); format:imageURL;isElastic:1;bgcolor:ffffff;' width='120' height='120' />
 		</div>
-		<h5 class='hideInMinimalMode' data-bind='var: product(prod_name); format:text;'></h5>
-		<h6 class='hideInMinimalMode' data-bind='var: product(base_price); format:money; isElastic:1; currencySign: $;  hideZero:true; className:price; pretext:;'></h6>
+		<h5 data-bind='var: product(prod_name); format:text;'></h5>
+		<h6 data-bind='var: product(base_price); format:money; isElastic:1; currencySign: $;  hideZero:true; className:price; pretext:;'></h6>
 	</div>
 	<div class='hideInMinimalMode pointer moreDetails' onClick="showContent('product',{'pid':$(this).parent().attr('data-pid')});"><img src="images/button-product-list-view-item.png" width="85" height="30" /></div>
 </li>
@@ -1184,6 +1184,9 @@ this will likely become more flexible in the future. ###
 		<span data-bind='var: reviews(reviews.total); format:text;posttext: from ;posttext: reviews; className:numReviews;'></span>
 	</section>
 	<div id="prodDesc" data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
+    <div class="pointer moreDetails" onclick="showContent('product',{'pid':$(this).attr('data-pid')})" data-bind="var:product(pid);format:assignAttribute; attribute:data-pid;">
+        <img width="85" height="30" src="images/button-product-list-view-item.png">
+    </div>
 	</td>
 </tr>
 <tr>
