@@ -2234,6 +2234,9 @@ div#slideshowContainer div.caroufredsel_wrapper{
 #mainContentArea_customer div.mainColumn{
 	width:94%;
 }
+.layeredSearch legend.priceLegend{
+	background-image:url(images/filterSearchCat.png);
+}
 
 
 
