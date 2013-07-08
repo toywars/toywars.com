@@ -477,6 +477,9 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	setTimeout(carouselImageSlider, 2000);
 	
 	*/
+	
+	//**TITLE CORRECTION FOR LIMITED EDITION POG**//
+	$("label[title='Numbers Available']").text("Choose Limited Edition Item Number ");
 	}]);
 	
 app.rq.push(['templateFunction','productTemplate','onDeparts',function(P) {	
