@@ -479,7 +479,7 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	*/
 	
 	//**TITLE CORRECTION FOR LIMITED EDITION POG**//
-	$("label[title='Numbers Available']").text("Choose Limited Edition Item Number ");
+	$(".limitedEditionPog").text("Choose Limited Edition Item Number ");
 	}]);
 	//$("label[title='Numbers Available']").tooltip({ content: "Awesome title!" });
 	

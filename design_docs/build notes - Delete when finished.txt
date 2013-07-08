@@ -16,7 +16,6 @@ category:
 
 product:
 - image library adding white space to certain images. He wants the whitespace removed without compromising the image quality. If he opts to use magic zoom, problem might correct itself.
-- and a what's this pop up that explains the above pog IF it is showing for that product.
 - Build checks to make sure product variations have a value selection made to add to cart.
 
 Company:
