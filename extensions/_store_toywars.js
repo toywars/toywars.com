@@ -209,7 +209,16 @@ var store_toywars = function() {
 			createBuyer : function($form){
 				var obj = $form.serializeJSON();
 				app.u.dump(obj);
-			}
+			},
+			
+			handleToolTip : function()	{
+				app.u.dump("BEGIN store_toywars.u.handleToolTip.");
+					$('.tipify',$('#appView')).each(function(){
+						var $this = $(this);
+						$this.parent().css('position','relative'); //this is what makes the tooltip appear next to the link instead of off in space.
+						$this.mouseover(function(){	$('.toolTip',$this.parent()).show();}).mouseout(function(){	$('.toolTip',$this.parent()).fadeOut(3000);});
+						});
+				},
 				
 			}, //u
 
