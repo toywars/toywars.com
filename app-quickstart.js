@@ -1193,17 +1193,19 @@ app.ext.myRIA.pageTransition($old,$('#'+infoObj.parentID));
 //if the detail panel is already visible, no need to animate or adjust css on containers.
 				else if($detail.is(':visible'))	{
 //transition out the existing product in view.
-					$detail.children().css({'position':'absolute','z-index':10000,'width':$detail.width()}).animate({'right':1000},'slow','',function(){$(this).empty().remove()})
+					$detail.children().css({'position':'absolute','z-index':10000,'width':$detail.width()}).animate({'right':1000},'slow','',function(){$(this).empty().remove()})				
 					}
 				else	{
 					//class below is used as a selector for setting data() on button bar. don't change.
 					var $buttonBar = $("<div \/>").addClass('buttonBar').css({'position':'absolute','right':0}).prependTo($parent);
 					$buttonBar.data('page-in-focus',$('#resultsProductListContainer').data('page-in-focus')); //used to determine if a page change has occured in next/prev product buttons.
-
+					
+/***TOY WARS***/	$(".filterContainerSearch").hide();
 					
 //button for turning off preview mode. returns li's to normal state and animates the two 'panes'.
 					$("<button \/>").button().text('close preview').on('click',function(event){
 						app.ext.myRIA.u.revertPageFromPreviewMode($parent);
+/***TOY WARS***/		$(".filterContainerSearch").show();
 						}).prependTo($buttonBar);
 
 
