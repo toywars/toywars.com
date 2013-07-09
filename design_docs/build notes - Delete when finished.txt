@@ -1,8 +1,6 @@
 Requests for support/implementation:
-- Update limited edition pog so that the title returned is: Choose Limited Edition Number . Talk to TIm about making this change.
 
 all pages:
-- Add a function for ALL elastic searches. If no results are returned, set an app.u.dump that states that no results were returned.
 - All links will need to be updated once filtered search is implemented so that they link to the appropriate new cat pages.
 
 header: 
