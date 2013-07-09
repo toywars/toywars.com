@@ -396,7 +396,7 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 		else	{} //couldn't find the tab to tabificate.
 		
 		//CONVERT CODE FOR LIMITED EDITION CONVERT SELECT TO BUTTONS
-	$('select[name=#Z]').select2Buttons();
+	$('select[name=#Z]', $context).select2Buttons();
 	
 	
 	//BEGIN CAROUSEL CODE FOR RECENTLY VIEWED/RELATED ITEMS

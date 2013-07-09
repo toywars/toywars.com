@@ -220,6 +220,64 @@ var store_toywars = function() {
 						});
 				},
 				
+			addItemToCart : function($form,obj)	{
+				app.u.dump("BEGIN myRIA.u.addItemToCart");
+					if($('select[name=#Z]', $form)){
+						if($('select[name=#Z]', $form).val() !== ""){
+							app.u.dump("select[name=#Z] has an option selected, continue with checkout.");
+							obj = obj || {'action':'modal'}
+							if($form && $form.length)	{
+								var cartObj = app.ext.store_product.u.buildCartItemAppendObj($form);
+								if(cartObj)	{
+									if(cartObj)	{
+										app.calls.cartItemAppend.init(cartObj,{},'immutable');
+										app.model.destroy('cartDetail');
+										app.calls.cartDetail.init({'callback':function(rd){
+											if(obj.action === "modal"){
+												showContent('cart',obj);
+												}
+											}},'immutable');
+										app.model.dispatchThis('immutable');
+										}
+									}
+								else	{} //do nothing, the validation handles displaying the errors.
+								}
+							else	{
+								app.u.throwGMessage("WARNING! add to cart $form has no length. can not add to cart.");
+							}
+						}
+						else{
+							app.u.dump("select[name=#Z] doesn't have an option selected, halt checkout.");
+							app.u.throwMessage("Please select a Limited Edition number to proceed with adding product to cart.");
+						}
+					}
+					else{
+						app.u.dump("select[name=#Z] doesn't exist. Continue with checkout normally.");
+						obj = obj || {'action':'modal'}
+							if($form && $form.length)	{
+								var cartObj = app.ext.store_product.u.buildCartItemAppendObj($form);
+								if(cartObj)	{
+									if(cartObj)	{
+										app.calls.cartItemAppend.init(cartObj,{},'immutable');
+										app.model.destroy('cartDetail');
+										app.calls.cartDetail.init({'callback':function(rd){
+											if(obj.action === "modal"){
+												showContent('cart',obj);
+												}
+											}},'immutable');
+										app.model.dispatchThis('immutable');
+										}
+									}
+								else	{} //do nothing, the validation handles displaying the errors.
+								}
+							else	{
+								app.u.throwGMessage("WARNING! add to cart $form has no length. can not add to cart.");
+							}
+					}
+										
+											
+				}, //handleAddToCart
+				
 			}, //u
 
 
