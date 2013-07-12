@@ -1206,10 +1206,10 @@ app.ext.myRIA.pageTransition($old,$('#'+infoObj.parentID));
 					
 //button for turning off preview mode. returns li's to normal state and animates the two 'panes'.
 					$("<button \/>").button().text('close preview').on('click',function(event){
-						app.ext.myRIA.u.revertPageFromPreviewMode($parent);
-/***TOY WARS***/		$(".filterContainerSearch").show();
-/***TOY WARS***/	$("#resultsProductListContainer").css({'width':'745px'});
-/***TOY WARS***/	$(".searchFilterResults").css({'width':'760px'});
+							app.ext.myRIA.u.revertPageFromPreviewMode($parent);
+/***TOY WARS***/			$(".filterContainerSearch").show();
+/***TOY WARS***/			$("#resultsProductListContainer").css({'width':'745px'});
+/***TOY WARS***/			$(".searchFilterResults").css({'width':'760px'});
 						}).prependTo($buttonBar);
 
 
