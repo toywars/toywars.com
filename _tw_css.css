@@ -2186,7 +2186,7 @@ div.container div.nav div.navContent > ul > li{
     display: block;
     height: 77px;
     width: 74px;
-    z-index: 3;
+    z-index: 2;
 	position:absolute;
 }
 .tagsContainer span.is_bestseller{
@@ -2202,7 +2202,7 @@ div.container div.nav div.navContent > ul > li{
     display: block;
     height: 77px;
     width: 74px;
-    z-index: 2;
+    z-index: 3;
 	position:absolute;
 }
 
@@ -2238,8 +2238,9 @@ table.prodViewerContainer tbody tr td.imageContainer div{
 	position:relative;
 }
 table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
-	position:absolute;
-	right: 20px;
+	position: absolute;
+    right: -30px;
+    top: -25px;
 }
 
 .productPage table.prodViewerContainer{

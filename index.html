@@ -694,7 +694,7 @@ COMMONLY EDITED TEMPLATES
 
 <!--Any Content custom templates-->
 <div id="prodPageElasticTemplate">
-	<ul data-bind="useParentData:true; format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults;' class='listStyleNone fluidList clearfix noPadOrMargin productList'";></ul>
+	<ul data-bind="useParentData:true; format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview;' class='listStyleNone fluidList clearfix noPadOrMargin productList'";></ul>
 </div>
 
 
@@ -731,7 +731,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
     -->
     <!-- a sample of how to format an elastic native search in a data-bind -->
      <div class="homeProdSearchBestSellerCont">   
-     	<ul id='homeProdSearchBestSellers' data-bind='var: elastic-native({"size":"5","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+     	<ul id='homeProdSearchBestSellers' data-bind='var: elastic-native({"size":"5","mode":"elastic-native","filter":{"term":{"tags":"IS_BESTSELLER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
      	<img src="images/h_specialty_item_arrow_right.png" class="hotItemsNext pointer" />
         <img src="images/h_specialty_item_arrow_left.png" class="hotItemsPrev pointer" />
         <div id="homeProdSearchBestSellersPage"></div>
@@ -739,7 +739,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
      </div>
      
      <div class="homeProdSearchFreshCont">   
-     	<ul id='homeProdSearchFresh' data-bind='var: elastic-native({"size":"5","mode":"elastic-native","filter":{"term":{"tags":"IS_FRESH"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+     	<ul id='homeProdSearchFresh' data-bind='var: elastic-native({"size":"5","mode":"elastic-native","filter":{"term":{"tags":"IS_FRESH"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
      	<img src="images/h_specialty_item_arrow_right.png" class="freshItemsNext pointer" />
         <img src="images/h_specialty_item_arrow_left.png" class="freshItemsPrev pointer" />
         <div id="homeProdSearchFreshPage"></div>
@@ -747,7 +747,7 @@ the homepageTemplate template is loaded into mainContentArea by default when the
      </div>
      
      <div class="homeProdSearchPreorderCont">   
-     	<ul id='homeProdSearchPreorder' data-bind='var: elastic-native({"size":"5","mode":"elastic-native","filter":{"term":{"tags":"IS_PREORDER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+     	<ul id='homeProdSearchPreorder' data-bind='var: elastic-native({"size":"5","mode":"elastic-native","filter":{"term":{"tags":"IS_PREORDER"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
      	<img src="images/h_specialty_item_arrow_right.png" class="preorderItemsNext pointer" />
         <img src="images/h_specialty_item_arrow_left.png" class="preorderItemsPrev pointer" />
         <div id="homeProdSearchPreorderPage"></div>
@@ -776,28 +776,28 @@ the homepageTemplate template is loaded into mainContentArea by default when the
             <div class="catCarousel">
                 <div class="ccItem">
                     <h2>THE HOBBIT</h2>
-                    <ul id="carCat1" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'>
+                    <ul id="carCat1" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'>
                     </ul>
                      <!--<p align="center"><img class="btnViewAllCategories" src="images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories"/></p>-->
                 </div>
                 <div class="ccItem">
                     <h2>STAR WARS</h2>
-                    <ul id="carCat2" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat2" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
                 </div>
                 <div class="ccItem">
                     <h2>DOCTOR WHO</h2>
-                    <ul id="carCat3" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat3" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
                 </div>
                 <div class="ccItem">
                     <h2>WALKING DEAD</h2>
-                    <ul id="carCat4" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat4" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
                 </div>	
                 <div class="ccItem">
                     <h2>AVENGERS</h2>
-                    <ul id="carCat5" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat5" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
                 </div>
             </div>
-            <!--<ul data-bind='var: elastic-native({"size":"4","mode":"elastic-native","query":{"query_string":{"query":"featured"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResults; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>-->
+            <!--<ul data-bind='var: elastic-native({"size":"4","mode":"elastic-native","query":{"query_string":{"query":"featured"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>-->
             <!--<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>-->
             <!--<img class="btnViewAllCategories" src="site/images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories" />-->
     </div>
@@ -943,13 +943,13 @@ SANITY -> if you change the height and width of this image, change the .minimalM
 </li>
 <li id='productListTemplateResultsNoPreview' class='loadingBG searchResultsProduct ' >
 	<div onClick="return showContent('product', {'pid' : $(this).parent().attr('data-pid')});" class='pointer'>
-		<div class='prodThumbContainer'>
+		<div class='prodThumbContainer' style="height:120px; text-align:center; margin-top:2px;">
 		<img src='blank.gif' class='prodThumb' alt='' data-bind='var: product(images); format:imageURL;isElastic:1;bgcolor:ffffff;' width='120' height='120' />
 		</div>
 		<h5 class='hideInMinimalMode' data-bind='var: product(prod_name); format:text;'></h5>
 		<h6 class='hideInMinimalMode' data-bind='var: product(base_price); format:money; isElastic:1; currencySign: $;  hideZero:true; className:price; pretext: Our Price: ;'></h6>
 	</div>
-	<div class='hideInMinimalMode pointer moreDetails' onClick="showContent('product',{'pid':$(this).parent().attr('data-pid')});">more details</div>
+	<div class='hideInMinimalMode pointer moreDetails' onClick="showContent('product',{'pid':$(this).parent().attr('data-pid')});"><img src="images/button-product-list-view-item.png" width="85" height="30" /></div>
 </li>
 </ul>
 <!--
