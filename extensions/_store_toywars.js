@@ -102,6 +102,44 @@ var store_toywars = function() {
 //that way, two render formats named the same (but in different extensions) don't overwrite each other.
 		renderFormats : {
 			
+			yyyymmdd2Pretty : function($tag, str) {
+				var r = false;
+				if(Number(str)) {
+				 var year = str.substr(0,4)
+				 var month = Number(str.substr(4,2));
+				 var day = str.substr(6,2);
+				 var d = new Date();
+				 d.setFullYear(year, (month - 1), day)
+			//     app.u.dump(" date obj: "); app.u.dump(d);
+			//     app.u.dump(" -> YYYYMMDD2Pretty ["+str+"]: Y["+year+"]  Y["+month+"]  Y["+day+"] ");
+				  r = month+"/"+day+"/"+year;
+				 }
+				else {
+				 app.u.dump("WARNING! the parameter passed into YYYYMMDD2Pretty is not a numder ["+str+"]");
+				 
+				 var convertToNum = '';
+				 convertToNum = str.value;
+				 //app.u.dump(str.value);
+				 if(Number(convertToNum)){
+					 var year = convertToNum.substr(0,4)
+					 var month = Number(convertToNum.substr(4,2));
+					 var day = convertToNum.substr(6,2);
+					 var d = new Date();
+					 d.setFullYear(year, (month - 1), day)
+				//     app.u.dump(" date obj: "); app.u.dump(d);
+				//     app.u.dump(" -> YYYYMMDD2Pretty ["+str+"]: Y["+year+"]  Y["+month+"]  Y["+day+"] ");
+				//app.u.dump(d);
+					 r = month+"/"+day+"/"+year;
+					 app.u.dump(r);
+				 }
+				 else{
+					 app.u.dump("WARNING! the parameter passed into YYYYMMDD2Pretty cannot be converted into a string. ["+str+"]");
+				 }
+			
+				 }
+				$tag.html(r);
+			} //yyyymmdd2Pretty
+			
 				
 			}, //renderFormats
 			
@@ -209,6 +247,12 @@ var store_toywars = function() {
 			createBuyer : function($form){
 				var obj = $form.serializeJSON();
 				app.u.dump(obj);
+			},
+			
+			getDOWFromDay : function(X)	{
+//				app.u.dump("BEGIN beachmart.u.getDOWFromDay ["+X+"]");
+				var weekdays = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+				return weekdays[X];
 			}
 				
 			}, //u
