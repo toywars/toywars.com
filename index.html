@@ -527,7 +527,7 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 						<li><a href="#customer?show=orders">Previous Orders</a></li>																								
 					</ul>	
 					<div id="footerSubscribe">
- 						<form action='#' id='subscribeFrm' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe('subscribeFrm'); return false">						
+ 						<form action='#' id='subscribeFrm' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe($(this)); return false">						
                             <p>STAY UP-TO-DATE</p>
                             <fieldset class='userInfo'>
                                 <input type="text" name='fullname' value='' placeholder="Full Name" class="subName" id='subscribeFullname' />
