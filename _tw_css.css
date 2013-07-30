@@ -347,7 +347,14 @@ div#gotAccount1 input#modalLoginPassword{left:30px; top:132px;}
 div#gotAccount1 span#lblLoginPassword{font-family: Helvetica; font-size: 12px; left: 32px; position: absolute; top: 138px;}
 .loginShow a{ color:#fff;}
 #loginFormForModal{ background:#b7a58b;}
-.Account{ width:622px; background:url(images/createbg.jpg) no-repeat; margin-bottom:20px; float:left;}
+.Account{ 
+	width:622px; 
+	background:url(images/createbg.jpg) no-repeat; margin-bottom:20px; 
+	float: left;
+    margin-bottom: 20px;
+    margin-left: 160px;
+    width: 622px;
+}
 .Account h1{ text-align:center; padding:10px 0 30px 0; color:#fff;}
 .Account b{ font-weight:bold; font-size:12px;}
 .fieldM{ margin:0px auto; padding:0px 0 10px; width:570px;}

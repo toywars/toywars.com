@@ -1279,13 +1279,16 @@ subscribeListsArticle is used for authenticated buyers
 			<h1>Subscribe to our Newsletter and Save!</h1>
 			<div data-bind="format:loadsTemplate; loadsTemplate:subscribeFormTemplate;"></div>
 		</div>
+<!--**REMOVED TEMPORARILY WHILE TROUBLESHOOTING**
 <span class="hideIfLoggedIn">
 <div class="CreatAccount">
+<!--**REMOVED DUE TO REDUNDANCY WITH LOGIN POPUP**
 <div id="gotAccount1"> 
 		<h1>GOT AN ACCOUNT?</h1>
 <form action='#' onSubmit='app.ext.myRIA.u.loginFrmSubmit($("#modalLoginlogin").val(),$("#modalLoginpassword").val()); return false;' id='modalLoginForm'>
 			<input type='hidden' name='loginCallback' id='loginCallback' value='' /><!-- used to save a callback action in -->
-			<fieldset style="margin:0 0 0 20px; border:0px;">
+			<!--
+            <fieldset style="margin:0 0 0 20px; border:0px;">
 	<input type='email' class='zform_textbox zform_email'  name='login' id='modalLoginlogin' value='' size='25' />
 	<input type='password' class='zform_textbox zform_password'   name='password' id='modalLoginpassword' value='' size='25' />
         <input type='image' src="images/button-login-to-my-account.png" value='log in' class='ui-button-text ui-button ui-state-default ui-corner-all ' style="height:54px; width:240px; padding:0px; border:none !important; border-radius:0px !important; margin:0px;"/>
@@ -1293,14 +1296,18 @@ subscribeListsArticle is used for authenticated buyers
 		</form>
 		<p><a href="#" onClick="app.ext.store_crm.calls.appBuyerPasswordRecover.init($('#modalLoginLogin').val(),{'callback':'showMessaging','message':'Thank you, will receive an email shortly','targetID':'loginMessaging'}); app.model.dispatchThis('immutable'); return false;">Forgot your username or password?</a></p>
 	</div>
+    -->
+<!--
 <div class="Account" >
 <form action='#' class='inputsAsBreaks'  onSubmit="app.ext.myRIA.u.handleAppBuyerCreate($(this)); return false;">
 <input type="hidden" name="vendor" value="toywars"/>
 <h1>WELCOME, FIRST-TIMERS!</h1><input type='hidden' name='form' value='wholesale' />
 <div class="fieldM"><span class="field">First Name</span> <input name='firstname' type='text' size='30' class='textfname' placeholder='First Name' required='required' />
 <!--<span class="field">Middle Initial</span> <input name='firstname' type='text' size='3' class='textmname' />-->
+<!--
 <b>Last Name</b> <input name='lastname' type='text' size='30' placeholder='Last Name' required='required' class='textflast'/></div>
 <!--<div class="passwordInput"><b>Password</b><input name="password" size="30" placeholder="Password" required /></div>-->
+<!--
 <div class="fieldM"><span class="field">Address</span> <input name='address1' type='text' size='30' placeholder='Address' class='textfadd' required='required' /> 
 <input name='address2' type='text' size='30' placeholder='Address (Line 2)' class='textfadd1'/></div>
 <div class="fieldM"><span class="field">City</span> <input name='city' type='text' size='30' placeholder='City' required='required' class='textcity'/> 	<b>State</b> <input name='region' type='text' size='5' placeholder='State' class='textfstate' /> <b>Zip</b> <input name='postal' type='text' size='10' placeholder='00000-0000' class='textfzip'/></div>
@@ -1315,21 +1322,29 @@ subscribeListsArticle is used for authenticated buyers
 	<div class="fieldM"><input name='ein' type='text' size='30' placeholder='Company EIN/Tax ID' />
 	<input name='credit_limit' type='number' step='0.01' min='0' placeholder='Requested Credit Limit' /></div>
 </fieldset>-->
+<!--
 <button class="createButton"><img src="images/createaccount.png"></button>
 </form>
             </div>
 		</div>
         </span>
+        -->
 		<div id='subscriberListsArticle' class='displayNone textContentArea'>
 			<h1>Manage your Subscriptions</h1>
 <!-- save onchange -->
 <form action='#' name='subscribeFrm'>
+
 <fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'></fieldset>
+
 </form>
+
 		</div>
+
 		<div id='myaccountArticle' class='displayNone textContentArea'>
 			<h1>My Account</h1>
+
 			<section>
+
 <div class='billAddressContainer' data-app-role='addressContainer' data-app-addresstype='bill'>
 	<div class='marginBottom'>
 		<button class='floatRight' data-app-event='myRIA|showBuyerAddressAdd'>Add New Billing Address</button>
@@ -1337,6 +1352,7 @@ subscribeListsArticle is used for authenticated buyers
 	</div>
 	<div class='billAddresses' data-bind="var: buyer(@bill); format:processList; loadsTemplate:billAddressTemplate;"></div>
 </div>
+
 <div class='shipAddressContainer' data-app-role='addressContainer' data-app-addresstype='ship'>
 	<div class='marginBottom'>
 		<button class='floatRight' data-app-event='myRIA|showBuyerAddressAdd'>Add New Shipping Address</button>
@@ -1344,40 +1360,65 @@ subscribeListsArticle is used for authenticated buyers
 	</div>
 	<div class='billAddresses' data-bind="var: buyer(@ship); format:processList; loadsTemplate:shipAddressTemplate;"></div>
 </div>
+
+
 			</section>
+
+
 		</div>
+
+
 		<div id='ordersArticle' class='displayNone textContentArea'>
 			<h1>Order History</h1>
 			<div data-bind="var: orders(@orders); format:processList; loadsTemplate:orderLineItemTemplate;" data-app-role='orderList' class='ui-accordion ui-widget ui-helper-reset ui-accordion-icons '></div>
 		</div>
+
+
 		<div id='invoiceArticle' class='displayNone textContentArea'>
 			<div data-bind="format:loadsTemplate; loadsTemplate: invoiceTemplate; useParentData:true;"></div>
 		</div>
+
+
+
 		<div id='changepasswordArticle' class='displayNone textContentArea'>
 			<h1>Change Password</h1>
 			<div id='changepasswordContainer'>
+
 <form action='#' id='changePasswordForm' name='changePasswordForm' onSubmit="app.ext.store_crm.u.handleChangePassword('changePasswordForm',{'callback':'showMessaging','message':'Thank you, your password has been changed','targetID':'changepasswordContainer'}); return false">
 <fieldset class='borderNone'>
+
 <div class='marginBottom'><label for='changePassword'>Password</label><input type='password' name='password' id='changePassword' size='35' /></div>
 <div class='marginBottom'><label for='changePassword2'>Confirm Password</label><input type='password' name='password2' id='changePassword2' size='35' /></div>
 <div class='marginBottom'><input type='submit' value='Change Password' class='loadingButton ui-button-text ui-button ui-state-default ui-corner-all'></div>
+
 </fieldset>
 </form>
 			</div>
 		</div>
+
 		<div id='listsArticle' class='displayNone textContentArea'>
 			<h1>List Manager</h1>
 			<div id='listsContainer' class='prodlist loadingBG'></div>
+
 			<div id='listEditorContainer' class='displayNone loadingBG'></div><!-- editor for a given list gets added here -->
+
 		</div>
+
 		<div id='forgetmeArticle' class='displayNone textContentArea'>
 			<h1>Your 'Forget Me' list</h1>
 			<p>Items on this list will not show up anywhere on the site. Use it for items you never want to see again. If you add an item to the list by mistake, use this page to remove it from the list and it will start re-appearing during your shopping experience.</p>
 			<ul id='forgetmeContainer' class='prodlist loadingBG'>
 			</ul>
 		</div>
+
 	</div>
+
 </div>
+
+
+
+
+
 <div id='searchTemplate' class='searchResultsPage clearfix'>
 
 	<!-- the div is use to show a detailed view of a product. should be hidden by default. -->
@@ -1836,7 +1877,7 @@ The 'data-action' attribute is used to assign an onclick.
 	<div id="createAccount">
 		<h1>FIRST-TIMER?</h1>
 		<p>If you have never made a purchase at this web site and have never subscribed to this store's mailing kist, please choose this option.</p>
-		<img class="pointer" src="images/button-create-account.png" onClick="return showContent('customer',{'show':'crateaccount'});" alt="Create Account" />
+		<img class="pointer" src="images/button-create-account.png" onClick="return showContent('customer',{'show':'myaccount'});" alt="Create Account" />
 	</div>
 </div>
 <!-- this div will appear after a successful login. if you bind a new action to the button, best to empty the div and re-add the button, so the actions don't statck. -->
