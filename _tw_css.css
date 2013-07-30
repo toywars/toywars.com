@@ -2265,6 +2265,9 @@ table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
     padding: 0;
     text-align: left;
 }
+.btnFooterSubscribe{
+	 background-image:url(images/button-footer-subscribe.png);
+}
 
 
 

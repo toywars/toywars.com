@@ -527,21 +527,25 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 						<li><a href="#customer?show=orders">Previous Orders</a></li>																								
 					</ul>	
 					<div id="footerSubscribe">
-						<form onSubmit="app.ext.store_crm.u.handleSubscribe('subscribeFrm'); return false" name="subscribeFrm" id="subscribeFrm" action="#">
-						<table>
-							<tr>
-								<td>STAY UP-TO-DATE</td>
-							</tr>
-							<tr>
-								<td><input type="text" id="subscribeFullname" name="fullname" size="30" maxlength="50" value="Full Name" /></td>
-							</tr>
-							<tr>
-								<td><input type="email" id="subscribeLogin" name="login" size="30" maxlength="50"  value="Email Address" /></td>
-							</tr>
-							<tr>
-								<td><img id="btnFooterSubscribe" src="images/button-footer-subscribe.png" alt="Get Me In The Loop" /></td>
-							</tr>
-						</table>
+ 						<form action='#' id='subscribeFrm' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe('subscribeFrm'); return false">						
+                            <table>
+                                <tr>
+                                    <td>STAY UP-TO-DATE</td>
+                                </tr>
+                                <tr>
+                                	<fieldset class='userInfo'>
+                                    <td><input type="text" name='fullname' value='' placeholder="Full Name" class="subName" id='subscribeFullname' /></td>
+                                </tr>
+                                <tr>	
+                                    <td><input type="email" name='login' value='' placeholder="   E-mail Address" class="subEmail" id='subscribeLogin' /></td>
+                                </tr>
+                                <tr>
+                                    <td><fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'>
+                                    <input class="btnFooterSubscribe pointer" type="submit" value="Sign Up!" id="" />
+                                </fieldset>
+                                    <!--<img id="btnFooterSubscribe" src="images/button-footer-subscribe.png" alt="Get Me In The Loop" />--></td>
+                                </tr>
+                            </table>
 						</form>	
 					</div>																								
 				</div>
