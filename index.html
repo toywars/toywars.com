@@ -20,7 +20,7 @@ var _gaq = _gaq || {'push':function(){}} //here for testing. REPLACE BEFORE DEPL
 var myCreole;
 
 var app = {vars:{
-	"release":"201320.am",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"201320.an",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"_clientid":"zmvc",
 	"baseURL":"", //used in non-local mode.
 	"checkoutAuthMode" : "active",//can be passive, active or required
@@ -532,8 +532,8 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                                 <tr>
                                     <td>STAY UP-TO-DATE</td>
                                 </tr>
+                                <fieldset class='userInfo'>
                                 <tr>
-                                	<fieldset class='userInfo'>
                                     <td><input type="text" name='fullname' value='' placeholder="Full Name" class="subName" id='subscribeFullname' /></td>
                                 </tr>
                                 <tr>	
@@ -542,9 +542,9 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                                 <tr>
                                     <td><fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'>
                                     <input class="btnFooterSubscribe pointer" type="submit" value="Sign Up!" id="" />
-                                </fieldset>
                                     <!--<img id="btnFooterSubscribe" src="images/button-footer-subscribe.png" alt="Get Me In The Loop" />--></td>
                                 </tr>
+                                </fieldset>
                             </table>
 						</form>	
 					</div>																								
