@@ -559,6 +559,10 @@ CUSTOMER PAGES
 #subscribeFormContainer li	{list-style:none;}
 #subscribeFormContainer .userInfo label, #changePasswordForm label	{width:120px; display:inline-block; margin-right:10px;}
 .subscriberLists label	{width:300px;}
+.userInfo{
+	border: medium none;
+    margin-top: -5px;
+}
 
 
 /****** ORDER HISTORY AND INVOICE ******/
@@ -2266,7 +2270,14 @@ table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
     text-align: left;
 }
 .btnFooterSubscribe{
-	 background-image:url(images/button-footer-subscribe.png);
+	background-image:url(images/button-footer-subscribe.png);
+    border: medium none;
+    height: 34px !important;
+    width: 200px !important;
+}
+.subscriberLists{
+	padding:0;
+	margin-top:10px;
 }
 
 
