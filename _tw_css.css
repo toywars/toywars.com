@@ -398,7 +398,7 @@ div#gotAccount1 span#lblLoginPassword{font-family: Helvetica; font-size: 12px; l
 			font-size: 12px;
 			height: 24px;
 			width: 237px;
-			margin:0 0 20px;
+			margin:0 0 10px;
 		}
 	div#gotAccount input#modalLoginLogin
 	{
@@ -548,7 +548,7 @@ CUSTOMER PAGES
 
 
 /****** LOGIN MODAL ******/
-#loginFormForModal fieldset	{border:0; margin:30px 0 0 16px;}
+#loginFormForModal fieldset	{border:0; margin:15px 0 0 16px;}
 .loginOption fieldset div	{margin-bottom:12px;}
 .loginOption label	{width:120px; text-align:right; display:block; float:left; clear:left;}
 .loginOption label:after	{margin-right:12px; content:":"}
@@ -2253,7 +2253,18 @@ table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
 .productPage table.prodViewerContainer{
 	width:940px;
 }
-
+#recoverPasswordContainer{
+	margin-top: 95px;
+}
+#recoverPasswordContainer form fieldset{
+	margin-top: -10px;
+}
+#modalLoginForm fieldset p{
+	font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
 
 
 

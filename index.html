@@ -1868,18 +1868,34 @@ The 'data-action' attribute is used to assign an onclick.
 <form action='#' onSubmit='app.ext.myRIA.u.loginFrmSubmit($("#modalLoginlogin").val(),$("#modalLoginpassword").val()); return false;' id='modalLoginForm'>
 			<input type='hidden' name='loginCallback' id='loginCallback' value='' /><!-- used to save a callback action in -->
 			<fieldset>
-	<input type='email' class='zform_textbox zform_email'  name='login' id='modalLoginlogin' value='' size='25' />
-	<input type='password' class='zform_textbox zform_password'   name='password' id='modalLoginpassword' value='' size='25' />
+	<p>Email</p>
+    <input type='email' class='zform_textbox zform_email'  name='login' id='modalLoginlogin' value='' size='25' />
+	<p>Password</p>
+    <input type='password' class='zform_textbox zform_password'   name='password' id='modalLoginpassword' value='' size='25' />
         <input type='image' src="images/button-login-to-my-account.png" value='log in' class='ui-button-text ui-button ui-state-default ui-corner-all ' style="height:54px; width:240px; padding:0px; border:0px; margin:0px;"/>
 			</fieldset>
 		</form>
-		<p><a href="#" onClick="app.ext.store_crm.calls.appBuyerPasswordRecover.init($('#modalLoginLogin').val(),{'callback':'showMessaging','message':'Thank you, will receive an email shortly','targetID':'loginMessaging'}); app.model.dispatchThis('immutable'); return false;">Forgot your username or password?</a></p>
 	</div>
 	<div id="createAccount">
 		<h1>FIRST-TIMER?</h1>
 		<p>If you have never made a purchase at this web site, feel free to sign up for an account at checkout.</p>
 		<!--<img class="pointer" src="images/button-create-account.png" onClick="return showContent('customer',{'show':'myaccount'});" alt="Create Account" />-->
-	</div>
+		<div id='recoverPasswordContainer'>
+            <hr />
+            
+            <h3 class='marginBottom'>Recover Password</h3>
+            <div id='recoverPasswordMessaging'></div>
+            <form action='#' onSubmit="app.calls.appBuyerPasswordRecover.init($('#passwordRecoveryLogin').val(),{'callback':'showMessaging','message':'Thank you, will receive an email shortly','targetID':'recoverPasswordMessaging'}); app.model.dispatchThis('immutable'); return false;">
+            <fieldset>
+            <div class='marginBottom'><label for='passwordRecoveryLogin'>Login/Email</label> <input type='text' name='login' required='required' id='passwordRecoveryLogin' size='25' /></div>
+            
+            <div><input type='submit' class='ui-button-text ui-button ui-state-default ui-corner-all ' value='Email Password to Me' /></div>
+            
+            </fieldset>
+            </form>
+
+        </div><!-- /recoverPasswordContainer -->
+    </div>
 </div>
 <!-- this div will appear after a successful login. if you bind a new action to the button, best to empty the div and re-add the button, so the actions don't statck. -->
 	<div id='loginSuccessContainer' class='center displayNone'>
