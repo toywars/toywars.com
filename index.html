@@ -528,24 +528,14 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 					</ul>	
 					<div id="footerSubscribe">
  						<form action='#' id='subscribeFrm' name='subscribeFrm' onSubmit="app.ext.store_crm.u.handleSubscribe('subscribeFrm'); return false">						
+                            <p>STAY UP-TO-DATE</p>
                             <fieldset class='userInfo'>
-                                <table>
-                                    <tr>
-                                        <td>STAY UP-TO-DATE</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="text" name='fullname' value='' placeholder="Full Name" class="subName" id='subscribeFullname' /></td>
-                                    </tr>
-                                    <tr>	
-                                        <td><input type="email" name='login' value='' placeholder="   E-mail Address" class="subEmail" id='subscribeLogin' /></td>
-                                    </tr>
-                                    <tr>
-                                        <td><fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'></fieldset>
-                                        <input class="btnFooterSubscribe pointer" type="submit" value="" id="" />
-                                        <!--<img id="btnFooterSubscribe" src="images/button-footer-subscribe.png" alt="Get Me In The Loop" />--></td>
-                                    </tr>
-                                </table>
+                                <input type="text" name='fullname' value='' placeholder="Full Name" class="subName" id='subscribeFullname' />
+                                <input type="email" name='login' value='' placeholder="E-mail Address" class="subEmail" id='subscribeLogin' />
                             </fieldset>
+                            <fieldset data-bind="var:newsletters(@lists); format:subscribeCheckboxes; extension:store_crm;" class='borderNone subscriberLists'></fieldset>
+                            <input type='submit' class='btnFooterSubscribe' value='' />
+                            <!--<img id="btnFooterSubscribe" src="images/button-footer-subscribe.png" alt="Get Me In The Loop" />-->
 						</form>	
 					</div>																								
 				</div>

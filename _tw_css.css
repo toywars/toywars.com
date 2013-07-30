@@ -99,7 +99,20 @@ div#footer div#footerContent div#footerLinks > ul li a{color: #FFFFFF; text-deco
 div#footer div#footerContent div#footerLinks > ul li a:hover{text-decoration: underline;}
 div#footer div#footerContent div#footerLinks > ul li:first-child, div#footer div#footerContent div#footerSubscribe table tr td:first-child
 {color: #666666; font-family:'Conv_BebasNeue',Sans-Serif; font-size: 30px;}
-div#footer div#footerContent div#footerLinks div#footerSubscribe{float: left; position: relative; top:60px;}						
+div#footer div#footerContent div#footerLinks div#footerSubscribe{ float: left;
+    position: relative;
+    top: 60px;
+	width: 225px;}	
+	div#footer div#footerContent div#footerLinks div#footerSubscribe form#subscribeFrm p{
+	 color: #666666;
+    font-family: 'Conv_BebasNeue',Sans-Serif;
+    font-size: 30px;	
+	}
+.userInfo input{
+	height: 20px;
+    margin-bottom: 10px;
+    width: 190px;
+}
 div#footer div#footerContent div#footerLinks div#footerSubscribe table{}					
 div#footer div#footerContent div#footerLinks div#footerSubscribe table tr td{}
 div#footer div#footerContent div#footerLinks div#footerSubscribe table tr:not(:first-child) td{padding-top:6px;}						
@@ -561,7 +574,8 @@ CUSTOMER PAGES
 .subscriberLists label	{width:300px;}
 .userInfo{
 	border: medium none;
-    margin-top: -5px;
+    margin-top: 0;
+	padding: 0;
 }
 
 
