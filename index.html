@@ -157,7 +157,7 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                     <img src="images/account-icon.png" alt="">
                     <span class="fl">Welcome,
                         <span class="loginShow username" onClick="return showContent('customer',{'show':'myaccount'});" ></span> <span class="loginShow"> <a href="#" onClick="app.ext.myRIA.u.handleLogoutActions(); return false;">Log Out</a></span>
-                        <span class="loginHide">Guest! <a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Login  </a><span>or</span> <a href="#customer?show=createaccount" class='bindByAnchor' id="account">Sign-Up</a></span>
+                        <span class="loginHide">Guest! <a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Login  </a><span>or</span> <a href="#customer?show=myaccount" class='bindByAnchor' id="account">Sign-Up</a></span>
                     </span>
                     <img src="images/view-cart-icon.png" alt="View Cart" />
                     <p><span class="cartItemCount">0</span> Items in your Shopping Cart <a href="#" onClick="return showContent('cart',{});">VIEW CART</a></p>
@@ -1251,15 +1251,15 @@ also email us at <a href="mailto:help@toywars.com">help@toywars.com</a>. </div>
 </div><!-- /companyTemplate -->
 
 
+
 <!-- loadingBG needed on this for app init (content may take a moment to load) -->
 <div id='customerTemplate' class='clearfix'>
-	<!--
-<div class='sideline' >
+
+	<div class='sideline' >
 	<nav id='customerNav'>
 	<ul class='listStyleNone noPadOrMargin'>
-<!-- before restoring this, test cuz news form on left was causing some conflicts -->
-		<!--
-<li><a href='#customer?show=subscriberLists'>Newsletter Subscription</a></li>
+<!-- before restoring this, test cuz news form on left was causing some conflicts
+		<li><a href='#customer?show=subscriberLists'>Newsletter Subscription</a></li> -->
 		<li><a href='#customer?show=myaccount'>My Account</a></li>
 		<li><a href='#customer?show=changepassword'>Change Password</a></li>
 		<li><a href='#customer?show=orders'>Order History</a></li>
@@ -1268,9 +1268,10 @@ also email us at <a href="mailto:help@toywars.com">help@toywars.com</a>. </div>
 	</ul>
 	</nav>
 	</div>
--->
-<div class='mainColumn'>
+
+	<div class='mainColumn'>
 <!-- .textContentArea is used as a selector because IE8 doesn't play well  with tag type article as a selector -->
+
 <!--
 newsletterArticle is used for buyers who are not logged in or do not have an account.
 subscribeListsArticle is used for authenticated buyers
@@ -1876,8 +1877,8 @@ The 'data-action' attribute is used to assign an onclick.
 	</div>
 	<div id="createAccount">
 		<h1>FIRST-TIMER?</h1>
-		<p>If you have never made a purchase at this web site and have never subscribed to this store's mailing kist, please choose this option.</p>
-		<img class="pointer" src="images/button-create-account.png" onClick="return showContent('customer',{'show':'myaccount'});" alt="Create Account" />
+		<p>If you have never made a purchase at this web site, feel free to sign up for an account at checkout.</p>
+		<!--<img class="pointer" src="images/button-create-account.png" onClick="return showContent('customer',{'show':'myaccount'});" alt="Create Account" />-->
 	</div>
 </div>
 <!-- this div will appear after a successful login. if you bind a new action to the button, best to empty the div and re-add the button, so the actions don't statck. -->
