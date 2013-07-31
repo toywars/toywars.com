@@ -1767,13 +1767,16 @@ The 'data-action' attribute is used to assign an onclick.
 		<span data-bind="var: address(bill_lastname);format:text;"  title='last name'></span>
 	</div>
 	<div class='address'>
-		<div data-bind="var: address(bill_address1);format:text;"  title='address'></div>
-		<div data-bind="var: address(bill_address2);format:text;"  title='address 2'></div>
-		<span data-bind="var: address(bill_city);format:text;"  title='city'></span>,
-		<span data-bind="var: address(bill_region);format:text;"  title='state'></span>.
-		<span data-bind="var: address(bill_postal);format:text;"  title='zip'></span>
-		<div data-bind="var: address(bill_countrycode);format:text;" title='country'></div>
+		<div data-bind="var: address(bill/address1);format:text;"  title='address'></div>
+    <div data-bind="var: address(bill/address2);format:text;"  title='address 2'></div>
+
+    <span data-bind="var: address(bill/city);format:text;"  title='city'></span>,
+    <span data-bind="var: address(bill/region);format:text;"  title='state'></span>.
+    <span data-bind="var: address(bill/postal);format:text;"  title='zip'></span>
+    <div data-bind="var: address(bill/countrycode);format:text;" title='country'></div>
+
 	</div>
+
 </address>
 <!-- used in the my account area -->
 <address id='shipAddressTemplate' class='ui-widget ui-widget-content ui-corner-all marginBottom '>
@@ -1783,13 +1786,17 @@ The 'data-action' attribute is used to assign an onclick.
 		<span data-bind="var: address(ship_lastname);format:text;"  title='last name'></span>
 	</div>
 	<div class='address'>
-		<div data-bind="var: address(ship_address1);format:text;"  title='address'></div>
-		<div data-bind="var: address(ship_address2);format:text;"  title='address 2'></div>
-		<span data-bind="var: address(ship_city);format:text;"  title='city'></span>,
-		<span data-bind="var: address(ship_region);format:text;"  title='state'></span>.
-		<span data-bind="var: address(ship_postal);format:text;"  title='zip'></span>
-		<div data-bind="var: address(ship_countrycode);format:text;" title='country'></div>
+				<div data-bind="var: address(ship/address1);format:text;"  title='address'></div>
+		<div data-bind="var: address(ship/address2);format:text;"  title='address 2'></div>
+
+		<span data-bind="var: address(ship/city);format:text;"  title='city'></span>,
+		<span data-bind="var: address(ship/region);format:text;"  title='state'></span>.
+		<span data-bind="var: address(ship/postal);format:text;"  title='zip'></span>
+		<div data-bind="var: address(ship/countrycode);format:text;" title='country'></div>
+
+
 	</div>
+
 </address>
 <table class='orderContentsTable' data-app-role='invoiceContainer' id='invoiceTemplate'>
 <tr>
