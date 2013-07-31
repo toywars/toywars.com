@@ -2272,10 +2272,25 @@ table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
 	width:940px;
 }
 #recoverPasswordContainer{
-	margin-top: 95px;
+	margin-top: 90px;
+}
+#recoverPasswordContainer h3{
+	color: #FFFFFF;
+    font-family: 'Conv_BebasNeue';
+    font-size: 36px;
+    text-align: center;
 }
 #recoverPasswordContainer form fieldset{
-	margin-top: -10px;
+	margin-left: 27px;
+    margin-top: -25px;
+}
+#recoverPasswordContainer form fieldset div.marginBottom label{
+	text-align:left;
+}
+#recoverPasswordContainer form fieldset div input.ui-button{
+	border: 2px outset #CCCCCC !important;
+    border-radius: 3px 3px 3px 3px;
+	width: 192px;
 }
 #modalLoginForm fieldset p{
 	font-size: 16px;
@@ -2293,6 +2308,11 @@ table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
 	padding:0;
 	margin-top:10px;
 }
-
+#recoverPasswordMessaging div div p.anyMessage{
+	color: black;
+    font-size: 16px;
+    left: 30px;
+    top: 220px;
+}
 
 
