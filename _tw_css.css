@@ -290,7 +290,6 @@ and override using classes or id's as needed.
     margin: 0 auto;
     max-width: 948px;}
 .midmain .productList li{font-size:.8em;border: 2px solid #FFFFFF; box-shadow: 1px 1px 5px 1px #222222; background:#fff; height: 225px; margin-left: 0; margin-right: 20px; position: relative; text-align: center; max-width:213px;}
-.midmain .productList li img.prodThumb{ width:213px;}
 .midmain .prodThumbContainer{ width:215px !important;}
 .productList li, .categoryList li{font-size:.8em;}
 .productList h5{ min-height:50px; width:180px; margin:20px auto 0;}
@@ -2012,17 +2011,17 @@ div.container div.nav div.navContent > ul > li{
     vertical-align: text-top !important;
 }
 .hotItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .hotItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchBestSellersPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2056,23 +2055,23 @@ div.container div.nav div.navContent > ul > li{
     width: 225px;
 	position:relative;
 	float:left;
-	margin-left:136px;
+	margin-left:15px;
 }
 #homeProdSearchFresh li.searchResultsProduct{
 	float:left;
 }
 .freshItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .freshItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchFreshPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2113,17 +2112,17 @@ div.container div.nav div.navContent > ul > li{
 	float:left;
 }
 .hotItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .hotItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchBestSellersPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2157,23 +2156,23 @@ div.container div.nav div.navContent > ul > li{
     width: 225px;
 	position:relative;
 	float:left;
-	margin-left:136px;
+	margin-left:15px;
 }
 #homeProdSearchPreorder li.searchResultsProduct{
 	float:left;
 }
 .preorderItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .preorderItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchPreorderPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2197,6 +2196,58 @@ div.container div.nav div.navContent > ul > li{
     right: 10px;
     top: 5px;
 }
+
+/*LIST4 ITEMS LIST***/
+#homeProdSearchList4{
+	 left: 0 !important;
+}
+.homeProdSearchList4Cont{
+	height: 230px;
+    width: 225px;
+	position:relative;
+	float:left;
+	margin-left:15px;
+}
+#homeProdSearchList4 li.searchResultsProduct{
+	float:left;
+}
+.list4ItemsNext{
+	bottom: 105px;
+    position: absolute;
+    right: 19px;
+}
+.list4ItemsPrev{
+	bottom: 105px;
+    left: 15px;
+    position: absolute;
+}
+#homeProdSearchList4Page{
+	bottom: 105px;
+    left: 55px;
+    position: absolute;
+}
+#homeProdSearchList4Page a{
+	display: block;
+    float: left;
+    height: 10px;
+    margin-right: 15px;
+    width: 10px;
+	background-image:url(images/h_specialty_item_pagination_inactive.png);
+}
+#homeProdSearchList4Page a.selected{
+	background-image:url(images/h_specialty_item_pagination_active.png);
+	
+}
+#homeProdSearchList4Page a span{
+	display:none;
+}
+.hpSpecialtyListLogo{
+	position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+
 
 .tagsContainer{
 	height: 77px;
@@ -2313,6 +2364,12 @@ table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
     font-size: 16px;
     left: 30px;
     top: 220px;
+}
+div.caroufredsel_wrapper ul li.ProductListStyles{
+	width:213px;
+	height:225px;
+}
+.prodListContentCont{
 }
 
 

@@ -145,27 +145,44 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 	}
 	carouselHPPreItems = foo5;
 	setTimeout(carouselHPPreItems, 2000);
+	
+	//**LIST4 ITEMS**
+	var carouselHPList4Items;
+	function foo6(){ $("#homeProdSearchList4").carouFredSel
+	({
+		width   : 220,
+		height	: 235,
+		items   : 1,
+		scroll: 1,
+		auto : false,
+		next: ".list4ItemsNext",
+		prev: ".list4ItemsPrev",
+		pagination  : "#homeProdSearchList4Page"
+	});
+	}
+	carouselHPList4Items = foo6;
+	setTimeout(carouselHPList4Items, 2100);
 		
 		
 		
 	//**HOMEPAGE BOTTOM CATEGORY CAROUSEL**
 	var carouselBottomCats;
-	function foo6(){ $(".catCarousel").carouFredSel({
+	function foo7(){ $(".catCarousel").carouFredSel({
 			auto : false,
 			items   : 1,
 			scroll: 1
 	});}
-	carouselBottomCats = foo6;
+	carouselBottomCats = foo7;
 	setTimeout(carouselBottomCats, 2000);
 	
 	var carouselBottomCatTitles;
-	function foo7(){ $(".catNavContent").carouFredSel({
+	function foo8(){ $(".catNavContent").carouFredSel({
 			auto : false,
 			items   : 3,
 			height: 63,
 			scroll: 1
 	});}
-	carouselBottomCatTitles = foo7;
+	carouselBottomCatTitles = foo8;
 	setTimeout(carouselBottomCatTitles, 2000);
 	
 	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL
