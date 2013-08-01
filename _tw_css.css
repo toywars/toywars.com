@@ -2371,5 +2371,10 @@ div.caroufredsel_wrapper ul li.ProductListStyles{
 }
 .prodListContentCont{
 }
+.dropdownImageCont{
+	float: left;
+    height: 275px;
+    width: 225px;
+}
 
 
