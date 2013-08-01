@@ -42,22 +42,7 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 	
 	var $context = $(app.u.jqSelector('#',P.parentID));
 	
-	//RANDOM SHIPPING LOGO GENERATOR
-	$(".shipLogo1").hide();
-	$(".shipLogo2").hide();
-	$(".shipLogo3").hide();
-	$(".shipLogo4").hide();
 	
-	var  randomLogo = Math.floor((Math.random()*4)+1);
-	if(randomLogo === 1){
-		$(".shipLogo1").show();
-	}else if(randomLogo === 2){
-		$(".shipLogo2").show();
-		}else if(randomLogo === 3){
-			$(".shipLogo3").show();
-			}else if(randomLogo === 4){
-				$(".shipLogo4").show();
-			}
 			
 	//TOP SLIDESHOW BANNER
 	var carouselHPBanner;
@@ -490,6 +475,29 @@ app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {app.
 
 //group any third party files together (regardless of pass) to make troubleshooting easier.
 app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js']);
+
+
+//RANDOM SHIPPING LOGO GENERATOR
+	var  randomLogo = 1;
+	function logoRandomizer() {
+	$(".shipLogo1").fadeOut(1000);
+	$(".shipLogo2").fadeOut(1000);
+	$(".shipLogo3").fadeOut(1000);
+	$(".shipLogo4").fadeOut(1000);
+	randomLogo = Math.floor((Math.random()*4)+1);
+	if(randomLogo === 1){
+		//$(".shipLogo1").delay(1000).fadeIn(1000);
+		$(".shipLogo1").fadeIn(1000);
+	}else if(randomLogo === 2){
+		$(".shipLogo2").fadeIn(1000);
+		}else if(randomLogo === 3){
+			$(".shipLogo3").fadeIn(1000);
+			}else if(randomLogo === 4){
+				$(".shipLogo4").fadeIn(1000);
+			}
+	}
+	
+	setInterval('logoRandomizer()',5000);
 
 
 /*
