@@ -270,8 +270,9 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                              </ul>
                          </div>
                          <div class="dropdownImageCont">
+                         	<a onClick="return showContent('search',{KEYWORDS: 'assassin creed figure'});"><img src="images/drop downs/all-cats.jpg" /></a>
                          </div>
-                         <a href="#" onClick="return showContent('search',{KEYWORDS: 'funko pop'});"><img src="https://static.zoovy.com/img/redford/W900-H100/toywars/dropdownfunkopop4.jpg" /></a>
+                         <!--<a href="#" onClick="return showContent('search',{KEYWORDS: 'funko pop'});"><img src="https://static.zoovy.com/img/redford/W900-H100/toywars/dropdownfunkopop4.jpg" /></a>-->
                      </div>
                      <div id="megamenu1" class="megamenu">
                          <div class="column">                              
@@ -326,7 +327,9 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                                <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'underground toys figure'});">Underground Toys</a></li>
                              </ul>
                          </div>                                                                     
-                         <a href="#"onClick="return showContent('search',{KEYWORDS: 'walking dead figure'});"><img src="https://static.zoovy.com/img/redford/W314-H220/toywars/dropdown_walking_dead2.jpg" /></a>
+                         <div class="dropdownImageCont">
+                         	<a onClick="return showContent('search',{KEYWORDS: 'walking dead figure'});"><img src="images/drop downs/Action-Figures.jpg" /></a>
+                         </div>
                      </div>
                      <div id="megamenu2" class="megamenu">
                          <div class="column">                                          
@@ -374,7 +377,9 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                                  <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'maquette'});">Maquette</a></li>
                              </ul>
                          </div>
-                         <a href="#" onClick="return showContent('search',{KEYWORDS: 'gentle giant preorder'});"><img src="https://static.zoovy.com/img/redford/W314-H220/toywars/dropdown_bibfortuna.jpg" /></a>
+                         <div class="dropdownImageCont">
+                         	<a onClick="return showContent('search',{KEYWORDS: 'game of thrones statue'});"><img src="images/drop downs/statues.jpg" /></a>
+                         </div>
                      </div>
                      <div id="megamenu3" class="megamenu">
                          <div class="column">                                
@@ -433,7 +438,9 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                                  <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'figure'});">Over $100</a></li>                    
                              </ul>
                          </div>
-                         <a href="#"><img src="https://static.zoovy.com/img/redford/W801-H80/toywars/dropdowncomics.jpg" /></a>
+                         <div class="dropdownImageCont">
+                         	<a onClick="return showContent('search',{KEYWORDS: ''});"><img src="images/drop downs/comics.jpg" /></a>
+                         </div>
                      </div>
                      <div id="megamenu4" class="megamenu">
                          <div class="column">                              
@@ -472,7 +479,9 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                                  <li><a href="#" onClick="return showContent('search',{KEYWORDS: 'weta'});">Weta</a></li>
                              </ul>
                          </div>
-                         <a href="#" onClick="return showContent('product',{'pid':'EF01110009-RF'})"><img src="https://static.zoovy.com/img/redford/W241-H338/toywars/dropdown_vader.jpg" /></a>
+                         <div class="dropdownImageCont">
+                         	<a onClick="return showContent('search',{KEYWORDS: 'james bond breather'});"><img src="images/drop downs/props.jpg" /></a>
+                         </div>
                      </div>
                      <div id="megamenu5" class="megamenu">
                          <div class="column">                              
@@ -586,8 +595,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
                     <li><img onClick="return showContent('product',{'pid':'DCD522903'});" src="images/Homepage/topBannerImages/banner3.jpg"/></li>
                     <li><img onClick="return showContent('product',{'pid':'QMSTR-0034-RF'});" src="images/Homepage/topBannerImages/banner4.jpg"/></li>
                     <li><img onClick="return showContent('search',{KEYWORDS: 'walking dead pop'});" src="images/Homepage/topBannerImages/banner5.jpg"/></li>
-                    <li><img onClick="return showContent('product',{'pid':'DCD527750'});" src="images/Homepage/topBannerImages/banner6-1.jpg"/></li>
-                    <li><img onClick="return showContent('product',{'pid':'DCD612281'});" src="images/Homepage/topBannerImages/banner7.jpg"/></li>
+                    <li><img onClick="return showContent('product',{'pid':'DCD527750'});" src="images/Homepage/topBannerImages/banner6.jpg"/></li>
+                    <li><img onClick="return showContent('product',{'pid':'FCSPCSTR380-RF'});" src="images/Homepage/topBannerImages/banner7.jpg"/></li>
                 </ul>
             </div>
             <div style="clear:both;"></div>
@@ -1506,7 +1515,7 @@ So the cart template should contain these two elements and the extension should 
 		<div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
 	</div>
      </ul>
-   <div style="border-top:#897c68 solid 1px; margin:10px 0 0;">
+   <div class="cartBottomArea" style="border-top:#897c68 solid 1px; margin:10px 0 0;">
    <div class="right">
 		<p>HELPFUL LINKS</p>
 		<ul>
@@ -1574,9 +1583,9 @@ So the cart template should contain these two elements and the extension should 
 	<div class='checkoutButtonsContainer'>
 		<span title='proceed to secure checkout' style="border-bottom:1px solid #cccccc; padding:0 0 10px;"><button class='ui-button ui-button-text ui-state-default ui-corner-all checkoutButton' onClick="showContent('checkout',{});"><img src="images/button-checkout.png" width="180" height="54"></button></span>
         <img src="images/cart-credit-cards-accepted.png" width="171" height="23"> 
-        <img src="images/buywith.gif" width="160" height="30" style="margin:15px 0 15px 0px;"> 
+        <!--<img src="images/buywith.gif" width="160" height="30" style="margin:15px 0 15px 0px;">--> 
         <span id='paypalECButton' data-bind='var: cart(cart/cartid); format:paypalECButton;'></span>
-		<span id='googleCheckoutButton' class='pointer' data-bind='var: cart(sum/items_total); format:googleCheckoutButton;'></span>
+		<!--<span id='googleCheckoutButton' class='pointer' data-bind='var: cart(sum/items_total); format:googleCheckoutButton;'></span>-->
 		<span id='amazonCheckoutButton' class='pointer' data-bind='var: cart(cart/cartid); format:amazonCheckoutButton;'></span>
         <!--<img src="images/amazon.gif" width="160" height="30" >--> 
 	</div>

@@ -1,5 +1,5 @@
 /***TRANFERRED CODE FROM OLD CSS BEFORE FRAMEWORK RESTORE**/
-body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif;}
+body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif; min-width:1200px;}
 
 @font-face{font-family:'Anton'; font-style:normal; font-weight:400; src:local('Anton'), url(http://themes.googleusercontent.com/static/fonts/anton/v3/tilmJBBU81h1G7ZsdY3Hmw.woff) format('woff');}
 @font-face{font-family:'Conv_BebasNeue'; src: url('fonts/BebasNeue.eot'); src: url('fonts/BebasNeue.otf'); src: local('☺'), url('fonts/BebasNeue.woff') format('woff'), url('fonts/BebasNeue.ttf') format('truetype'), url('fonts/BebasNeue.svg') format('svg'); font-weight:normal; font-style:normal;}
@@ -28,7 +28,7 @@ note - wait should only be used in cases where the entire template is being relo
 note - background- are use instead of background in case element this is applied to has a bgcolor and it's !important. (like a modal parent)
 */
 
-#modalCart{background:#b7a58b;}
+#modalCart{background:#b7a58b; overflow:scroll;}
 .loadingBG{background-image:url(loading.gif) !important; background-repeat:no-repeat !important; background-position:center center; min-height:100px !important; min-width:100px;}
 li.loadingBG, .wait{background:url(wait.gif) no-repeat top center !important; min-height:20px !important; min-width:20px;}
 span.wait{display:inline-block;}
@@ -281,7 +281,7 @@ and override using classes or id's as needed.
 .lineItemProdlist .prodThumb{margin:10px 20px; width:100px; height:100px;}
 .lineItemProdlist button{margin:0 20px 0 0;}
 .categoryList > li{width:150px; height:200px;}
-#cartStuffList{margin: -10px 0 0 -10px;width: 756px;}
+#cartStuffList{margin: -10px 0 0 -10px;width: 730px;}
 #cartStuffList li{ background:#c9bca8;}
 #cartStuffList li h4{ font-size:14px;}
 .productList h4, .productList h5, .productList h6, .categoryList h4, .categoryList h5, .categoryList h6	{padding:0; margin:0; font-size:12px;} /* h4 - h6 are used in default templates for name, price, etc */
@@ -546,9 +546,19 @@ cartTemplate
 ***************************************************/
 
 
-.cartContainer	{width:100%;}
+.cartContainer	{width:89%;}
+#cartTemplateForm{
+	width:1015px;
+}
 
 #mainContentArea_cart .continueShoppingButton	{display:none;} /* used in modal cart only */
+
+#paypalECButton{
+	margin-top:15px;
+}
+.cartBottomArea{
+	width: 731px;
+}
 
 /***************************************************
 
@@ -667,8 +677,8 @@ CART
 .cartSummaryTotalsContainer .cartSummaryContainer	{padding:12px;}
 .cartZipCodeContainer, .cartSummaryContainer	{margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid #cccccc;}
 .cartAltButtonsContainer{border-bottom:0px solid #cccccc;}
-.cartStuffContainer	{width:77%; vertical-align:top; padding-right:20px;}
-.cartSummaryTotalsContainer {width:23%; padding-left:12px; font-size:.8em;} /* by default, this is the right column */
+.cartStuffContainer	{width:1%; vertical-align:top; padding-right:20px;}
+.cartSummaryTotalsContainer {width:1%; padding-left:12px; font-size:.8em;} /* by default, this is the right column */
 
 .checkoutButtonsContainer span	{display:block; float:left; margin:0 12px 12px 0;}
 td.cartStuffContainer .right {
@@ -1703,7 +1713,7 @@ div.container div#footer{
 	opacity:.65;
 }
 .hpSSTopPage6{
-	background-image:url(images/Homepage/topBannerImages/banner6-1Thumb.jpg) !important;
+	background-image:url(images/Homepage/topBannerImages/banner6Thumb.jpg) !important;
 }
 .hpSSTopPage6:hover{
 	opacity:.65;
@@ -2375,6 +2385,7 @@ div.caroufredsel_wrapper ul li.ProductListStyles{
 	float: left;
     height: 275px;
     width: 225px;
+	cursor:pointer;
 }
 
 
