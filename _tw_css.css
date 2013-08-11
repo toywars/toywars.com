@@ -2260,17 +2260,17 @@ div.container div.nav div.navContent > ul > li{
 
 
 .tagsContainer{
-	height: 77px;
+	height: 70px;
     position: absolute;
     right: 0;
     top: 0;
     width: 74px;
 	z-index: 1;
 }
-.tagsContainer span.is_fresh{
+.tagsContainer span.is_newarrival{
 	background-image:url(images/new_item_logo.png);
     display: block;
-    height: 77px;
+    height: 70px;
     width: 74px;
     z-index: 2;
 	position:absolute;
@@ -2278,7 +2278,7 @@ div.container div.nav div.navContent > ul > li{
 .tagsContainer span.is_bestseller{
 	background-image: url(images/hot_item_logo.png);
     display: block;
-    height: 77px;
+    height: 70px;
     width: 74px;
     z-index: 4;
 	position:absolute;
@@ -2286,7 +2286,7 @@ div.container div.nav div.navContent > ul > li{
 .tagsContainer span.is_preorder{
 	background-image:url(images/preorder_item_logo.png);
     display: block;
-    height: 77px;
+    height: 70px;
     width: 74px;
     z-index: 3;
 	position:absolute;
@@ -2382,10 +2382,14 @@ div.caroufredsel_wrapper ul li.ProductListStyles{
 .prodListContentCont{
 }
 .dropdownImageCont{
-	float: left;
+	float: right;
     height: 275px;
     width: 225px;
 	cursor:pointer;
 }
-
+.tagSprite{
+}
+#faqArticle{
+	width: 734px;
+}
 
