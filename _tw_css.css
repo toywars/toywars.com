@@ -2392,4 +2392,14 @@ div.caroufredsel_wrapper ul li.ProductListStyles{
 #faqArticle{
 	width: 734px;
 }
+.boldText{
+font-weight:bold;
+text-decoration:underline;
+}
+.warningSpacer{
+margin-left:30px;
+}
+.normalText{
+font-weight:normal;
+}
 

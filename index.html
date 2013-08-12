@@ -523,12 +523,13 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 					</ul>
 					<ul>
 						<li>FIND IT HERE</li>
-						<li><a href="#" onClick="return showContent('homepage',{});">All Categories</a></li>	
+						<li>Coming Soon!</li>
+						<!--<li><a href="#" onClick="return showContent('homepage',{});">All Categories</a></li>	
 						<li><a href="#" onClick="return showContent('homepage',{});">What's Hot</a></li>
 						<li><a href="#" onClick="return showContent('homepage',{});">New Arrivals</a></li>	
 						<li><a href="#" onClick="return showContent('homepage',{});">Item Type</a></li>
 						<li><a href="#" onClick="return showContent('homepage',{});">By Manufacturer</a></li>
-						<li><a href="#" onClick="return showContent('homepage',{});">Clearance Items</a></li>	
+						<li><a href="#" onClick="return showContent('homepage',{});">Clearance Items</a></li>-->	
 					</ul>
 					<ul>
 						<li>MY ACCOUNT</li>
@@ -929,6 +930,10 @@ this will likely become more flexible in the future. ###
                         <span class='savingsPercentage' data-bind='var: product(pid); format:priceRetailSavingsPercentage; extension:myRIA; pretext: (; posttext:);'></span>
                     </span>-->
                 </div>
+				<section class='marginBottom'>
+					<span data-bind='var: reviews(reviews.average); format:addClass; className:review_;' class='reviewSprite'></span>
+					<span data-bind='var: reviews(reviews.total); format:text;posttext: from ;posttext: reviews; className:numReviews;'></span>
+				</section>
                 <menu data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' class='CRMButtonMenu'>
                     <a href='#' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).parent().attr("data-pid"),"templateID":"reviewFrmTemplate"}); return ;'>See reviews or write one!</a>
                 </menu>
@@ -962,7 +967,7 @@ this will likely become more flexible in the future. ###
                 	<li data-bind='var: product(is:preorder); format:showIfSet;' class="displayNone">
                     	<span data-bind='var: product(zoovy:prod_salesrank); format:yyyymmdd2Pretty; pretext:Estimated release date: ; extension:store_toywars;'></span>
                     </li>
-                    <li data-bind='var: product(zoovy:prod_cpsiawarning); format:showIfSet;' class="displayNone"><img src="images/redalert.gif" width="20" height="17" />WARNING CHOKING HAZARD: Small parts. Not for children under 3 yrs.</li>
+                    <li data-bind='var: product(zoovy:prod_cpsiawarning); format:showIfSet;' class="displayNone"><img src="images/redalert.gif" width="20" height="17" /><span class="boldText">WARNING! CHOKING <div class="warningSpacer">HAZARD</span>: <span class="normalText">Small parts. Not for children under 3 yrs.</span></div></li>
                     <li data-bind='var: product(zoovy:ship_latency); format:showIfSet;' class="displayNone bottomLatency"><img src="images/grayalert.gif" width="20" height="17" /><div data-bind='var: product(zoovy:ship_latency); format:text;pretext:Usually ships in ;posttext: day(s);' class='latency marginBottom'></div></li>
                     <li data-bind='var: product(is:shipfree); format:showIfSet;' class="displayNone"><img src="images/grayalert.gif" width="20" height="17" />Eligible for FREE Shipping</li>
                     <li data-bind='var: product(user:prod_storepickup); format:showIfSet;' class="displayNone"><img src="images/grayalert.gif" width="20" height="17">Available for Store Pick-up</li>
