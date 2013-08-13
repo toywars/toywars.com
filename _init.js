@@ -244,6 +244,9 @@ app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 		
 		
 }]);
+		
+		
+}]);
 	
 	//**COMMENT TO REMOVE AUTO-RESETTING WHEN LEAVING CAT PAGE FOR FILTERED SEARCH**
 	
@@ -318,47 +321,80 @@ app.rq.push(['templateFunction','searchTemplate','onCompletes',function(P) {
 	var $page = $(app.u.jqSelector('#',P.parentID));
 	
 	//****FILTERED SEARCH CODE****
-	$('.fsCheckbox').attr('checked', false);
-	$("#resultsProductListContainer").show(); 
-	$(".searchFilterResults").hide();    
-	app.u.dump("BEGIN searchTemplate onCompletes for filtering");
-	var $form = $("[name='searchPageForm']",'#appFilters').clone().appendTo($('.filterContainerSearch',$page));
-	$form.on('submit.filterSearch',function(event){
-		event.preventDefault()
-		app.u.dump(" -> Filter form submitted.");
-		app.ext.store_filter.a.execFilter($form,$page);
-				});
-	
-		if(typeof app.ext.store_filter.filterMap["searchPage"].exec == 'function')	{
-			app.ext.store_filter.filterMap["searchPage"].exec($form,P)
-			}
-	
-	//make all the checkboxes auto-submit the form.
-		$(":checkbox",$form).off('click.formSubmit').on('click.formSubmit',function() {
-			$form.submit(); 
-			//app.u.dump("Filter search actvated");
-			$("#resultsProductListContainer").hide();  
-			
-			$group1 = $('.fsCheckbox');
-			if($group1.filter(':checked').length === 0){
-				//app.u.dump("All checkboxes removed. Filter search deactivated.");
-				$("#resultsProductListContainer").show(); 
-				$(".searchFilterResults").hide();    
-			}
-			else{
-				//app.u.dump("All checkboxes removed. Filter search still active.");
-				$("#resultsProductListContainer").hide(); 
-				$(".searchFilterResults").show();    
-			}  
-		});
-				
-			
-		
-		$('.resetButtonSearchPage', $context).click(function(){
+	if($page.data('filterAdded'))	{} //filter is already added, don't add again.
+		else	{
+			$page.data('filterAdded',true)
 			$('.fsCheckbox').attr('checked', false);
 			$("#resultsProductListContainer").show(); 
 			$(".searchFilterResults").hide();    
-		});
+			app.u.dump("BEGIN searchTemplate onCompletes for filtering");
+			var $form = $("[name='searchPageForm']",'#appFilters').clone().appendTo($('.filterContainerSearch',$page));
+			$form.on('submit.filterSearch',function(event){
+				event.preventDefault()
+				app.u.dump(" -> Filter form submitted.");
+				app.ext.store_filter.a.execFilter($form,$page);
+						});
+			
+				if(typeof app.ext.store_filter.filterMap["searchPage"].exec == 'function')	{
+					app.ext.store_filter.filterMap["searchPage"].exec($form,P)
+					}
+			
+			//make all the checkboxes auto-submit the form.
+				$(":checkbox",$form).off('click.formSubmit').on('click.formSubmit',function() {
+					$form.submit(); 
+					//app.u.dump("Filter search actvated");
+					$("#resultsProductListContainer").hide();  
+					
+					$group1 = $('.fsCheckbox');
+					if($group1.filter(':checked').length === 0){
+						//app.u.dump("All checkboxes removed. Filter search deactivated.");
+						$("#resultsProductListContainer").show(); 
+						$(".searchFilterResults").hide();    
+					}
+					else{
+						//app.u.dump("All checkboxes removed. Filter search still active.");
+						$("#resultsProductListContainer").hide(); 
+						$(".searchFilterResults").show();    
+					}  
+				});
+						
+					
+				
+				$('.resetButtonSearchPage', $context).click(function(){
+					$('.fsCheckbox').attr('checked', false);
+					$("#resultsProductListContainer").show(); 
+					$(".searchFilterResults").hide();    
+				});
+				
+				
+				//**SEARCH COLLAPSE/EXPAND DATA**//
+				
+				//characterLegend
+				if($('.characterLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+				else {
+				 $('.characterLegend',$context).data('collapseOrExpanded',true).append();
+				 }
+				 
+				 //themeLegend
+				if($('.themeLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+				else {
+				 $('.themeLegend',$context).data('collapseOrExpanded',true).append();
+				 }
+				 
+				 //productLegend
+				if($('.productLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+				else {
+				 $('.productLegend',$context).data('collapseOrExpanded',true).append();
+				 }
+				 
+				  //ManufacturerLegend
+				if($('.ManufacturerLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
+				else {
+				 $('.ManufacturerLegend',$context).data('collapseOrExpanded',true).append();
+				 }
+				 
+				 //**END SEARCH COLLAPSE/EXPAND DATA**//
+		}
 }]);
 
 
