@@ -102,6 +102,44 @@ var store_toywars = function() {
 //that way, two render formats named the same (but in different extensions) don't overwrite each other.
 		renderFormats : {
 			
+			yyyymmdd2Pretty : function($tag, str) {
+				var r = false;
+				if(Number(str)) {
+				 var year = str.substr(0,4)
+				 var month = Number(str.substr(4,2));
+				 var day = str.substr(6,2);
+				 var d = new Date();
+				 d.setFullYear(year, (month - 1), day)
+			//     app.u.dump(" date obj: "); app.u.dump(d);
+			//     app.u.dump(" -> YYYYMMDD2Pretty ["+str+"]: Y["+year+"]  Y["+month+"]  Y["+day+"] ");
+				  r = month+"/"+day+"/"+year;
+				 }
+				else {
+				 app.u.dump("WARNING! the parameter passed into YYYYMMDD2Pretty is not a numder ["+str+"]");
+				 
+				 var convertToNum = '';
+				 convertToNum = str.value;
+				 //app.u.dump(str.value);
+				 if(Number(convertToNum)){
+					 var year = convertToNum.substr(0,4)
+					 var month = Number(convertToNum.substr(4,2));
+					 var day = convertToNum.substr(6,2);
+					 var d = new Date();
+					 d.setFullYear(year, (month - 1), day)
+				//     app.u.dump(" date obj: "); app.u.dump(d);
+				//     app.u.dump(" -> YYYYMMDD2Pretty ["+str+"]: Y["+year+"]  Y["+month+"]  Y["+day+"] ");
+				//app.u.dump(d);
+					 r = month+"/"+day+"/"+year;
+					 app.u.dump(r);
+				 }
+				 else{
+					 app.u.dump("WARNING! the parameter passed into YYYYMMDD2Pretty cannot be converted into a string. ["+str+"]");
+				 }
+			
+				 }
+				$tag.html(r);
+			} //yyyymmdd2Pretty
+			
 				
 			}, //renderFormats
 			
@@ -211,72 +249,11 @@ var store_toywars = function() {
 				app.u.dump(obj);
 			},
 			
-			handleToolTip : function()	{
-				app.u.dump("BEGIN store_toywars.u.handleToolTip.");
-					$('.tipify',$('#appView')).each(function(){
-						var $this = $(this);
-						$this.parent().css('position','relative'); //this is what makes the tooltip appear next to the link instead of off in space.
-						$this.mouseover(function(){	$('.toolTip',$this.parent()).show();}).mouseout(function(){	$('.toolTip',$this.parent()).fadeOut(3000);});
-						});
-				},
-				
-			addItemToCart : function($form,obj)	{
-				app.u.dump("BEGIN myRIA.u.addItemToCart");
-					if($('select[name=#Z]', $form)){
-						if($('select[name=#Z]', $form).val() !== ""){
-							app.u.dump("select[name=#Z] has an option selected, continue with checkout.");
-							obj = obj || {'action':'modal'}
-							if($form && $form.length)	{
-								var cartObj = app.ext.store_product.u.buildCartItemAppendObj($form);
-								if(cartObj)	{
-									if(cartObj)	{
-										app.calls.cartItemAppend.init(cartObj,{},'immutable');
-										app.model.destroy('cartDetail');
-										app.calls.cartDetail.init({'callback':function(rd){
-											if(obj.action === "modal"){
-												showContent('cart',obj);
-												}
-											}},'immutable');
-										app.model.dispatchThis('immutable');
-										}
-									}
-								else	{} //do nothing, the validation handles displaying the errors.
-								}
-							else	{
-								app.u.throwGMessage("WARNING! add to cart $form has no length. can not add to cart.");
-							}
-						}
-						else{
-							app.u.dump("select[name=#Z] doesn't have an option selected, halt checkout.");
-							app.u.throwMessage("Please select a Limited Edition number to proceed with adding product to cart.");
-						}
-					}
-					else{
-						app.u.dump("select[name=#Z] doesn't exist. Continue with checkout normally.");
-						obj = obj || {'action':'modal'}
-							if($form && $form.length)	{
-								var cartObj = app.ext.store_product.u.buildCartItemAppendObj($form);
-								if(cartObj)	{
-									if(cartObj)	{
-										app.calls.cartItemAppend.init(cartObj,{},'immutable');
-										app.model.destroy('cartDetail');
-										app.calls.cartDetail.init({'callback':function(rd){
-											if(obj.action === "modal"){
-												showContent('cart',obj);
-												}
-											}},'immutable');
-										app.model.dispatchThis('immutable');
-										}
-									}
-								else	{} //do nothing, the validation handles displaying the errors.
-								}
-							else	{
-								app.u.throwGMessage("WARNING! add to cart $form has no length. can not add to cart.");
-							}
-					}
-										
-											
-				}, //handleAddToCart
+			getDOWFromDay : function(X)	{
+//				app.u.dump("BEGIN beachmart.u.getDOWFromDay ["+X+"]");
+				var weekdays = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+				return weekdays[X];
+			}
 				
 			}, //u
 

@@ -1193,23 +1193,17 @@ app.ext.myRIA.pageTransition($old,$('#'+infoObj.parentID));
 //if the detail panel is already visible, no need to animate or adjust css on containers.
 				else if($detail.is(':visible'))	{
 //transition out the existing product in view.
-					$detail.children().css({'position':'absolute','z-index':10000,'width':$detail.width()}).animate({'right':1000},'slow','',function(){$(this).empty().remove()})				
+					$detail.children().css({'position':'absolute','z-index':10000,'width':$detail.width()}).animate({'right':1000},'slow','',function(){$(this).empty().remove()})
 					}
 				else	{
 					//class below is used as a selector for setting data() on button bar. don't change.
 					var $buttonBar = $("<div \/>").addClass('buttonBar').css({'position':'absolute','right':0}).prependTo($parent);
 					$buttonBar.data('page-in-focus',$('#resultsProductListContainer').data('page-in-focus')); //used to determine if a page change has occured in next/prev product buttons.
-					
-/***TOY WARS***/	$(".filterContainerSearch").hide();
-/***TOY WARS***/	$("#resultsProductListContainer").css({'width':'240px'});
-/***TOY WARS***/	$(".searchFilterResults").css({'width':'240px'});
+
 					
 //button for turning off preview mode. returns li's to normal state and animates the two 'panes'.
 					$("<button \/>").button().text('close preview').on('click',function(event){
-							app.ext.myRIA.u.revertPageFromPreviewMode($parent);
-/***TOY WARS***/			$(".filterContainerSearch").show();
-/***TOY WARS***/			$("#resultsProductListContainer").css({'width':'745px'});
-/***TOY WARS***/			$(".searchFilterResults").css({'width':'760px'});
+						app.ext.myRIA.u.revertPageFromPreviewMode($parent);
 						}).prependTo($buttonBar);
 
 
@@ -2617,7 +2611,7 @@ buyer to 'take with them' as they move between  pages.
 				$('#loginSuccessContainer').hide(); //contains 'continue' button.
 				$('#loginMessaging, #recoverPasswordMessaging').empty(); //used for success and fail messaging.
 				$('#loginFormContainer, #recoverPasswordContainer').show(); //contains actual form and password recovery form (second id)
-				$('#loginFormForModal').dialog({modal: true,width: ($(window).width() > 500) ? 500 : '90%',autoOpen:false});
+				$('#loginFormForModal').dialog({modal: true,width: ($(window).width() > 700) ? 700 : '90%', height: ($(window).height() > 350) ? 350 : '90%',autoOpen:false});
 				$('#loginFormForModal').dialog('open');
 				
 		
@@ -3008,60 +3002,26 @@ else	{
 //used for adding a single item to the cart, such as from a prodlist w/ an add to cart but no quantity inputs for bulk adding.
 			addItemToCart : function($form,obj)	{
 				app.u.dump("BEGIN myRIA.u.addItemToCart");
-					if($('select[name=#Z]', $form)){
-						if($('select[name=#Z]', $form).val() !== ""){
-							app.u.dump("select[name=#Z] has an option selected, continue with checkout.");
-							obj = obj || {'action':'modal'}
-							if($form && $form.length)	{
-								var cartObj = app.ext.store_product.u.buildCartItemAppendObj($form);
-								if(cartObj)	{
-									if(cartObj)	{
-										app.calls.cartItemAppend.init(cartObj,{},'immutable');
-										app.model.destroy('cartDetail');
-										app.calls.cartDetail.init({'callback':function(rd){
-											if(obj.action === "modal"){
-												showContent('cart',obj);
-												}
-											}},'immutable');
-										app.model.dispatchThis('immutable');
-										}
+				obj = obj || {'action':'modal'}
+				if($form && $form.length)	{
+					var cartObj = app.ext.store_product.u.buildCartItemAppendObj($form);
+					if(cartObj)	{
+						if(cartObj)	{
+							app.calls.cartItemAppend.init(cartObj,{},'immutable');
+							app.model.destroy('cartDetail');
+							app.calls.cartDetail.init({'callback':function(rd){
+								if(obj.action === "modal"){
+									showContent('cart',obj);
 									}
-								else	{} //do nothing, the validation handles displaying the errors.
-								}
-							else	{
-								app.u.throwGMessage("WARNING! add to cart $form has no length. can not add to cart.");
+								}},'immutable');
+							app.model.dispatchThis('immutable');
 							}
 						}
-						else{
-							app.u.dump("select[name=#Z] doesn't have an option selected, halt checkout.");
-							app.u.throwMessage("Please select a Limited Edition number to proceed with adding product to cart.");
-						}
+					else	{} //do nothing, the validation handles displaying the errors.
 					}
-					else{
-						app.u.dump("select[name=#Z] doesn't exist. Continue with checkout normally.");
-						obj = obj || {'action':'modal'}
-							if($form && $form.length)	{
-								var cartObj = app.ext.store_product.u.buildCartItemAppendObj($form);
-								if(cartObj)	{
-									if(cartObj)	{
-										app.calls.cartItemAppend.init(cartObj,{},'immutable');
-										app.model.destroy('cartDetail');
-										app.calls.cartDetail.init({'callback':function(rd){
-											if(obj.action === "modal"){
-												showContent('cart',obj);
-												}
-											}},'immutable');
-										app.model.dispatchThis('immutable');
-										}
-									}
-								else	{} //do nothing, the validation handles displaying the errors.
-								}
-							else	{
-								app.u.throwGMessage("WARNING! add to cart $form has no length. can not add to cart.");
-							}
+				else	{
+					app.u.throwGMessage("WARNING! add to cart $form has no length. can not add to cart.");
 					}
-										
-											
 				}, //handleAddToCart
 
 

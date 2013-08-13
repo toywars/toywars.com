@@ -1,24 +1,72 @@
 Requests for support/implementation:
+- Update limited edition pog so that the title returned is: Choose Limited Edition Number . Talk to TIm about making this change.
+
+dev questions:
+JT:
+- Hot spots feature in magic zoom. Haven't tried using it yet but do you think its possible to use it within the framework?
+
+
 
 all pages:
-- All links will need to be updated once filtered search is implemented so that they link to the appropriate new cat pages.
+- Test for browser compatibility and fix by Monday.
 
-header: 
-- Many links need categories built for them still before I can link them. Inform Stephen.
+header:
+
+Footer:
 
 homepage:
 - Need feedback on last specialty item list. 
 
-category:
-- finish filter forms for all categories.
+Category:
 
 product:
-- image library adding white space to certain images. He wants the whitespace removed without compromising the image quality. If he opts to use magic zoom, problem might correct itself.
-- Build checks to make sure product variations have a value selection made to add to cart. Completed for #z(limited edition) pog. Not sure what other pogs exist.
+
+product lists:
 
 Company:
 - Needs content for almost all pages.
 - all links to customer page need to be made as most links are dead.
 
+Customer:
+- Get testing account from Michael tomorrow to place a test order and view/fix the customer page.
+- Cannot view links yet as no testing account has been made.
+
 search:
+
+cart:
+
+checkout:
+
+product lists:
+
+bugs:
+- Occasionally the cart is not being initialized. No idea what is causing the issue as of yet.
+
+
+
+
+
+
+ROUND 2:
+
+all pages:
+- Add a function for ALL elastic searches. If no results are returned, set an app.u.dump that states that no results were returned.
+- All links will need to be updated once filtered search is implemented so that they link to the appropriate new cat pages.
+
+header: 
+- revert top nav links to categories( see document named top nav cats - link types with link data in designs folder).
+
+category:
+- finish filter forms for all categories.
+- re-enable filtered search.
+
+product:
+- image library adding white space to certain images. He wants the whitespace removed without compromising the image quality.
+- and a what's this pop up that explains the above pog IF it is sowing for that product.
+- Build checks to make sure product variations have a value selection made to add to cart.
+- fix magic zoom issue.
+- Add span tags to product lists.
+
+search:
+- reactivate filtered search and restlye to fit.
 

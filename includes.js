@@ -470,15 +470,7 @@ renderOption: function(pog,pid) {
 
 
 //create the label (prompt) for the form input and make it a child of the newly created div.
-				
-/**TOY WARS**/	if (pogid === "#Z"){
-/**TOY WARS**/		var $formFieldLabel = $('<label>').attr({"title":"Please select which Limited Edition numbered item you would like to purchase."}).addClass("label_"+pog.type + " limitedEditionPog").text(pog.prompt);
-/**TOY WARS**/		app.u.dump("pogid is equal to #Z");
-/**TOY WARS**/	}
-/**TOY WARS**/	else{
-					var $formFieldLabel = $('<label>').attr({"title":labelTitle}).addClass("label_"+pog.type).text(pog.prompt);
-/**TOY WARS**/		app.u.dump("pogid is not equal to #Z");
-/**TOY WARS**/	}
+	var $formFieldLabel = $('<label>').attr({"title":labelTitle}).addClass("label_"+pog.type).text(pog.prompt);
 
 	$formFieldDiv.append($formFieldLabel);
 	

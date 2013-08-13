@@ -41,6 +41,8 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 	//app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
 	
 	var $context = $(app.u.jqSelector('#',P.parentID));
+	
+	
 			
 	//TOP SLIDESHOW BANNER
 	var carouselHPBanner;
@@ -128,27 +130,44 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 	}
 	carouselHPPreItems = foo5;
 	setTimeout(carouselHPPreItems, 2000);
+	
+	//**LIST4 ITEMS**
+	var carouselHPList4Items;
+	function foo6(){ $("#homeProdSearchList4").carouFredSel
+	({
+		width   : 220,
+		height	: 235,
+		items   : 1,
+		scroll: 1,
+		auto : false,
+		next: ".list4ItemsNext",
+		prev: ".list4ItemsPrev",
+		pagination  : "#homeProdSearchList4Page"
+	});
+	}
+	carouselHPList4Items = foo6;
+	setTimeout(carouselHPList4Items, 2100);
 		
 		
 		
 	//**HOMEPAGE BOTTOM CATEGORY CAROUSEL**
 	var carouselBottomCats;
-	function foo6(){ $(".catCarousel").carouFredSel({
+	function foo7(){ $(".catCarousel").carouFredSel({
 			auto : false,
 			items   : 1,
 			scroll: 1
 	});}
-	carouselBottomCats = foo6;
+	carouselBottomCats = foo7;
 	setTimeout(carouselBottomCats, 2000);
 	
 	var carouselBottomCatTitles;
-	function foo7(){ $(".catNavContent").carouFredSel({
+	function foo8(){ $(".catNavContent").carouFredSel({
 			auto : false,
 			items   : 3,
 			height: 63,
 			scroll: 1
 	});}
-	carouselBottomCatTitles = foo7;
+	carouselBottomCatTitles = foo8;
 	setTimeout(carouselBottomCatTitles, 2000);
 	
 	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL
@@ -299,80 +318,47 @@ app.rq.push(['templateFunction','searchTemplate','onCompletes',function(P) {
 	var $page = $(app.u.jqSelector('#',P.parentID));
 	
 	//****FILTERED SEARCH CODE****
-	if($page.data('filterAdded'))	{} //filter is already added, don't add again.
-		else	{
-			$page.data('filterAdded',true)
+	$('.fsCheckbox').attr('checked', false);
+	$("#resultsProductListContainer").show(); 
+	$(".searchFilterResults").hide();    
+	app.u.dump("BEGIN searchTemplate onCompletes for filtering");
+	var $form = $("[name='searchPageForm']",'#appFilters').clone().appendTo($('.filterContainerSearch',$page));
+	$form.on('submit.filterSearch',function(event){
+		event.preventDefault()
+		app.u.dump(" -> Filter form submitted.");
+		app.ext.store_filter.a.execFilter($form,$page);
+				});
+	
+		if(typeof app.ext.store_filter.filterMap["searchPage"].exec == 'function')	{
+			app.ext.store_filter.filterMap["searchPage"].exec($form,P)
+			}
+	
+	//make all the checkboxes auto-submit the form.
+		$(":checkbox",$form).off('click.formSubmit').on('click.formSubmit',function() {
+			$form.submit(); 
+			//app.u.dump("Filter search actvated");
+			$("#resultsProductListContainer").hide();  
+			
+			$group1 = $('.fsCheckbox');
+			if($group1.filter(':checked').length === 0){
+				//app.u.dump("All checkboxes removed. Filter search deactivated.");
+				$("#resultsProductListContainer").show(); 
+				$(".searchFilterResults").hide();    
+			}
+			else{
+				//app.u.dump("All checkboxes removed. Filter search still active.");
+				$("#resultsProductListContainer").hide(); 
+				$(".searchFilterResults").show();    
+			}  
+		});
+				
+			
+		
+		$('.resetButtonSearchPage', $context).click(function(){
 			$('.fsCheckbox').attr('checked', false);
 			$("#resultsProductListContainer").show(); 
 			$(".searchFilterResults").hide();    
-			app.u.dump("BEGIN searchTemplate onCompletes for filtering");
-			var $form = $("[name='searchPageForm']",'#appFilters').clone().appendTo($('.filterContainerSearch',$page));
-			$form.on('submit.filterSearch',function(event){
-				event.preventDefault()
-				app.u.dump(" -> Filter form submitted.");
-				app.ext.store_filter.a.execFilter($form,$page);
-						});
-			
-				if(typeof app.ext.store_filter.filterMap["searchPage"].exec == 'function')	{
-					app.ext.store_filter.filterMap["searchPage"].exec($form,P)
-					}
-			
-			//make all the checkboxes auto-submit the form.
-				$(":checkbox",$form).off('click.formSubmit').on('click.formSubmit',function() {
-					$form.submit(); 
-					//app.u.dump("Filter search actvated");
-					$("#resultsProductListContainer").hide();  
-					
-					$group1 = $('.fsCheckbox');
-					if($group1.filter(':checked').length === 0){
-						//app.u.dump("All checkboxes removed. Filter search deactivated.");
-						$("#resultsProductListContainer").show(); 
-						$(".searchFilterResults").hide();    
-					}
-					else{
-						//app.u.dump("All checkboxes removed. Filter search still active.");
-						$("#resultsProductListContainer").hide(); 
-						$(".searchFilterResults").show();    
-					}  
-				});
-						
-					
-				
-				$('.resetButtonSearchPage', $context).click(function(){
-					$('.fsCheckbox').attr('checked', false);
-					$("#resultsProductListContainer").show(); 
-					$(".searchFilterResults").hide();    
-				});
-				
-				
-				//**SEARCH COLLAPSE/EXPAND DATA**//
-				
-				//characterLegend
-				if($('.characterLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
-				else {
-				 $('.characterLegend',$context).data('collapseOrExpanded',true).append();
-				 }
-				 
-				 //themeLegend
-				if($('.themeLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
-				else {
-				 $('.themeLegend',$context).data('collapseOrExpanded',true).append();
-				 }
-				 
-				 //productLegend
-				if($('.productLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
-				else {
-				 $('.productLegend',$context).data('collapseOrExpanded',true).append();
-				 }
-				 
-				  //ManufacturerLegend
-				if($('.ManufacturerLegend',$context).data('collapseOrExpanded')) {} //do nothing, content already added.
-				else {
-				 $('.ManufacturerLegend',$context).data('collapseOrExpanded',true).append();
-				 }
-				 
-				 //**END SEARCH COLLAPSE/EXPAND DATA**//
-		}
+		});
 }]);
 
 
@@ -396,7 +382,7 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 		else	{} //couldn't find the tab to tabificate.
 		
 		//CONVERT CODE FOR LIMITED EDITION CONVERT SELECT TO BUTTONS
-	$('select[name=#Z]', $context).select2Buttons();
+	$('select[name=#Z]').select2Buttons();
 	
 	
 	//BEGIN CAROUSEL CODE FOR RECENTLY VIEWED/RELATED ITEMS
@@ -477,24 +463,19 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	setTimeout(carouselImageSlider, 2000);
 	
 	*/
-	
-	//**TITLE CORRECTION FOR LIMITED EDITION POG**//
-	$(".limitedEditionPog").text("Choose Limited Edition Item Number ");
 	}]);
-	//$("label[title='Numbers Available']").tooltip({ content: "Awesome title!" });
 	
 app.rq.push(['templateFunction','productTemplate','onDeparts',function(P) {	
 	$(".select2Buttons").remove();
 	$('select[name=#Z]').show();
 }]);
 //sample of an onDeparts. executed any time a user leaves this page/template type.
-app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {
-	app.u.dump("just left the homepage")
-}]);
+app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {app.u.dump("just left the homepage")}]);
 
 
+//group any third party files together (regardless of pass) to make troubleshooting easier.
+app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js']);
 
-//**ALL PAGES BASIC FUNCTIONS**
 
 //RANDOM SHIPPING LOGO GENERATOR
 	var  randomLogo = 1;
@@ -517,9 +498,6 @@ app.rq.push(['templateFunction','homepageTemplate','onDeparts',function(P) {
 	}
 	
 	setInterval('logoRandomizer()',5000);
-
-//group any third party files together (regardless of pass) to make troubleshooting easier.
-app.rq.push(['script',0,(document.location.protocol == 'https:' ? 'https:' : 'http:')+'//ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js']);
 
 
 /*

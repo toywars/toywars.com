@@ -466,7 +466,7 @@ if(app.ext.store_filter.u.validateFilterProperties($form))	{
 				}
 			
 			},'datapointer':'appPublicSearch|elasticFiltering',
-			'templateID': $form.data('loadstemplate') || 'productListTemplateResultsNoPreview'
+			'templateID': $form.data('loadstemplate') || 'productListTemplateResults'
 			});
 			app.u.dump(JSON.stringify(query));
 		app.model.dispatchThis();
@@ -481,60 +481,7 @@ else	{
 $('html, body').animate({scrollTop : 0},200); //new page content loading. scroll to top.
 
 				
-				},//execFilter
-				
-				
-				toggleHideShowCharCat : function(){
-					if($('.characterLegend').data('collapseOrExpanded') === true){
-						$('.characterCont').slideUp(1000);
-						$('.characterLegend').css("background-image","url(images/filterSearchCat.png)");
-						$('.characterLegend').data('collapseOrExpanded',false).append();
-					}
-					else{
-						$('.characterCont').slideDown(1000);
-						$('.characterLegend').css("background-image","url(images/filterSearchCatOpen.png)");
-						$('.characterLegend').data('collapseOrExpanded',true).append();
-					}
-				},
-				
-				toggleHideShowThemeCat : function(){
-					if($('.themeLegend').data('collapseOrExpanded') === true){
-						$('.themeCont').slideUp(1000);
-						$('.themeLegend').css("background-image","url(images/filterSearchCat.png)");
-						$('.themeLegend').data('collapseOrExpanded',false).append();
-					}
-					else{
-						$('.themeCont').slideDown(1000);
-						$('.themeLegend').css("background-image","url(images/filterSearchCatOpen.png)");
-						$('.themeLegend').data('collapseOrExpanded',true).append();
-					}
-				},	
-					
-				toggleHideShowProductCat : function(){
-					if($('.productLegend').data('collapseOrExpanded') === true){
-						$('.productCont').slideUp(1000);
-						$('.productLegend').css("background-image","url(images/filterSearchCat.png)");
-						$('.productLegend').data('collapseOrExpanded',false).append();
-					}
-					else{
-						$('.productCont').slideDown(1000);
-						$('.productLegend').css("background-image","url(images/filterSearchCatOpen.png)");
-						$('.productLegend').data('collapseOrExpanded',true).append();
-					}
-				},
-				
-				toggleHideShowManufacturerCat : function(){
-					if($('.ManufacturerLegend').data('collapseOrExpanded') === true){
-						$('.manufacturerCont').slideUp(1000);
-						$('.ManufacturerLegend').css("background-image","url(images/filterSearchCat.png)");
-						$('.ManufacturerLegend').data('collapseOrExpanded',false).append();
-					}
-					else{
-						$('.manufacturerCont').slideDown(1000);
-						$('.ManufacturerLegend').css("background-image","url(images/filterSearchCatOpen.png)");
-						$('.ManufacturerLegend').data('collapseOrExpanded',true).append();
-					}
-				}
+				}//filter
 			
 			}, //actions
 

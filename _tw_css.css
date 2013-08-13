@@ -1,5 +1,5 @@
 /***TRANFERRED CODE FROM OLD CSS BEFORE FRAMEWORK RESTORE**/
-body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif;}
+body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif; min-width:1200px;}
 
 @font-face{font-family:'Anton'; font-style:normal; font-weight:400; src:local('Anton'), url(http://themes.googleusercontent.com/static/fonts/anton/v3/tilmJBBU81h1G7ZsdY3Hmw.woff) format('woff');}
 @font-face{font-family:'Conv_BebasNeue'; src: url('fonts/BebasNeue.eot'); src: url('fonts/BebasNeue.otf'); src: local('☺'), url('fonts/BebasNeue.woff') format('woff'), url('fonts/BebasNeue.ttf') format('truetype'), url('fonts/BebasNeue.svg') format('svg'); font-weight:normal; font-style:normal;}
@@ -28,7 +28,7 @@ note - wait should only be used in cases where the entire template is being relo
 note - background- are use instead of background in case element this is applied to has a bgcolor and it's !important. (like a modal parent)
 */
 
-#modalCart{background:#b7a58b;}
+#modalCart{background:#b7a58b; overflow:scroll;}
 .loadingBG{background-image:url(loading.gif) !important; background-repeat:no-repeat !important; background-position:center center; min-height:100px !important; min-width:100px;}
 li.loadingBG, .wait{background:url(wait.gif) no-repeat top center !important; min-height:20px !important; min-width:20px;}
 span.wait{display:inline-block;}
@@ -62,7 +62,7 @@ and offMenu is toggle off, hiding the change button.
 .loginHide a{font-size:12px; color:#fff; /*font-weight:bold;*/ text-transform:uppercase;}
 .cb{clear:both;}
 .bindByAnchor{} /* here just to give a little aid to wysiwyg editors. no styles should be applied. used w/ bindNav feature */
-#mainContentArea{background:#b7a58b; clear:left; margin-top:60px;}
+#mainContentArea{background:#b7a58b; clear:left;}
 .sliderM{max-width:948px; margin:70px auto 20px;}
 .bannerS{width:620px; float:left; margin:0 20px 0 0; box-shadow:0px 0px 9px #000;}
 .rightB{float:left; max-width:300px; box-shadow:0px 0px 9px #000;}
@@ -83,7 +83,7 @@ div#header div#headerContent{height: 124px; margin: 0px auto; position: relative
 div#header div#headerContent img#logo{cursor: pointer; left: 10px; position: relative; top: 11px;}
 div#header div#headerContent input#txtSearch{height:34px; width:125px; color:#999; font-size:14px; padding:0 10px; float:left; border:none; /*left: 470px; position: absolute; top: 46px;*/}
 #btnTopNavSearch{cursor: pointer; position: absolute;  width: 35px; float:left; /*height: 33px; left: 617px; top: 47px; */ }
-div#header div#headerContent div#headerFreeShipping{background: url(images/header-free-shipping.png); height: 54px; /*left: 730px; position: absolute;*/ width: 220px; position:relative;}
+div#header div#headerContent div#headerFreeShipping{background: url(images/header-free-shipping.png); height: 54px; position:relative; /*left: 730px; position: absolute;*/ width: 220px; top: 20px;}
 div#header div#headerContent div#headerFreeShipping img{left: -20px; position: absolute; top: -10px;}
 div#header div#headerContent a#btnSocialFacebook{cursor: pointer; left: 10px; position: relative; top: 21px;}
 div#header div#headerContent a#btnSocialTwitter{cursor: pointer; left: 20px; position: relative; top: 21px;}
@@ -99,7 +99,20 @@ div#footer div#footerContent div#footerLinks > ul li a{color: #FFFFFF; text-deco
 div#footer div#footerContent div#footerLinks > ul li a:hover{text-decoration: underline;}
 div#footer div#footerContent div#footerLinks > ul li:first-child, div#footer div#footerContent div#footerSubscribe table tr td:first-child
 {color: #666666; font-family:'Conv_BebasNeue',Sans-Serif; font-size: 30px;}
-div#footer div#footerContent div#footerLinks div#footerSubscribe{float: left; position: relative; top:60px;}						
+div#footer div#footerContent div#footerLinks div#footerSubscribe{ float: left;
+    position: relative;
+    top: 60px;
+	width: 225px;}	
+	div#footer div#footerContent div#footerLinks div#footerSubscribe form#subscribeFrm p{
+	 color: #666666;
+    font-family: 'Conv_BebasNeue',Sans-Serif;
+    font-size: 30px;	
+	}
+.userInfo input{
+	height: 20px;
+    margin-bottom: 10px;
+    width: 190px;
+}
 div#footer div#footerContent div#footerLinks div#footerSubscribe table{}					
 div#footer div#footerContent div#footerLinks div#footerSubscribe table tr td{}
 div#footer div#footerContent div#footerLinks div#footerSubscribe table tr:not(:first-child) td{padding-top:6px;}						
@@ -268,7 +281,7 @@ and override using classes or id's as needed.
 .lineItemProdlist .prodThumb{margin:10px 20px; width:100px; height:100px;}
 .lineItemProdlist button{margin:0 20px 0 0;}
 .categoryList > li{width:150px; height:200px;}
-#cartStuffList{margin: -10px 0 0 -10px;width: 756px;}
+#cartStuffList{margin: -10px 0 0 -10px;width: 730px;}
 #cartStuffList li{ background:#c9bca8;}
 #cartStuffList li h4{ font-size:14px;}
 .productList h4, .productList h5, .productList h6, .categoryList h4, .categoryList h5, .categoryList h6	{padding:0; margin:0; font-size:12px;} /* h4 - h6 are used in default templates for name, price, etc */
@@ -277,7 +290,6 @@ and override using classes or id's as needed.
     margin: 0 auto;
     max-width: 948px;}
 .midmain .productList li{font-size:.8em;border: 2px solid #FFFFFF; box-shadow: 1px 1px 5px 1px #222222; background:#fff; height: 225px; margin-left: 0; margin-right: 20px; position: relative; text-align: center; max-width:213px;}
-.midmain .productList li img.prodThumb{ width:213px;}
 .midmain .prodThumbContainer{ width:215px !important;}
 .productList li, .categoryList li{font-size:.8em;}
 .productList h5{ min-height:50px; width:180px; margin:20px auto 0;}
@@ -307,7 +319,7 @@ PRODUCT DETAIL PAGE (productTemplate)
 
 ***************************************************/
 .container{ max-width:1000px; margin:0px auto;}
-.prodViewerContainer{width:655px; margin:20px auto 28px;}
+.prodViewerContainer{width:660px; margin:20px auto 28px;}
 .breadAndAddThisContainer{margin-bottom:8px; padding-bottom:8px; border-bottom:1px dotted #b6b6b6;}
 
 /* primary image and thumbnails */
@@ -347,7 +359,14 @@ div#gotAccount1 input#modalLoginPassword{left:30px; top:132px;}
 div#gotAccount1 span#lblLoginPassword{font-family: Helvetica; font-size: 12px; left: 32px; position: absolute; top: 138px;}
 .loginShow a{ color:#fff;}
 #loginFormForModal{ background:#b7a58b;}
-.Account{ width:622px; background:url(images/createbg.jpg) no-repeat; margin-bottom:20px; float:left;}
+.Account{ 
+	width:622px; 
+	background:url(images/createbg.jpg) no-repeat; margin-bottom:20px; 
+	float: left;
+    margin-bottom: 20px;
+    margin-left: 160px;
+    width: 622px;
+}
 .Account h1{ text-align:center; padding:10px 0 30px 0; color:#fff;}
 .Account b{ font-weight:bold; font-size:12px;}
 .fieldM{ margin:0px auto; padding:0px 0 10px; width:570px;}
@@ -391,7 +410,7 @@ div#gotAccount1 span#lblLoginPassword{font-family: Helvetica; font-size: 12px; l
 			font-size: 12px;
 			height: 24px;
 			width: 237px;
-			margin:0 0 20px;
+			margin:0 0 10px;
 		}
 	div#gotAccount input#modalLoginLogin
 	{
@@ -527,9 +546,19 @@ cartTemplate
 ***************************************************/
 
 
-.cartContainer	{width:100%;}
+.cartContainer	{width:89%;}
+#cartTemplateForm{
+	width:1015px;
+}
 
 #mainContentArea_cart .continueShoppingButton	{display:none;} /* used in modal cart only */
+
+#paypalECButton{
+	margin-top:15px;
+}
+.cartBottomArea{
+	width: 731px;
+}
 
 /***************************************************
 
@@ -541,7 +570,7 @@ CUSTOMER PAGES
 
 
 /****** LOGIN MODAL ******/
-#loginFormForModal fieldset	{border:0; margin:30px 0 0 16px;}
+#loginFormForModal fieldset	{border:0; margin:15px 0 0 16px;}
 .loginOption fieldset div	{margin-bottom:12px;}
 .loginOption label	{width:120px; text-align:right; display:block; float:left; clear:left;}
 .loginOption label:after	{margin-right:12px; content:":"}
@@ -552,6 +581,11 @@ CUSTOMER PAGES
 #subscribeFormContainer li	{list-style:none;}
 #subscribeFormContainer .userInfo label, #changePasswordForm label	{width:120px; display:inline-block; margin-right:10px;}
 .subscriberLists label	{width:300px;}
+.userInfo{
+	border: medium none;
+    margin-top: 0;
+	padding: 0;
+}
 
 
 /****** ORDER HISTORY AND INVOICE ******/
@@ -592,7 +626,7 @@ SEARCH RESULTS PAGE
 
 .minimalMode .hideInMinimalMode	{display:none;}
 .minimalMode .searchResultsProduct	{
-	height:120px; width:216px; overflow:hidden; margin:0 5px 5px 0;
+	height:120px; width:120px; overflow:hidden; margin:0 5px 5px 0;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;
@@ -643,8 +677,8 @@ CART
 .cartSummaryTotalsContainer .cartSummaryContainer	{padding:12px;}
 .cartZipCodeContainer, .cartSummaryContainer	{margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid #cccccc;}
 .cartAltButtonsContainer{border-bottom:0px solid #cccccc;}
-.cartStuffContainer	{width:77%; vertical-align:top; padding-right:20px;}
-.cartSummaryTotalsContainer {width:23%; padding-left:12px; font-size:.8em;} /* by default, this is the right column */
+.cartStuffContainer	{width:1%; vertical-align:top; padding-right:20px;}
+.cartSummaryTotalsContainer {width:1%; padding-left:12px; font-size:.8em;} /* by default, this is the right column */
 
 .checkoutButtonsContainer span	{display:block; float:left; margin:0 12px 12px 0;}
 td.cartStuffContainer .right {
@@ -1389,9 +1423,10 @@ div ul .filterSearchResults3{
 	background-color: white;
 }
 .layeredSearch legend{
-	background-image:url(images/filterSearchCatOpen.png);
+	background-image: url("images/filterSearchCat.png");
     height: 30px;
     margin-left: -3px;
+    padding-left: 40px;
     padding-top: 8px;
     width: 162px;
 	color:white;
@@ -1716,8 +1751,7 @@ div.container div.nav div.navContent > ul > li{
     width: 220px;
 }
 .layeredSearch legend.searchPageFSLegend{
-	width: 223px;
-	text-align:center;
+	width: 185px;
 }
 .searchFilterResults{
 	float: left;
@@ -1987,17 +2021,17 @@ div.container div.nav div.navContent > ul > li{
     vertical-align: text-top !important;
 }
 .hotItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .hotItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchBestSellersPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2031,23 +2065,23 @@ div.container div.nav div.navContent > ul > li{
     width: 225px;
 	position:relative;
 	float:left;
-	margin-left:136px;
+	margin-left:15px;
 }
 #homeProdSearchFresh li.searchResultsProduct{
 	float:left;
 }
 .freshItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .freshItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchFreshPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2088,17 +2122,17 @@ div.container div.nav div.navContent > ul > li{
 	float:left;
 }
 .hotItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .hotItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchBestSellersPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2132,23 +2166,23 @@ div.container div.nav div.navContent > ul > li{
     width: 225px;
 	position:relative;
 	float:left;
-	margin-left:136px;
+	margin-left:15px;
 }
 #homeProdSearchPreorder li.searchResultsProduct{
 	float:left;
 }
 .preorderItemsNext{
-	bottom: 89px;
+	bottom: 105px;
     position: absolute;
     right: 19px;
 }
 .preorderItemsPrev{
-	bottom: 89px;
+	bottom: 105px;
     left: 15px;
     position: absolute;
 }
 #homeProdSearchPreorderPage{
-	bottom: 89px;
+	bottom: 105px;
     left: 55px;
     position: absolute;
 }
@@ -2173,18 +2207,70 @@ div.container div.nav div.navContent > ul > li{
     top: 5px;
 }
 
+/*LIST4 ITEMS LIST***/
+#homeProdSearchList4{
+	 left: 0 !important;
+}
+.homeProdSearchList4Cont{
+	height: 230px;
+    width: 225px;
+	position:relative;
+	float:left;
+	margin-left:15px;
+}
+#homeProdSearchList4 li.searchResultsProduct{
+	float:left;
+}
+.list4ItemsNext{
+	bottom: 105px;
+    position: absolute;
+    right: 19px;
+}
+.list4ItemsPrev{
+	bottom: 105px;
+    left: 15px;
+    position: absolute;
+}
+#homeProdSearchList4Page{
+	bottom: 105px;
+    left: 55px;
+    position: absolute;
+}
+#homeProdSearchList4Page a{
+	display: block;
+    float: left;
+    height: 10px;
+    margin-right: 15px;
+    width: 10px;
+	background-image:url(images/h_specialty_item_pagination_inactive.png);
+}
+#homeProdSearchList4Page a.selected{
+	background-image:url(images/h_specialty_item_pagination_active.png);
+	
+}
+#homeProdSearchList4Page a span{
+	display:none;
+}
+.hpSpecialtyListLogo{
+	position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+
+
 .tagsContainer{
-	height: 77px;
+	height: 70px;
     position: absolute;
     right: 0;
     top: 0;
     width: 74px;
 	z-index: 1;
 }
-.tagsContainer span.is_fresh{
+.tagsContainer span.is_newarrival{
 	background-image:url(images/new_item_logo.png);
     display: block;
-    height: 77px;
+    height: 70px;
     width: 74px;
     z-index: 2;
 	position:absolute;
@@ -2192,17 +2278,17 @@ div.container div.nav div.navContent > ul > li{
 .tagsContainer span.is_bestseller{
 	background-image: url(images/hot_item_logo.png);
     display: block;
-    height: 77px;
+    height: 70px;
     width: 74px;
-    z-index: 3;
+    z-index: 4;
 	position:absolute;
 }
 .tagsContainer span.is_preorder{
 	background-image:url(images/preorder_item_logo.png);
     display: block;
-    height: 77px;
+    height: 70px;
     width: 74px;
-    z-index: 4;
+    z-index: 3;
 	position:absolute;
 }
 
@@ -2232,10 +2318,7 @@ div#slideshowContainer div.caroufredsel_wrapper{
 	clear:left;
 }
 #mainContentArea_customer div.mainColumn{
-	width:94%;
-}
-.layeredSearch legend.priceLegend{
-	background-image:url(images/filterSearchCat.png);
+	width:69%;
 }
 table.prodViewerContainer tbody tr td.imageContainer div{
 	position:relative;
@@ -2249,13 +2332,74 @@ table.prodViewerContainer tbody tr td.imageContainer div div.tagsContainer{
 .productPage table.prodViewerContainer{
 	width:940px;
 }
-#resultsProductListContainer li.ui-state-active{
-	border:solid 2px red !important;
+#recoverPasswordContainer{
+	margin-top: 90px;
 }
-.searchFilterResults li.ui-state-active{
-	border:solid 2px red !important;
+#recoverPasswordContainer h3{
+	color: #FFFFFF;
+    font-family: 'Conv_BebasNeue';
+    font-size: 36px;
+    text-align: center;
 }
-
-
-
+#recoverPasswordContainer form fieldset{
+	margin-left: 27px;
+    margin-top: -25px;
+}
+#recoverPasswordContainer form fieldset div.marginBottom label{
+	text-align:left;
+}
+#recoverPasswordContainer form fieldset div input.ui-button{
+	border: 2px outset #CCCCCC !important;
+    border-radius: 3px 3px 3px 3px;
+	width: 192px;
+}
+#modalLoginForm fieldset p{
+	font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+.btnFooterSubscribe{
+	background-image:url(images/button-footer-subscribe.png);
+    border: medium none;
+    height: 34px !important;
+    width: 200px !important;
+}
+.subscriberLists{
+	padding:0;
+	margin-top:10px;
+}
+#recoverPasswordMessaging div div p.anyMessage{
+	color: black;
+    font-size: 16px;
+    left: 30px;
+    top: 220px;
+}
+div.caroufredsel_wrapper ul li.ProductListStyles{
+	width:213px;
+	height:225px;
+}
+.prodListContentCont{
+}
+.dropdownImageCont{
+	float: right;
+    height: 275px;
+    width: 225px;
+	cursor:pointer;
+}
+.tagSprite{
+}
+#faqArticle{
+	width: 734px;
+}
+.boldText{
+font-weight:bold;
+text-decoration:underline;
+}
+.warningSpacer{
+margin-left:30px;
+}
+.normalText{
+font-weight:normal;
+}
 
