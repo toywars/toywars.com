@@ -241,11 +241,6 @@ app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 		$context.empty().remove();
 		showContent('category',{'navcat':P.navcat});
 		});
-		
-		
-}]);
-		
-		
 }]);
 	
 	//**COMMENT TO REMOVE AUTO-RESETTING WHEN LEAVING CAT PAGE FOR FILTERED SEARCH**
