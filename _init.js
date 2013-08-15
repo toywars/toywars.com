@@ -213,7 +213,7 @@ app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 
 		var $page = $(app.u.jqSelector('#',P.parentID));
 		app.u.dump(" -> $page.length: "+$page.length);
-		if($page.data('filterAdded'))	{} //filter is already added, don't add again.
+		if($page.data('filterAdded'))	{app.u.dump("filter is already added, don't add again.")} //filter is already added, don't add again.
 		else	{
 			$page.data('filterAdded',true)
 			var $form = $("[name='"+app.ext.store_filter.filterMap[P.navcat].filter+"']",'#appFilters').clone().appendTo($('.filterContainer',$page));
@@ -343,11 +343,13 @@ app.rq.push(['templateFunction','searchTemplate','onCompletes',function(P) {
 					$group1 = $('.fsCheckbox');
 					if($group1.filter(':checked').length === 0){
 						//app.u.dump("All checkboxes removed. Filter search deactivated.");
+						$(".resultsHeader", ".searchResultsPage").show();
 						$("#resultsProductListContainer").show(); 
 						$(".searchFilterResults").hide();    
 					}
 					else{
 						//app.u.dump("All checkboxes removed. Filter search still active.");
+						$(".resultsHeader", ".searchResultsPage").hide();
 						$("#resultsProductListContainer").hide(); 
 						$(".searchFilterResults").show();    
 					}  
