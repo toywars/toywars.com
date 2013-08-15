@@ -44,6 +44,12 @@ var store_filter = function() {
 			"exec" : function($form,infoObj){app.ext.store_filter.u.renderSlider($form, infoObj, {MIN:0,MAX:2000});}
 			}
 			*/
+			
+			//****TEST CATEGORIES****//
+			".batman":{
+			"filter": "batmanForm",
+			"exec" : function($form,infoObj){app.ext.store_filter.u.renderSlider($form, infoObj, {MIN:0,MAX:2000});}
+			},
 		
 			//****SEARCH PAGE'S FILTER FORM****
 			"searchPage":{

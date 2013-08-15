@@ -1369,7 +1369,7 @@ div ul .filterSearchResults3{
 	width: 220px;
 }
 .catBrowseSidebar{
-	width:200px;
+	width:220px;
 	background-color:#B29F6B;
 	float:left;
 	border-radius:5px;
@@ -1423,7 +1423,7 @@ div ul .filterSearchResults3{
 	background-color: white;
 }
 .layeredSearch legend{
-	background-image: url("images/filterSearchCat.png");
+	background-image:url(images/filterSearchCatOpen.png);
     height: 30px;
     margin-left: -3px;
     padding-left: 40px;

@@ -200,7 +200,7 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 }]);
 
 app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
-	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
+	
 	
 	
 	var $context = $(app.u.jqSelector('#',P.parentID));
@@ -241,6 +241,7 @@ app.rq.push(['templateFunction','categoryTemplate','onCompletes',function(P) {
 		$context.empty().remove();
 		showContent('category',{'navcat':P.navcat});
 		});
+	app.rq.push(['script',1,app.vars.baseURL+'site/script/app_actions.js']);
 }]);
 	
 	//**COMMENT TO REMOVE AUTO-RESETTING WHEN LEAVING CAT PAGE FOR FILTERED SEARCH**
