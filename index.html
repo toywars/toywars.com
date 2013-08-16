@@ -20,7 +20,7 @@ var _gaq = _gaq || {'push':function(){}} //here for testing. REPLACE BEFORE DEPL
 var myCreole;
 
 var app = {vars:{
-	"release":"201320.cf",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
+	"release":"201320.cg",  //increment this with each change. should solve caching issues. format: YYYYMMDDHHMMSS
 	"_clientid":"zmvc",
 	"baseURL":"", //used in non-local mode.
 	"checkoutAuthMode" : "active",//can be passive, active or required
@@ -1443,7 +1443,6 @@ subscribeListsArticle is used for authenticated buyers
 
 
 <div id='searchTemplate' class='searchResultsPage clearfix'>
-
 	<!-- the div is use to show a detailed view of a product. should be hidden by default. -->
 	<div class='previewProductDetail displayNone'></div>
 
@@ -1452,11 +1451,10 @@ subscribeListsArticle is used for authenticated buyers
     	<div class="filterContainerSearch"></div>
   
 		<!-- productListTemplateResults gets loaded into here -->
-        	<ul style="float: right; margin-right: 14px; width: 720px;" id='resultsProductListContainer' class='listStyleNone fluidList productList'></ul>
-    		<ul class="searchFilterResults productList" data-app-role='productList'>
-        	</ul>
+        <ul style="float: right; margin-right: 14px; width: 720px;" id='resultsProductListContainer' class='listStyleNone fluidList productList'></ul>
+        <ul class="searchFilterResults productList" data-app-role='productList'>
+        </ul>
 	</div>
-
 </div>
 <!--
 a template for multipage controls
