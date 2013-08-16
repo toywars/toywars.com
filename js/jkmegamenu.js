@@ -8,8 +8,8 @@
 
 var jkmegamenu={
 
-effectduration: 50, //duration of animation, in milliseconds
-delaytimer: 500, //delay after mouseout before menu should be hidden, in milliseconds
+effectduration: 500, //duration of animation, in milliseconds
+delaytimer: 100, //delay after mouseout before menu should be hidden, in milliseconds
 
 //No need to edit beyond here
 megamenulabels: [],
@@ -41,9 +41,10 @@ showmenu:function(e, megamenu_pos){
 	if ($menu.css("display")=="none"){
 		this.alignmenu(jQuery, e, megamenu_pos)
 		$menu.css("z-index", ++this.zIndexVal)
-		$menu.show(this.effectduration, function(){
-			$menuinner.css('visibility', 'visible')
-		})
+		$menu.slideDown(500)
+		//$menu.show(this.effectduration, function(){
+			//$menuinner.css('visibility', 'visible')
+		//})
 	}
 	else if ($menu.css("display")=="block" && e.type=="click"){ //if menu is hidden and this is a "click" event (versus "mouseout")
 		this.hidemenu(e, megamenu_pos)
@@ -57,7 +58,8 @@ hidemenu:function(e, megamenu_pos){
 	var $menuinner=megamenu.$menuinner
 	$menuinner.css('visibility', 'hidden')
 	this.$shimobj.css({display:"none", left:50, top:100})
-	$menu.hide(this.effectduration)
+	//$menu.hide(this.effectduration)
+	$menu.slideUp(500)
 },
 
 definemenu:function(anchorid, menuid, revealtype){
