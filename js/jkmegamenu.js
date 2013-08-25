@@ -16,6 +16,12 @@ megamenulabels: [],
 megamenus: [], //array to contain each block menu instances
 zIndexVal: 1000, //starting z-index value for drop down menu
 $shimobj: null,
+timeoutId : "",
+timeoutId1 : "",
+timeoutId2 : "",
+timeoutId3 : "",
+timeoutId4 : "",
+timeoutId5 : "",
 
 addshim:function($){
 	$(document.body).append('<IFRAME id="outlineiframeshim" src="'+(location.protocol=="https:"? 'blank.htm' : 'about:blank')+'" style="display:none; left:30; top:100; z-index:999; position:absolute; filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0)" frameBorder="0" scrolling="no"></IFRAME>')
@@ -35,21 +41,58 @@ alignmenu:function($, e, megamenu_pos){
 },
 
 showmenu:function(e, megamenu_pos){
-	var megamenu=this.megamenus[megamenu_pos]
-	var $menu=megamenu.$menuobj
-	var $menuinner=megamenu.$menuinner
-	if ($menu.css("display")=="none"){
-		this.alignmenu(jQuery, e, megamenu_pos)
-		$menu.css("z-index", ++this.zIndexVal)
-		$menu.slideDown(500)
-		//$menu.show(this.effectduration, function(){
-			//$menuinner.css('visibility', 'visible')
-		//})
-	}
-	else if ($menu.css("display")=="block" && e.type=="click"){ //if menu is hidden and this is a "click" event (versus "mouseout")
-		this.hidemenu(e, megamenu_pos)
-	}
-	return false
+		var megamenu=this.megamenus[megamenu_pos]
+		var $menu=megamenu.$menuobj
+		var $menuinner=megamenu.$menuinner
+		if ($menu.css("display")=="none"){
+			this.alignmenu(jQuery, e, megamenu_pos)
+			$menu.css("z-index", ++this.zIndexVal)
+			//app.u.dump($menu.attr('id'))
+			switch ($menu.attr('id')){
+				case "megamenu":
+				timeoutId = setTimeout(function() {
+					$menu.slideDown(500)
+				}, 500)
+				break;
+				
+				case "megamenu1":
+				timeoutId1 = setTimeout(function() {
+					$menu.slideDown(500)
+				}, 500)
+				break;
+				
+				case "megamenu2":
+				timeoutId2 = setTimeout(function() {
+					$menu.slideDown(500)
+				}, 500)
+				break;
+				
+				case "megamenu3":
+				timeoutId3 = setTimeout(function() {
+					$menu.slideDown(500)
+				}, 500)
+				break;
+				
+				case "megamenu4":
+				timeoutId4 = setTimeout(function() {
+					$menu.slideDown(500)
+				}, 500)
+				break;
+				
+				case "megamenu5":
+				timeoutId5 = setTimeout(function() {
+					$menu.slideDown(500)
+				}, 500)
+				break;
+			}
+			//$menu.show(this.effectduration, function(){
+				//$menuinner.css('visibility', 'visible')
+			//})
+		}
+		else if ($menu.css("display")=="block" && e.type=="click"){ //if menu is hidden and this is a "click" event (versus "mouseout")
+			this.hidemenu(e, megamenu_pos)
+		}
+		return false
 },
 
 hidemenu:function(e, megamenu_pos){
@@ -60,6 +103,31 @@ hidemenu:function(e, megamenu_pos){
 	this.$shimobj.css({display:"none", left:50, top:100})
 	//$menu.hide(this.effectduration)
 	$menu.slideUp(500)
+	switch ($menu.attr('id')){
+				case "megamenu":
+				clearTimeout(timeoutId)
+				break;
+				
+				case "megamenu1":
+				clearTimeout(timeoutId1)
+				break;
+				
+				case "megamenu2":
+				clearTimeout(timeoutId2)
+				break;
+				
+				case "megamenu3":
+				clearTimeout(timeoutId3)
+				break;
+				
+				case "megamenu4":
+				clearTimeout(timeoutId4)
+				break;
+				
+				case "megamenu5":
+				clearTimeout(timeoutId5)
+				break;
+			}
 },
 
 definemenu:function(anchorid, menuid, revealtype){
