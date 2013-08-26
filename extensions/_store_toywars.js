@@ -138,7 +138,21 @@ var store_toywars = function() {
 			
 				 }
 				$tag.html(r);
-			} //yyyymmdd2Pretty
+			}, //yyyymmdd2Pretty
+			
+			showIfSetPreorder : function($tag,data)	{
+			app.u.dump("showIfSet: "+data.value);
+			if (data.value.toLowerCase().indexOf("is:preorder") >= 0)	{
+				$tag.show().css('display','block'); //IE isn't responding to the 'show', so the display:block is added as well.
+				}
+			},
+			
+		hideIfSetPreorder : function($tag,data)	{
+			app.u.dump("showIfSet: "+data.value);
+			if (data.value.toLowerCase().indexOf("is:preorder") >= 0)	{
+				$tag.hide(); //IE isn't responding to the 'show', so the display:block is added as well.
+				}
+			}
 			
 				
 			}, //renderFormats
