@@ -141,17 +141,21 @@ var store_toywars = function() {
 			}, //yyyymmdd2Pretty
 			
 			showIfSetPreorder : function($tag,data)	{
-			app.u.dump("showIfSet: "+data.value);
-			if (data.value.toLowerCase().indexOf("is:preorder") >= 0)	{
-				$tag.show().css('display','block'); //IE isn't responding to the 'show', so the display:block is added as well.
-				}
+				 var isShipFree = (data.bindData.isElastic) ? data.value.tags : data.value['%attribs']['zoovy:prod_is_tags'];
+				 if(isShipFree) {
+					if(isShipFree.indexOf('IS_PREORDER') >= 0) {
+						$tag.show();
+					}
+				 }
 			},
 			
-		hideIfSetPreorder : function($tag,data)	{
-			app.u.dump("showIfSet: "+data.value);
-			if (data.value.toLowerCase().indexOf("is:preorder") >= 0)	{
-				$tag.hide(); //IE isn't responding to the 'show', so the display:block is added as well.
-				}
+			hideIfSetPreorder : function($tag,data)	{
+			var isShipFree = (data.bindData.isElastic) ? data.value.tags : data.value['%attribs']['zoovy:prod_is_tags'];
+				 if(isShipFree) {
+					if(isShipFree.indexOf('IS_PREORDER') >= 0) {
+						$tag.hide();
+					}
+				 }
 			}
 			
 				
