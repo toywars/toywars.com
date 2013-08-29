@@ -1253,62 +1253,6 @@ div.catCarousel2 h2
 .headert3{margin:15px 0 0 113px; padding:0px; float:left;}
 .socialicona{margin:0 0 0 35px; padding:0px; float:left;} 
 
-@media (min-width: 768px) and (max-width: 1024px)  { 
-.container {width:96%;}
-.caroufredsel_wrapper div.ccItem {padding-left:0px;margin-left:-5px;}
-.sortby {margin:0 0 0 2px;}
-.Account {width:600px;margin-left:-20px;}
-.featuredCategories div.catNavContent p:not(:last-child){width:290px;}
-.productList > li{width:214px;}
-}
-
-/*ipad*/
-@media  only screen and (min-width: 768px) and (max-width: 979px)  and (orientation:portrait) {
-.container {width:99%;}
-.headert1{margin:11px 0 0 -179px ;width:290px;}
-.headert2{margin:41px 28px 0 27px;}
-.headert3{margin:10px 0 0 29px;}
-div.nav div.navContent > ul > li > a {font-size:20px;}
-div.nav div.navContent > ul > li {padding-left:15px;padding-right:15px;}
-.midmain {margin-left:18px;}
-.featuredCategories div.catNavContent p:not(:last-child) {width:195px;}
-.caroufredsel_wrapper div.ccItem {padding-left:5px;}
-.productList > li{width:216px;}
-div#topNav div#topNavContent p:not(:last-child){ /*{padding-right:11px;*/}
-.fl {padding:8px 21px 0 0}
-div#footer div#footerContent div#footerLinks > ul {padding-left:18px;width:140px;padding-right:10px;}
-.featuredCategories img.btnViewAllCategories {margin-right:180px;}
-#resultsProductListContainer {width:500px!important;}
-.sortby {margin:20px 0 0 2px; width:215px;}
-}
-
-
-/*Samsung Big Phone*/
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-.headert1 {margin:-50px 0 0 20px;}
-#footer {display:none;}
-.headert2{display:none;}
-.headert3{display:none;}
-div#topNav {display:none;}
-}
-
-/*iphone used*/
-@media only screen and (max-width: 479px) {
-.container {width:99%;}
-div#topNav {display:none;}
-div.nav div.navContent > ul > li > a {display:none;}
-.midmain {margin-left:40px;}
-.featuredCategories div.catNavContent p.currentCat {margin-left:2px!important;font-size:12px!important;}
-.featuredCategories div.catNavContent p:not(:last-child) { font-size:12px!important; margin-left:-21px;width:100px;}
-.productList > li{width:220px;}
-.featuredCategories div.catNavContent img.catButton {padding-right:0px; margin-left:0px!important;}
-.headert1 img {width:250px!important;}
-.headert2{display:none;}
-.headert3{display:none;}
-.sliderM {display:none;}
-
- }
-
 
 
 .dropDownListHolder img{width:100%;}
@@ -2403,3 +2347,163 @@ margin-left:30px;
 font-weight:normal;
 }
 
+
+
+/*************************************************************************************
+	media querries - responsive design
+*************************************************************************************/
+
+@media (min-width: 768px) and (max-width: 1024px)  { 
+.container {width:96%;}
+.caroufredsel_wrapper div.ccItem {padding-left:0px;margin-left:-5px;}
+.sortby {margin:0 0 0 2px;}
+.Account {width:600px;margin-left:-20px;}
+.featuredCategories div.catNavContent p:not(:last-child){width:290px;}
+.productList > li{width:214px;}
+}
+
+/*ipad*/
+@media only screen and (min-width: 768px) and (max-width: 979px)  and (orientation:portrait) {
+.container {width:99%;}
+.headert1{margin:11px 0 0 -179px ;width:290px;}
+.headert2{margin:41px 28px 0 27px;}
+.headert3{margin:10px 0 0 29px;}
+div.nav div.navContent > ul > li > a {font-size:20px;}
+div.nav div.navContent > ul > li {padding-left:15px;padding-right:15px;}
+.midmain {margin-left:18px;}
+.featuredCategories div.catNavContent p:not(:last-child) {width:195px;}
+.caroufredsel_wrapper div.ccItem {padding-left:5px;}
+.productList > li{width:216px;}
+div#topNav div#topNavContent p:not(:last-child){ /*{padding-right:11px;*/}
+.fl {padding:8px 21px 0 0}
+div#footer div#footerContent div#footerLinks > ul {padding-left:18px;width:140px;padding-right:10px;}
+.featuredCategories img.btnViewAllCategories {margin-right:180px;}
+#resultsProductListContainer {width:500px!important;}
+.sortby {margin:20px 0 0 2px; width:215px;}
+}
+
+
+/*Samsung Big Phone*/
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.headert1 {margin:-50px 0 0 20px;}
+#footer {display:none;}
+.headert2{display:none;}
+.headert3{display:none;}
+div#topNav {display:none;}
+}
+
+/*iphone used*/
+@media only screen and (max-width: 479px) {
+.container {width:99%;}
+div#topNav {display:none;}
+div.nav div.navContent > ul > li > a {display:none;}
+.midmain {margin-left:40px;}
+.featuredCategories div.catNavContent p.currentCat {margin-left:2px!important;font-size:12px!important;}
+.featuredCategories div.catNavContent p:not(:last-child) { font-size:12px!important; margin-left:-21px;width:100px;}
+.productList > li{width:220px;}
+.featuredCategories div.catNavContent img.catButton {padding-right:0px; margin-left:0px!important;}
+.headert1 img {width:250px!important;}
+.headert2{display:none;}
+.headert3{display:none;}
+.sliderM {display:none;}
+
+ }
+
+@media screen and (max-width: 320px) {
+	
+	div.container{
+		margin: 0 auto;
+		max-width: 320px;
+		position: relative;
+	}
+	body, html{
+		min-width: 320px;
+	}
+	
+	/*APP PREVIEW*/
+	div#appPreView{
+		margin: 0;
+    	padding: 0;
+	}
+	div#appPreView table{
+		float:left;
+	}
+	div#appPreView table tbody tr td{
+	width:320px;
+	}
+	div#appPreView table tbody tr td img{
+		margin: 10px 2px 50px 0 !important;
+		width: 300px;
+	}
+	
+	div#appPreView table div#loader{
+		float: left;
+		font-size: 12px;
+		margin-left: 4px;
+		text-align: center;
+		width: 307px;
+	}
+	div#appPreView table div#loader > div.alignCenter > progress{
+		 width: 280px;
+	}
+	
+	/*HEADER*/
+	div#header{
+		width: 320px;
+		height: 125px;
+	}
+	div#header div#headerContent{
+		max-width: 320px;
+	}
+	.headert1{
+		 margin: 11px 0 0 32px;
+	}
+	.headert2{
+		display: block;
+		margin: 3px 0 0 67px;
+		position: absolute;
+		top: 85px;
+		z-index: 2;
+	}
+	
+	div.nav div.navContent{
+		display:none;
+	}
+	
+	
+	/*HOMEPAGE*/
+	.sliderM{
+		max-width: 320px;
+	}
+	.bannerS{
+		display:none;
+	}
+	.rightB{
+		box-shadow: 0 0 9px #000000;
+		margin-left: 8px;
+		max-width: 300px;		
+	}
+	.midmain{
+		float: left;
+		height: 960px;
+		margin: 0 auto;
+		max-width: 320px;
+	}
+	.homeProdSearchBestSellerCont{
+		float: left;
+		height: 230px;
+		margin-left: 48px;
+		margin-top: 10px;
+		position: relative;
+		width: 225px;
+	}
+	.homeProdSearchFreshCont {
+		float: left;
+		height: 230px;
+		margin-left: 48px;
+		margin-top: 10px;
+		position: relative;
+		width: 225px;
+	}
+	
+}
