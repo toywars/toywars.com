@@ -89,7 +89,7 @@ div#header div#headerContent a#btnSocialFacebook{cursor: pointer; left: 10px; po
 div#header div#headerContent a#btnSocialTwitter{cursor: pointer; left: 20px; position: relative; top: 21px;}
 div#header div#headerContent a#btnSocialYoutube{cursor: pointer; left: 30px; position: relative; top: 21px;}				
 div#header div#headerContent a#btnSocialMail{cursor: pointer; left: 40px; position: relative; top: 21px;}
-div#footer{background: url(images/background-footer.png); height: 358px; width: 100%;}
+div#footer{background: url(images/background-footer.png); height: 358px; width: 100%; float:left;}
 div#footer div#footerContent{height: 358px; margin: 0px auto; max-width: 960px;}
 div#footer div#footerContent div#footerLinks{height: 290px; max-width: 960px;}	
 div#footer div#footerContent div#footerLinks > ul{float: left; padding-right: 52px; margin-top:60px; width: 150px;}
@@ -319,7 +319,7 @@ PRODUCT DETAIL PAGE (productTemplate)
 
 ***************************************************/
 .container{ max-width:1000px; margin:0px auto;}
-.prodViewerContainer{width:660px; margin:20px auto 28px;}
+.prodViewerContainer{width:100%; margin:20px auto 28px;}
 .breadAndAddThisContainer{margin-bottom:8px; padding-bottom:8px; border-bottom:1px dotted #b6b6b6;}
 
 /* primary image and thumbnails */
@@ -329,7 +329,7 @@ PRODUCT DETAIL PAGE (productTemplate)
 .prodSummaryContainer{width:382px;}
 .prodSummaryContainer h1{ font-size:18px; margin-bottom:14px;}
 .basePrice span{ font-size:10px; color:#000000;}
-.RightPcol{background:#fff; padding:20px; width:180px;}
+.RightPcol{background:#fff; padding:20px; width:180px;float: left;}
 .RightPcol h4{float:right; text-align:center;font-size:18px; padding:0 16px 0 0; font-weight:bold;}
 .RightPcol h5{float:left;text-align:center;font-size:18px; color:#999999; text-decoration:line-through;}
 .RightPcol .prodMSRP span{font-size:10px; color:#999999;}
@@ -546,7 +546,7 @@ cartTemplate
 ***************************************************/
 
 
-.cartContainer	{width:89%;}
+.cartContainer	{width:100%;}
 #cartTemplateForm{
 	width:1015px;
 }
@@ -677,21 +677,29 @@ CART
 .cartSummaryTotalsContainer .cartSummaryContainer	{padding:12px;}
 .cartZipCodeContainer, .cartSummaryContainer	{margin-bottom:12px; padding-bottom:12px; border-bottom:1px solid #cccccc;}
 .cartAltButtonsContainer{border-bottom:0px solid #cccccc;}
-.cartStuffContainer	{width:1%; vertical-align:top; padding-right:20px;}
-.cartSummaryTotalsContainer {width:1%; padding-left:12px; font-size:.8em;} /* by default, this is the right column */
+.cartStuffContainer	{float: left;
+    vertical-align: top;
+    width: 732px;}
+.cartSummaryTotalsContainer { 
+	float: left;
+    font-size: 0.8em;
+    margin-left: 10px;
+    margin-top: -6px;
+    padding-left: 8px;
+    width: 240px;} /* by default, this is the right column */
 
 .checkoutButtonsContainer span	{display:block; float:left; margin:0 12px 12px 0;}
-td.cartStuffContainer .right {
+div.cartStuffContainer .right {
     background-color: #897C68;
     float: right;
     margin-top: 20px;
     position: relative;
     width: 200px;
 }
-td.cartStuffContainer .right p{ font-size:18px; color:#770000; margin:30px 0 0 30px;}
-td.cartStuffContainer .right ul{margin-left: 0px;margin-top: 13px;padding-bottom: 30px; padding-left:30px;}
-td.cartStuffContainer .right ul li{list-style: none outside none; padding-bottom: 5px;}
-td.cartStuffContainer .right ul li a{color: #000000;font-family: Helvetica;font-size: 12px; text-decoration: underline;}
+div.cartStuffContainer .right p{ font-size:18px; color:#770000; margin:30px 0 0 30px;}
+div.cartStuffContainer .right ul{margin-left: 0px;margin-top: 13px;padding-bottom: 30px; padding-left:30px;}
+div.cartStuffContainer .right ul li{list-style: none outside none; padding-bottom: 5px;}
+div.cartStuffContainer .right ul li a{color: #000000;font-family: Helvetica;font-size: 12px; text-decoration: underline;}
 .checkoutFormContainer{ margin:20px 0 0 0;}
 .checkoutFormContainer fieldset{ background:#c9bca8; border:#333 solid 1px; font-size: 15px;padding: 10px 0 15px 20px;}
 .checkoutFormContainer .panelContent input{ border:1px solid #90908F; padding:4px; width:200px; margin-bottom:10px;}
@@ -707,13 +715,13 @@ td.cartStuffContainer .right ul li a{color: #000000;font-family: Helvetica;font-
     padding: 2px 10px !important;
 }
 .checkoutFormContainer .ui-widget-header{ background: url(images/bgbutton.gif) repeat-x !important; color:#fff !important; font-size:15px; padding:3px 12px; border:#790000 solid 1px !important;}
-td.cartStuffContainer .left {
+div.cartStuffContainer .left {
     font-family: Helvetica;
     font-size: 12px;
     margin-top: 20px;
     width: 435px;
 }
-td.cartStuffContainer .left span{ font-weight:bold; font-size:15px;}
+div.cartStuffContainer .left span{ font-weight:bold; font-size:15px;}
 .cartShipMethods, .cartZipCodeContainer{margin:12px 0;}
 .cartSummary{ margin:0 0 0px;}
 
@@ -1443,16 +1451,19 @@ div.container div#footer{
 	overflow: hidden;
 }
 .imageContainer{
-	width:30%;
-	position:relative;
+	float: left;
+    position: relative;
+    width: 30%;
+	margin-left:80px;
 }
 .imageCont{
 	height: 340px;
     width: 300px;
 }
 .prodSummaryContainer{
-	width:auto;
-	height:auto;
+	float: left;
+    height: auto;
+    width: 30%;
 }
 .prodViewerContainer .addToCartButton{
     border: 2px outset #9A0000 !important;
@@ -1748,7 +1759,7 @@ div.container div.nav div.navContent > ul > li{
     float: left;
     height: 71px;
     position: absolute;
-    width: 100%;
+    width: 300px;
 	bottom:0;
 	background-color:rgb(2, 2, 2);
 	background-color: rgba(10, 10, 10, 0.7);
@@ -1785,7 +1796,8 @@ div.container div.nav div.navContent > ul > li{
 	height: 574px;
     width: 100%;
 	background-image:
-	url(images/pp_caro_background.png)
+	url(images/pp_caro_background.png);
+	float:left;
 }
 .prodPageCaroTitleCont{
 	height: 60px;
@@ -2635,6 +2647,45 @@ div.nav div.navContent > ul > li > a {display:none;}
 		width: 265px !important;
 	}
 	/**END SEARCH PAGE**/
+	
+	/*PRODUCT PAGE*/
+	.productPage table.prodViewerContainer{
+		width:320px;
+	}
+	.imageContainer{
+		margin-left: 8px;
+    	width: 320px;
+	}
+	.prodViewerContainer div div.prodSummaryContainer {
+		margin-left: 8px;
+		margin-top: 10px;
+		width: 320px;	
+	}
+	.prodViewerContainer div div.RightPcol{
+		margin-left: 8px;
+    	width: 260px;
+	}
+	.CRMButtonMenu{
+		clear:left;
+		margin-left: 35px;
+	}
+	.bottomP{
+		float:left;
+	}
+	.prodViewerAddToCartForm{
+		margin-left: 34px;
+	}
+	.RightPcol div.latency{
+		margin-left: 55px;
+	}
+	.RightPcol menu.CRMButtonMenuMobile{
+		margin-left: 55px;
+	}
+	.ppCarousel{
+		display:none;
+	}
+	
+	/**END PRODUCT PAGE**/
 	
 	
 }

@@ -900,9 +900,9 @@ this will likely become more flexible in the future. ###
 -->
 <div id='productTemplate' class='productPage'>
     <ul class='clearfix noPadOrMargin fluidList breadcrumb' data-bind='var: session(session.recentCategories.0); format:breadcrumb; extension:store_navcats; loadsTemplate: breadcrumbTemplate;'></ul>
-    <table class='prodViewerContainer'>
-        <tr>
-            <td class='imageContainer' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
+    <div class='prodViewerContainer'>
+        <div>
+            <div class='imageContainer' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
         		<div class="imageInnerCont">
             <!--	<img src='blank.gif' id='bobWasHere' class='prodBigImage' data-bind='var: product(zoovy:prod_image1); format: magicZoomPlus; extension: magicToolBox_mzp;' width='340' height='340' /> -->
             
@@ -944,8 +944,8 @@ this will likely become more flexible in the future. ###
                         <li><img src="images/grayb.gif" width="20" height="21" style="margin:-2px 8px 2px 0;">Marvel Super Hero Chess Limited Edition</li>
                     -->
                 </div>
-            </td>
-            <td class='prodSummaryContainer marginBottom no_underline'>
+            </div>
+            <div class='prodSummaryContainer marginBottom no_underline'>
                 <div style="background:#c9bca8; padding:20px; margin-right:20px;"><h1 data-bind='var: product(zoovy:prod_name); format:text;'></h1>
                     <hgroup class='marginBottom'>
                         <!--<h5 class='stid' data-bind='var: product(pid); format:text; pretext: Sku: ;'></h5>-->
@@ -959,8 +959,8 @@ this will likely become more flexible in the future. ###
                
                 
                 
-            </td>
-            <td class="RightPcol">
+            </div>
+            <div class="RightPcol">
                 <div class='priceContainer marginBottom'>
                     <h4 class='basePrice' data-bind='var: product(zoovy:base_price); format:money; currencySign: $;  hideZero:true; pretext: <span>NOW</span><br> ;'></h4>
                     <h5 class='prodMSRP' data-bind='var: product(zoovy:prod_msrp); format:money; currencySign: $;  hideZero:true; pretext: <span>WAS</span><br> ;'></h5>
@@ -974,7 +974,7 @@ this will likely become more flexible in the future. ###
 					<span data-bind='var: reviews(reviews.average); format:addClass; className:review_;' class='reviewSprite'></span>
 					<span data-bind='var: reviews(reviews.total); format:text;posttext: from ;posttext: reviews; className:numReviews;'></span>
 				</section>
-                <menu data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' class='CRMButtonMenu'>
+                <menu data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' class='CRMButtonMenu CRMButtonMenuMobile'>
                     <a href='#' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).parent().attr("data-pid"),"templateID":"reviewFrmTemplate"}); return ;'>See reviews or write one!</a>
                 </menu>
                 <div class="socialLinks">
@@ -1012,12 +1012,15 @@ this will likely become more flexible in the future. ###
                     <li data-bind='var: product(is:shipfree); format:showIfSet;' class="displayNone"><img src="images/grayalert.gif" width="20" height="17" />Eligible for FREE Shipping</li>
                     <li data-bind='var: product(user:prod_storepickup); format:showIfSet;' class="displayNone"><img src="images/grayalert.gif" width="20" height="17">Available for Store Pick-up</li>
                 </ul>
-            </td>
-        </tr>
+            </div>
+        </div>
+       
         
-        <tr>
+        
+        
+        <div>
         	
-            <td colspan='2' class="tabbedProductContentTD">
+            <div colspan='2' class="tabbedProductContentTD">
                 <!--
                 the tabs are built in an onComplete.  ID's are added based on sku AND index, so the index (order) of the tabs MUST match the order of the tabContent divs
                 or the tab clicked won't open the right content.
@@ -1054,9 +1057,9 @@ this will likely become more flexible in the future. ###
                 <ul class='listStyleNone fluidList clearfix noPadOrMargin lineItemProdlist' data-bind="var: product(zoovy:accessory_products); format:productList; extension:store_prodlist;loadsTemplate:productListTemplateATC;hide_pagination:true;hide_summary:true; withReviews:1; withInventory:1; withVariations:1;"></ul>
                     </div>
                 </div>-->
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
     <!--BEGIN CAROUSEL CODE-->
         <div class="ppCarousel">
             <div class="prodPageCaroTitleCont">
@@ -1538,9 +1541,9 @@ So the cart template should contain these two elements and the extension should 
 -->
 <div id='cartTemplate' class='loadingBG'>
 <form id='cartTemplateForm' action='#' onSubmit='return false'>
-<table class='cartContainer'>
-<tr>
-	<td class='cartStuffContainer'>
+<div class='cartContainer'>
+<div>
+	<div class='cartStuffContainer'>
 	<ul id='cartStuffList' data-bind="var: cart(@ITEMS); format:stuffList; loadsTemplate:productListTemplateCart;" class='listStyleNone fluidList clearfix noPadOrMargin productList lineItemProdlist' >
     <div class='tabContent' data-anytab-content='prodDesc'>
 		<div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
@@ -1567,8 +1570,8 @@ So the cart template should contain these two elements and the extension should 
 		All preorders paid with a credit card will be charged at the time of shipment. All preorders paid with Google Checkout, Paypal or Amazon Payments will be charged when your order is placed. If you do not wish to pay for your preorder until it ships then you must use the checkout button and pay with a credit card. Orders that have both preorder and instock items we be shipped at the same time in one shipment. We recommend that you do not order in stock items with preorder items. 
 	</p></div>
    </div>
-	</td>
-	<td class='cartSummaryTotalsContainer'>
+	</div>
+	<div class='cartSummaryTotalsContainer'>
 	<div class='ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'>
 		<h2 class='ui-widget-header ui-helper-clearfix ui-corner-all ui-header'>Cart Totals</h2>
 		<div class='cartSummaryContainer'>
@@ -1623,9 +1626,9 @@ So the cart template should contain these two elements and the extension should 
 </section>
 		</div>
 	</div>
-	</td>
-</tr>
-</table>
+	</div>
+</div>
+</div>
 </form>
 </div><!-- /cartTemplate -->
 <!-- cart line-item template -->
