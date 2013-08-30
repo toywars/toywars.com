@@ -1543,34 +1543,6 @@ So the cart template should contain these two elements and the extension should 
 <form id='cartTemplateForm' action='#' onSubmit='return false'>
 <div class='cartContainer'>
 <div>
-	<div class='cartStuffContainer'>
-	<ul id='cartStuffList' data-bind="var: cart(@ITEMS); format:stuffList; loadsTemplate:productListTemplateCart;" class='listStyleNone fluidList clearfix noPadOrMargin productList lineItemProdlist' >
-    <div class='tabContent' data-anytab-content='prodDesc'>
-		<div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
-	</div>
-     </ul>
-   <div class="cartBottomArea" style="border-top:#897c68 solid 1px; margin:10px 0 0;">
-   <div class="right">
-		<p>HELPFUL LINKS</p>
-		<ul>
-			<li><a onClick="return showContent('company',{'show':'contact'});" href="#">Contact Us</a></li>
-			<li><a onClick="return showContent('company',{'show':'shipping'});" href="#">Shipping Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'return'});" href="#">Return Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'payment'});" href="#">Payment Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'privacy'});" href="#">Privacy Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'faq'});" href="#">FAQs</a></li>
-		</ul>
-	</div>
-    <div class="left"><p>
-		<span>FREE Shipping on all orders over $50</span><br>
-		All orders of $50 and more qualify for free standard shipping. Applicable only to address in the continental United States (HI and AK are not included). Free shipping does not apply to orders shipped to PO Boxes or international destinations. Not applicable to eBay or Amazon purchases.
-	</p>
-	<p>
-		<span>Preorders</span><br>
-		All preorders paid with a credit card will be charged at the time of shipment. All preorders paid with Google Checkout, Paypal or Amazon Payments will be charged when your order is placed. If you do not wish to pay for your preorder until it ships then you must use the checkout button and pay with a credit card. Orders that have both preorder and instock items we be shipped at the same time in one shipment. We recommend that you do not order in stock items with preorder items. 
-	</p></div>
-   </div>
-	</div>
 	<div class='cartSummaryTotalsContainer'>
 	<div class='ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'>
 		<h2 class='ui-widget-header ui-helper-clearfix ui-corner-all ui-header'>Cart Totals</h2>
@@ -1627,6 +1599,35 @@ So the cart template should contain these two elements and the extension should 
 		</div>
 	</div>
 	</div>
+	<div class='cartStuffContainer'>
+	<ul id='cartStuffList' data-bind="var: cart(@ITEMS); format:stuffList; loadsTemplate:productListTemplateCart;" class='listStyleNone fluidList clearfix noPadOrMargin productList lineItemProdlist' >
+    <div class='tabContent' data-anytab-content='prodDesc'>
+		<div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
+	</div>
+     </ul>
+   <div class="cartBottomArea" style="border-top:#897c68 solid 1px; margin:10px 0 0;">
+   <div class="right">
+		<p>HELPFUL LINKS</p>
+		<ul>
+			<li><a onClick="return showContent('company',{'show':'contact'});" href="#">Contact Us</a></li>
+			<li><a onClick="return showContent('company',{'show':'shipping'});" href="#">Shipping Policy</a></li>
+			<li><a onClick="return showContent('company',{'show':'return'});" href="#">Return Policy</a></li>
+			<li><a onClick="return showContent('company',{'show':'payment'});" href="#">Payment Policy</a></li>
+			<li><a onClick="return showContent('company',{'show':'privacy'});" href="#">Privacy Policy</a></li>
+			<li><a onClick="return showContent('company',{'show':'faq'});" href="#">FAQs</a></li>
+		</ul>
+	</div>
+    <div class="left"><p>
+		<span>FREE Shipping on all orders over $50</span><br>
+		All orders of $50 and more qualify for free standard shipping. Applicable only to address in the continental United States (HI and AK are not included). Free shipping does not apply to orders shipped to PO Boxes or international destinations. Not applicable to eBay or Amazon purchases.
+	</p>
+	<p>
+		<span>Preorders</span><br>
+		All preorders paid with a credit card will be charged at the time of shipment. All preorders paid with Google Checkout, Paypal or Amazon Payments will be charged when your order is placed. If you do not wish to pay for your preorder until it ships then you must use the checkout button and pay with a credit card. Orders that have both preorder and instock items we be shipped at the same time in one shipment. We recommend that you do not order in stock items with preorder items. 
+	</p></div>
+   </div>
+	</div>
+	
 </div>
 </div>
 </form>

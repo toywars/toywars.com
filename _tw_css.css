@@ -681,7 +681,7 @@ CART
     vertical-align: top;
     width: 732px;}
 .cartSummaryTotalsContainer { 
-	float: left;
+	float: right;
     font-size: 0.8em;
     margin-left: 10px;
     margin-top: -6px;
@@ -2684,8 +2684,43 @@ div.nav div.navContent > ul > li > a {display:none;}
 	.ppCarousel{
 		display:none;
 	}
-	
 	/**END PRODUCT PAGE**/
+	
+	/*CART PAGE*/
+	#cartTemplateForm{
+		margin-left: -12px;
+		min-height: 200px;
+		min-width: 240px;
+		width: 240px;
+	}
+	.cartSummaryTotalsContainer{
+	}
+	.cartStuffContainer{
+		border-top: 1px solid #897C68;
+		margin-top: 10px;
+		padding: 5px 0 0;
+		width: 250px;
+	}
+	#cartStuffList{
+		margin: 0 0 0 -10px;
+    	width: 263px;
+	}
+	.lineItemProdlist > li{
+		width:250px !important;
+	}
+	#cartStuffList li h4{
+		width: 250px !important;
+	}
+	.cartBottomArea{
+		width:250px;
+	}
+	.cartBottomArea div.right{
+		display:none;
+	}
+	div.cartStuffContainer .left{
+		width:250px;
+	}
+	/**END CART PAGE**/
 	
 	
 }
