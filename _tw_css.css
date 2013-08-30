@@ -2630,6 +2630,12 @@ div.nav div.navContent > ul > li > a {display:none;}
 	}
 	/*END FOOTER */
 	
+	/*SEARCH PAGE*/
+	#resultsProductListContainer{
+		width: 265px !important;
+	}
+	/*END SEARCH PAGE*/
+	
 	
 }
 /*END GENERIC MOBILE PHONE */
