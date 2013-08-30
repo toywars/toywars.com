@@ -2409,6 +2409,7 @@ div.nav div.navContent > ul > li > a {display:none;}
 
  }
 
+/*GENERIC MOBILE PHONE */
 @media screen and (max-width: 350px) {
 	
 	div.container{
@@ -2446,6 +2447,7 @@ div.nav div.navContent > ul > li > a {display:none;}
 	div#appPreView table div#loader > div.alignCenter > progress{
 		 width: 280px;
 	}
+	/*END APP PREVIEW*/
 	
 	/*HEADER*/
 	div#header{
@@ -2460,12 +2462,25 @@ div.nav div.navContent > ul > li > a {display:none;}
 	}
 	.headert2{
 		display: block;
-		margin: 3px 0 0 67px;
+		margin: 3px 0 0 10px;
 		position: absolute;
 		top: 85px;
 		z-index: 2;
 	}
-	
+	.headert4Mobile{
+		bottom: 0;
+		cursor: pointer;
+		display: block;
+		height: 35px;
+		position: absolute;
+		right: 0;
+		width: 115px;
+	}
+	.headert4Mobile img{
+		float: left;
+		margin-right: 5px;
+		margin-top: 5px;
+	}
 	div.nav div.navContent{
 		max-width: 320px;
 	}
@@ -2502,11 +2517,13 @@ div.nav div.navContent > ul > li > a {display:none;}
 		width: 285px !important;
 		z-index: 100;
 	}
+	/*END HEADER*/
 	
 	
 	/*HOMEPAGE*/
 	.sliderM{
 		max-width: 320px;
+		display:block;
 	}
 	.bannerS{
 		display:none;
@@ -2576,6 +2593,7 @@ div.nav div.navContent > ul > li > a {display:none;}
 		position: relative;
 		top: 16px;
 	}
+	/*END HOMEPAGE */
 	
 	
 	/*FOOTER*/
@@ -2610,6 +2628,8 @@ div.nav div.navContent > ul > li > a {display:none;}
 	div#footer div#footerContent div#copyright p{
 		margin-top: 20px;
 	}
+	/*END FOOTER */
 	
 	
 }
+/*END GENERIC MOBILE PHONE */
