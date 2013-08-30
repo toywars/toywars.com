@@ -294,8 +294,8 @@ and override using classes or id's as needed.
 .productList li, .categoryList li{font-size:.8em;}
 .productList h5{ min-height:50px; width:180px; margin:20px auto 0;}
 .productList h6{font-size:18px; width:100px; float:left;}
-#carCat1 h6, #carCat2 h6, #carCat3 h6, #carCat4 h6, #carCat5 h6, #carCat6 h6, #carCat7 h6, #carCat8 h6{ padding:0 0 0 15px;}
-#carCat1 .moreDetails, #carCat2 .moreDetails, #carCat3 .moreDetails, #carCat4 .moreDetails, #carCat5 .moreDetails, #carCat6 .moreDetails{ float:right; margin:0 8px 10px 0;}
+.carCat1 h6, .carCat2 h6, .carCat3 h6, .carCat4 h6, .carCat5 h6, .carCat6 h6, .carCat7 h6, .carCat8 h6{ padding:0 0 0 15px;}
+.carCat1 .moreDetails, .carCat2 .moreDetails, .carCat3 .moreDetails, .carCat4 .moreDetails, .carCat5 .moreDetails, .carCat6 .moreDetails{ float:right; margin:0 8px 10px 0;}
 .productList h4, .categoryList h4{font-size:1em;}
 .categoryList h5{font-size:.9em;}
 .categoryList h6{font-size:.85em;}
@@ -927,7 +927,7 @@ ul.categoryList li div.catName span {
 	
 }
 
-.caroufredsel_wrapper div.ccItem #carCat1, #carCat2, #carCat3, #carCat4, #carCat5{ width:948px; margin:0px auto; padding:10px 0 0 9px;}
+.caroufredsel_wrapper div.ccItem .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{ width:948px; margin:0px auto; padding:10px 0 0 9px;}
 
 div.catCarousel h2
 {
@@ -948,7 +948,7 @@ div.catCarousel2 h2
 	/*width: 970px;*/
 	max-width: 977px !Important;
 }
-.caroufredsel_wrapper div.ccItem1 #carCat1, #carCat2, #carCat3, #carCat4, #carCat5{width:948px; margin:0px auto; padding:10px 0 0 9px;}
+.caroufredsel_wrapper div.ccItem1 .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{width:948px; margin:0px auto; padding:10px 0 0 9px;}
 .productList > li {
     background: none repeat scroll 0 0 #FFFFFF;
     border: 0px solid #FFFFFF;
@@ -1913,7 +1913,7 @@ div.container div.nav div.navContent > ul > li{
 	width:20%;
 	text-align:center;
 }
-.caroufredsel_wrapper div.ccItem #carCat1, #carCat2, #carCat3, #carCat4, #carCat5{
+.caroufredsel_wrapper div.ccItem .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{
 	padding-left:0;
 }
 
@@ -2409,7 +2409,7 @@ div.nav div.navContent > ul > li > a {display:none;}
 
  }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) {
 	
 	div.container{
 		margin: 0 auto;
@@ -2449,7 +2449,7 @@ div.nav div.navContent > ul > li > a {display:none;}
 	
 	/*HEADER*/
 	div#header{
-		width: 320px;
+		width: 100%;
 		height: 125px;
 	}
 	div#header div#headerContent{
@@ -2467,7 +2467,40 @@ div.nav div.navContent > ul > li > a {display:none;}
 	}
 	
 	div.nav div.navContent{
-		display:none;
+		max-width: 320px;
+	}
+	div.nav div.navContent > ul{
+		max-width: 320px;
+	}
+	div.nav div.navContent > ul > li{
+		width: 50px;
+		padding-left:0;
+		padding-right:0;
+	}
+	div.nav div.navContent > ul > li > a{
+		display:block;
+		color: #FFFFFF;
+		font-family: 'Conv_BebasNeue';
+		font-size: 14px;
+		position: relative;
+		text-decoration: none;
+		top: 9px;
+	}
+	#megaanchor{
+		margin-left: 4px;
+	}
+	.megamenu{
+		background: none repeat scroll 0 0 white;
+		box-shadow: 1px 1px 1px 1px #222222;
+		display: none;
+		font: 12px Arial,Helvetica,sans-serif;
+		margin-left: -155px !important;
+		max-width: 310px;
+		padding: 10px;
+		position: absolute;
+		top: 176px !important;
+		width: 285px !important;
+		z-index: 100;
 	}
 	
 	
@@ -2498,12 +2531,85 @@ div.nav div.navContent > ul > li > a {display:none;}
 		width: 225px;
 	}
 	.homeProdSearchFreshCont {
-		float: left;
-		height: 230px;
 		margin-left: 48px;
 		margin-top: 10px;
-		position: relative;
-		width: 225px;
 	}
+	.homeProdSearchPreorderCont{
+		margin-left: 48px;
+    	margin-top: 10px;
+	}
+	.homeProdSearchList4Cont{
+		margin-left: 48px;
+    	margin-top: 10px;
+	}
+	.featuredCategories{
+		display:none;
+	}
+	.featuredCategoriesMobile{
+		display:block;
+		background: url("images/background-featured-categories.png") repeat scroll 0 0 transparent;
+		clear: both;
+		position: relative;
+		text-align: center;
+	}
+	.featuredCategoriesMobile div.catNav{
+		background: url("images/background-homepage-category-navigation.png") repeat-x scroll 0 0 transparent;
+		box-shadow: 1px 1px 5px 1px #222222;
+		height: 62px;
+		position: relative;
+		width: 100%;
+	}
+	.caroufredsel_wrapper div.ccItem{
+		width: 320px;
+		padding-left: 25px;
+	}
+	.caroufredsel_wrapper div.ccItem .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{
+		width:300px;
+	}
+	.featuredCategoriesMobile div.catNavContentMobile p.currentCat{
+		text-align: center;
+    	width: 320px;
+		color: #FFFFFF;
+		float: left;
+		font-family: 'Conv_BebasNeue';
+		font-size: 24px;
+		position: relative;
+		top: 16px;
+	}
+	
+	
+	/*FOOTER*/
+	div#footer div#footerContent{
+		max-width:320px;
+		height: 287px;
+	}
+	div#footer div#footerContent div#footerLinks{
+		max-width:320px;
+		height: 287px;
+	}
+	.footerFindItHere{
+		display:none;
+	}
+	div#footer div#footerContent div#footerLinks div#footerSubscribe{
+		display:none;
+	}
+	div#footer div#footerContent div#footerLinks > ul{
+		float: left;
+		margin-top: 60px;
+		padding: 0;
+		width: 140px;
+	}
+	.footerNeedHelp{
+		margin-left:25px;
+	}
+	div#footer div#footerContent div#copyright{
+		float: left;
+		height: 70px;
+		max-width: 320px;
+	}
+	div#footer div#footerContent div#copyright p{
+		margin-top: 20px;
+	}
+	
 	
 }

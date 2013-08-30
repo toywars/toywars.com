@@ -511,7 +511,7 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 	<div class="container">
 			<div id="footerContent">
 				<div id="footerLinks">
-					<ul>
+					<ul class="footerNeedHelp">
 						<li>NEED HELP?</li>
 						<li><a href="#" onClick="return showContent('homepage',{});">Home</a></li>
 						<li><a href="#" onClick="return showContent('company',{'show':'about'});">About</a></li>
@@ -521,7 +521,7 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 						<li><a href="#" onClick="return showContent('company',{'show':'faq'});">FAQs</a></li>
 						<!--<li><a href="#">Blog</a></li>-->
 					</ul>
-					<ul>
+					<ul class="footerFindItHere">
 						<li>FIND IT HERE</li>
 						<li>Coming Soon!</li>
 						<!--<li><a href="#" onClick="return showContent('homepage',{});">All Categories</a></li>	
@@ -667,25 +667,59 @@ the homepageTemplate template is loaded into mainContentArea by default when the
             <div class="catCarousel">
                 <div class="ccItem">
                     <h2>THE HOBBIT</h2>
-                    <ul id="carCat1" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'>
-                    </ul>
+                    <ul id="carCat1" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat1'></ul>
                      <!--<p align="center"><img class="btnViewAllCategories" src="images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories"/></p>-->
                 </div>
                 <div class="ccItem">
                     <h2>STAR WARS</h2>
-                    <ul id="carCat2" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat2" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat2'></ul>
                 </div>
                 <div class="ccItem">
                     <h2>DOCTOR WHO</h2>
-                    <ul id="carCat3" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat3" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat3'></ul>
                 </div>
                 <div class="ccItem">
                     <h2>WALKING DEAD</h2>
-                    <ul id="carCat4" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat4" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat4'></ul>
                 </div>	
                 <div class="ccItem">
                     <h2>AVENGERS</h2>
-                    <ul id="carCat5" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
+                    <ul id="carCat5" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat5'></ul>
+                </div>
+            </div>
+            <!--<ul data-bind='var: elastic-native({"size":"4","mode":"elastic-native","query":{"query_string":{"query":"featured"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>-->
+            <!--<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>-->
+            <!--<img class="btnViewAllCategories" src="site/images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories" />-->
+    </div>
+    <div class="featuredCategoriesMobile displayNone">
+        <div class="catNav">
+            <div class="catNavContentMobile">
+                <p class="currentCat">THE HOBBIT</p>
+                <p class="currentCat">STAR WARS</p>
+                <p class="currentCat">DOCTOR WHO</p>
+                <p class="currentCat">WALKING DEAD</p>
+                <p class="currentCat">AVENGERS</p>
+            </div>
+            <img class="btnCatNextMobile catButton" src="images/button-featured-cat-nav-next.png" alt="Next" style="display:block; position:absolute; right: 50px; top: 15px;" />
+            <img class="btnCatBackMobile catButton" src="images/button-featured-cat-nav-back.png" alt="Back" style="display:block; position:absolute; left: 50px; top: 15px;" />
+                <!--<img id="featuredNav" src="site/images/banner-featured-categories.png" alt="Featured Categories" />-->
+        </div>
+            <div class="catCarouselMobile">
+                <div class="ccItem">
+                    <ul id="carCat1Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat1'></ul>
+                     <!--<p align="center"><img class="btnViewAllCategories" src="images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories"/></p>-->
+                </div>
+                <div class="ccItem">
+                    <ul id="carCat2Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat2'></ul>
+                </div>
+                <div class="ccItem">
+                    <ul id="carCat3Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat3'></ul>
+                </div>
+                <div class="ccItem">
+                    <ul id="carCat4Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat4'></ul>
+                </div>	
+                <div class="ccItem">
+                    <ul id="carCat5Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat5'></ul>
                 </div>
             </div>
             <!--<ul data-bind='var: elastic-native({"size":"4","mode":"elastic-native","query":{"query_string":{"query":"featured"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>-->
