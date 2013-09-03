@@ -2370,62 +2370,6 @@ font-weight:normal;
 	media querries - responsive design
 *************************************************************************************/
 
-@media (min-width: 768px) and (max-width: 1024px)  { 
-.container {width:96%;}
-.caroufredsel_wrapper div.ccItem {padding-left:0px;margin-left:-5px;}
-.sortby {margin:0 0 0 2px;}
-.Account {width:600px;margin-left:-20px;}
-.featuredCategories div.catNavContent p:not(:last-child){width:290px;}
-.productList > li{width:214px;}
-}
-
-/*ipad*/
-@media only screen and (min-width: 768px) and (max-width: 979px)  and (orientation:portrait) {
-.container {width:99%;}
-.headert1{margin:11px 0 0 -179px ;width:290px;}
-.headert2{margin:41px 28px 0 27px;}
-.headert3{margin:10px 0 0 29px;}
-div.nav div.navContent > ul > li > a {font-size:20px;}
-div.nav div.navContent > ul > li {padding-left:15px;padding-right:15px;}
-.midmain {margin-left:18px;}
-.featuredCategories div.catNavContent p:not(:last-child) {width:195px;}
-.caroufredsel_wrapper div.ccItem {padding-left:5px;}
-.productList > li{width:216px;}
-div#topNav div#topNavContent p:not(:last-child){ /*{padding-right:11px;*/}
-.fl {padding:8px 21px 0 0}
-div#footer div#footerContent div#footerLinks > ul {padding-left:18px;width:140px;padding-right:10px;}
-.featuredCategories img.btnViewAllCategories {margin-right:180px;}
-#resultsProductListContainer {width:500px!important;}
-.sortby {margin:20px 0 0 2px; width:215px;}
-}
-
-
-/*Samsung Big Phone*/
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-.headert1 {margin:-50px 0 0 20px;}
-#footer {display:none;}
-.headert2{display:none;}
-.headert3{display:none;}
-div#topNav {display:none;}
-}
-
-/*iphone used*/
-@media only screen and (max-width: 479px) {
-.container {width:99%;}
-div#topNav {display:none;}
-div.nav div.navContent > ul > li > a {display:none;}
-.midmain {margin-left:40px;}
-.featuredCategories div.catNavContent p.currentCat {margin-left:2px!important;font-size:12px!important;}
-.featuredCategories div.catNavContent p:not(:last-child) { font-size:12px!important; margin-left:-21px;width:100px;}
-.productList > li{width:220px;}
-.featuredCategories div.catNavContent img.catButton {padding-right:0px; margin-left:0px!important;}
-.headert1 img {width:250px!important;}
-.headert2{display:none;}
-.headert3{display:none;}
-.sliderM {display:none;}
-
- }
-
 /*320 X 480 CELLPHONE*/
 @media screen and (max-width: 350px) {
 	
@@ -2884,11 +2828,17 @@ div.nav div.navContent > ul > li > a {display:none;}
 	.productList{
 		width:800px;
 	}
+	.caroufredsel_wrapper div.ccItem .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{
+		width:800px;
+	}
 	/*END HOMEPAGE*/
 	
 	/*FOOTER*/
 	.footerFindItHere{
 		display:none;
+	}
+	div#footer div#footerContent div#footerLinks{
+		max-width: 800px;
 	}
 	div#footer div#footerContent div#footerLinks > ul{
 		margin-left: 10px;
@@ -2896,6 +2846,80 @@ div.nav div.navContent > ul > li > a {display:none;}
 	div#footer div#footerContent div#footerLinks div#footerSubscribe{
 		margin-left: 50px;
 	}
+	div#footer div#footerContent{
+		max-width:800px;
+	}
 	/*END FOOTER*/
+	
+	/*PRODUCT PAGE*/
+	.imageContainer{
+		margin-left: 9px;
+		width: 37%;
+	}
+	.prodPageCaroTitleCont{
+		width: 795px;
+	}
+	.prodPageCarouselTitles h2{
+		width: 265px;
+		font-size: 20px;
+	}
+	.nextPPCaro{
+		right: 255px;
+	}
+	.prevPPCaro{
+		left: 255px;
+	}
+	.prodPageCarouselContentCont{
+		margin-left: 50px;
+		width: 685px;
+	}
+	.prodPageCarouselContent{
+		height: 1020px !important;
+		left: 0 !important;
+		width: 685px !important;
+	}
+	.placeholderCaroCat{
+		width: 690px;
+		height: 1010px;
+	}
+	.placeholderCaroCat ul{
+		width: 690px;
+		height: 1010px;
+	}
+	.prodPageCarouselContentCont div.caroufredsel_wrapper{
+		height: 1010px !important;
+	}
+	.ppCarousel{
+		height:1100px;
+	}
+	.prodPageCarouselContentCont{
+		height: 1010px;
+		margin-left: 70px;
+	}
+	#recentlyViewedItemsContainer{
+		width: 690px;
+		height: 1010px;
+	}
+	#recentlyViewedItemsContainer div ul{
+		width: 690px;
+		height: 1010px;
+	}
+	.prodlistRelatedContainer{
+		width: 690px;
+		height: 1010px;
+	}
+	.prodlistRelatedContainer div.displayNone{
+		width: 690px;
+		height: 1010px;
+	}
+	.prodlistRelatedContainer h1{
+		 color: #FF0000;
+		font-size: 22px;
+		height: 1010px;
+		line-height: 350px;
+		padding-left: 0;
+		width: 690px;
+	}
+	/*END PRODUCT PAGE*/
 }
 /*END 800 X 480 TABLET*/
