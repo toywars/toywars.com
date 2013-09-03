@@ -2421,7 +2421,7 @@ div.nav div.navContent > ul > li > a {display:none;}
 
  }
 
-/*GENERIC MOBILE PHONE */
+/*320 X 480 CELLPHONE*/
 @media screen and (max-width: 350px) {
 	
 	div.container{
@@ -2784,4 +2784,14 @@ div.nav div.navContent > ul > li > a {display:none;}
 	
 	
 }
-/*END GENERIC MOBILE PHONE */
+/*END 320 X 480 CELLPHONE*/
+
+/*800 X 480 TABLET*/
+@media screen and (max-width: 800px) {
+	/*APPVIEW*/
+	div#appPreView{
+		margin: 100px auto 100px -100px;
+	}
+	/*END APPVIEW*/
+}
+/*END 800 X 480 TABLET*/
