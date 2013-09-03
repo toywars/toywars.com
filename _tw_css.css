@@ -2741,11 +2741,46 @@ div.nav div.navContent > ul > li > a {display:none;}
 	.sideline{
 		float:left;
 	}
+	#mainContentArea_company div.sideline{
+		margin: 45px;
+    	width: 100%;
+	}
 	
 	#faqArticle{
 		width:320px;
 	}
 	/**END COMPANY PAGES**/
+	
+	/*CUSTOMER PAGES*/
+	#loginFormForModal{
+		height: 561px !important;
+		margin: 0;
+		padding: 0;
+	}
+	#loginFormContainer{
+		width:100%;
+	}
+	#loginMessaging{
+		margin-bottom:0;
+	}
+	#gotAccount{
+		left: 0;
+    	position: relative;
+	}
+	#recoverPasswordContainer form fieldset{
+		margin-top: -23px;
+	}
+	
+	#mainContentArea_customer div.sideline{
+		width:100%;
+		margin: 24px 100px;
+	}
+	.sideline nav#customerNav{
+	}
+	#mainContentArea_customer div.mainColumn{
+		width:100%;
+	}
+	/**END CUSTOMER PAGES**/
 	
 	
 }
