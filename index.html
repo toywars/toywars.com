@@ -1161,31 +1161,6 @@ if you change these, you should move them above this comment so that when you (o
 </ul>
 <!-- loadingBG needed on this for app init (content may take a moment to load) -->
 <div id='companyTemplate' class='clearfix loadingBG'>
-<div class='sideline' >
-    <nav id='companyNav'>
-    <ul class='listStyleNone noPadOrMargin'>
-        <h1>NEED HELP?</h1>
-        <li><a href='#company?show=about'>About Us</a></li>
-        <li><a href='#company?show=contact'>Contact Us</a></li>
-        <li><a href='#company?show=faq'>FAQ</a></li>
-        <li><a href='#company?show=payment'>Payment Policy</a></li>
-        <li><a href='#company?show=privacy'>Privacy Statement</a></li>
-        <li><a href='#company?show=return'>Return Policy</a></li>
-        <li><a href='#company?show=shipping'>Shipping Information</a></li>
-    </ul>
-    <div style="clear: both;"></div>
-    <br />
-    <ul class='listStyleNone noPadOrMargin'>
-        <h1>My Account</h1>
-        <li><a href='#customer?show=myaccount'>Login Or Sign Up</a></li>
-        <li><a href='#customer?show=myaccount'>View My Account</a></li>
-        <li><a href='#cart?show=cart'>View Shopping Cart</a></li>
-        <li><a href='#cart?show=cart'>Checkout</a></li>
-        <li><a href="#" data-bind="var: session(recentlyViewedItems); format: productList; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; hide_pagination:1; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>Recently Viewed Items</a></li>
-        <li><a href="#customer?show=orders">Previous Orders</a></li>
-        </ul>
-    </nav>
-</div>
 	<div class='mainColumn'>
 <!-- .textContentArea is used as a selector in quickstart.js because article tag type isn't ie8 friendly -->
 		<div id='aboutArticle' class='textContentArea article'>
@@ -1310,7 +1285,31 @@ also email us at <a href="mailto:help@toywars.com">help@toywars.com</a>. </div>
      <!--</div>
      -->
       <!--****END DISABLED BOTTOM CATEGORY CAROUSEL****-->
-      
+      <div class='sideline' >
+    <nav id='companyNav'>
+    <ul class='listStyleNone noPadOrMargin'>
+        <h1>NEED HELP?</h1>
+        <li><a href='#company?show=about'>About Us</a></li>
+        <li><a href='#company?show=contact'>Contact Us</a></li>
+        <li><a href='#company?show=faq'>FAQ</a></li>
+        <li><a href='#company?show=payment'>Payment Policy</a></li>
+        <li><a href='#company?show=privacy'>Privacy Statement</a></li>
+        <li><a href='#company?show=return'>Return Policy</a></li>
+        <li><a href='#company?show=shipping'>Shipping Information</a></li>
+    </ul>
+    <div style="clear: both;"></div>
+    <br />
+    <ul class='listStyleNone noPadOrMargin'>
+        <h1>My Account</h1>
+        <li><a href='#customer?show=myaccount'>Login Or Sign Up</a></li>
+        <li><a href='#customer?show=myaccount'>View My Account</a></li>
+        <li><a href='#cart?show=cart'>View Shopping Cart</a></li>
+        <li><a href='#cart?show=cart'>Checkout</a></li>
+        <li><a href="#" data-bind="var: session(recentlyViewedItems); format: productList; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; hide_pagination:1; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>Recently Viewed Items</a></li>
+        <li><a href="#customer?show=orders">Previous Orders</a></li>
+        </ul>
+    </nav>
+</div>
 </div><!-- /companyTemplate -->
 
 
