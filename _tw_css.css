@@ -2966,5 +2966,29 @@ font-weight:normal;
 		width: 392px;
 	}
 	/*END CART PAGE*/
+	/*COMPANY PAGE*/
+	.mainColumn{
+		width: 63%;
+	}
+	.sideline{
+		margin: 30px 50px;
+	}
+	#faqArticle{
+		width:100%;
+	}
+	/*END COMPANY PAGE*/
+	
+	/*LOGIN PAGE*/
+	div#loginFormContainer{
+		margin-left: 20px;
+    	position: relative;
+	}
+	/*END LOGIN PAGE*/
+	
+	/*LOGIN PAGE*/
+	#mainContentArea_customer div.mainColumn{
+		width: 63%;
+	}
+	/*END LOGIN PAGE*/
 }
 /*END 800 X 480 TABLET*/
