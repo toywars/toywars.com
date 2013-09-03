@@ -2360,6 +2360,11 @@ font-weight:normal;
 }
 
 
+.midmain div.rightB{
+	display:none;
+}
+
+
 
 /*************************************************************************************
 	media querries - responsive design
@@ -2830,5 +2835,67 @@ div.nav div.navContent > ul > li > a {display:none;}
 		margin-left: -391px !important;
 	}
 	/*END HEADER*/
+	/*HOMEPAGE*/
+	.sliderM{
+		margin-left: 80px;
+		margin-top: 65px;
+		max-width: 800px;
+	}
+	.sliderM div.rightB{
+		display:none;
+	}
+	.midmain div.rightB{
+		display: block;
+    	margin-left: 13px;
+	}
+	.homeProdSearchBestSellerCont{
+		margin-left:15px;
+	}
+	.homeProdSearchPreorderCont{
+		margin-top:10px;
+	}
+	.homeProdSearchList4Cont{
+		margin-top:10px;
+	}
+	
+	.featuredCategories{
+		float:left;
+		margin-top:15px;
+	}
+	.featuredCategories div.catNav{
+		width:800px;
+	}
+	div.catNav div.caroufredsel_wrapper{
+		width: 800px !important;
+	}
+	.featuredCategories div.catNavContent p:not(:last-child){
+		width: 266px;
+	}
+	.btnCatBack{
+		margin-left: 280px;
+	}
+	.btnCatNext {
+		right: 285px !important;
+	}
+	.caroufredsel_wrapper div.ccItem{
+		width:800px;
+		margin-left: 40px;
+	}
+	.productList{
+		width:800px;
+	}
+	/*END HOMEPAGE*/
+	
+	/*FOOTER*/
+	.footerFindItHere{
+		display:none;
+	}
+	div#footer div#footerContent div#footerLinks > ul{
+		margin-left: 10px;
+	}
+	div#footer div#footerContent div#footerLinks div#footerSubscribe{
+		margin-left: 50px;
+	}
+	/*END FOOTER*/
 }
 /*END 800 X 480 TABLET*/

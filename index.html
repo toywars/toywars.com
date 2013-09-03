@@ -618,6 +618,8 @@ the homepageTemplate template is loaded into mainContentArea by default when the
     <p data-bind="var: category(%page.description); format:wiki; wikiFormats:myRIA; editor: textarea;"></p>
     -->
     <!-- a sample of how to format an elastic native search in a data-bind -->
+     <div class="rightB" onClick="return showContent('product',{'pid':'FU3633-RF'});"><img src="images/flockedjake3.jpg" /></div>
+     
      <div class="homeProdSearchBestSellerCont">   
      	<ul id='homeProdSearchBestSellers' data-bind="var: list($hot_item.@products); format: infiniteProductList; extension:prodlist_infinite; loadsTemplate: productListTemplate; withReviews:1; withInventory:1; withVariations:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
      	<img src="images/h_specialty_item_arrow_right.png" class="hotItemsNext pointer" />
