@@ -2744,10 +2744,13 @@ font-weight:normal;
 		max-width:800px;
 		margin: 0;
 	}
+	body, html{
+		min-width: 800px;
+	}
 	
 	/*APPVIEW*/
 	div#appPreView{
-		margin: 100px auto 100px -100px;
+		margin: 100px auto 100px 60px;
 	}
 	/*END APPVIEW*/
 	/*HEADER*/
@@ -2777,6 +2780,12 @@ font-weight:normal;
 		max-width: 760px !important;
 		width: 760px !important;
 		margin-left: -391px !important;
+	}
+	div.nav div.navContent{
+		max-width: 800px;
+	}
+	div.nav div.navContent > ul{
+		max-width: 800px;
 	}
 	/*END HEADER*/
 	/*HOMEPAGE*/
@@ -2849,6 +2858,9 @@ font-weight:normal;
 	div#footer div#footerContent{
 		max-width:800px;
 	}
+	div#footer div#footerContent div#copyright{
+		max-width: 800px;
+	}
 	/*END FOOTER*/
 	
 	/*PRODUCT PAGE*/
@@ -2913,7 +2925,6 @@ font-weight:normal;
 		height: 1010px;
 	}
 	.prodlistRelatedContainer h1{
-		 color: #FF0000;
 		font-size: 22px;
 		height: 1010px;
 		line-height: 350px;
@@ -2921,5 +2932,12 @@ font-weight:normal;
 		width: 690px;
 	}
 	/*END PRODUCT PAGE*/
+	
+	/*SEARCH PAGE*/
+	#resultsProductListContainer{
+		margin-right: 0 !important;
+    	width: 760px !important;
+	}
+	/*END SEARCH PAGE*/
 }
 /*END 800 X 480 TABLET*/
