@@ -2939,5 +2939,32 @@ font-weight:normal;
     	width: 760px !important;
 	}
 	/*END SEARCH PAGE*/
+	
+	/*CART PAGE*/
+	#cartTemplateForm{
+		margin-left: -13px;
+		width: 640px;
+	}
+	#cartStuffList{
+		width: 390px;
+	}
+	#cartStuffList li h4{
+		width: 390px !important;
+		min-height: 75px !important;
+	}
+	.cartStuffContainer{
+		padding: 0;
+		width: 360px;
+	}
+	.cartBottomArea{
+		width: 392px;
+	}
+	div.cartStuffContainer .right{
+		display:none;
+	}
+	div.cartStuffContainer .left{
+		width: 392px;
+	}
+	/*END CART PAGE*/
 }
 /*END 800 X 480 TABLET*/
