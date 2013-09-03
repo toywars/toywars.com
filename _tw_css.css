@@ -2788,10 +2788,47 @@ div.nav div.navContent > ul > li > a {display:none;}
 
 /*800 X 480 TABLET*/
 @media screen and (max-width: 800px) {
+	.container{
+		width:800px;
+	}
+	div.container{
+		max-width:800px;
+		margin: 0;
+	}
+	
 	/*APPVIEW*/
 	div#appPreView{
 		margin: 100px auto 100px -100px;
 	}
 	/*END APPVIEW*/
+	/*HEADER*/
+	div#topNav div#topNavContent{
+		max-width: 800px;
+		margin: 0 0 0 35px;
+	}
+	.headerQuestions{
+		display:none;
+	}
+	
+	div#header div#headerContent{
+		max-width: 800px;
+	}
+	.headert2{
+		margin: 41px 0 0 25px;
+	}
+	.headert3{
+		margin: 15px 0 0 70px;
+	}
+	
+	div.nav div.navContent > ul > li{
+		padding-left: 26px;
+    	padding-right: 25px;
+	}
+	.megamenu{
+		max-width: 760px !important;
+		width: 760px !important;
+		margin-left: -391px !important;
+	}
+	/*END HEADER*/
 }
 /*END 800 X 480 TABLET*/
