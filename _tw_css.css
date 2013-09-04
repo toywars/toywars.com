@@ -2683,6 +2683,12 @@ font-weight:normal;
 	div.nav div.navContent > ul > li > a{
 		font-size: 18px;
 	}
+	
+	.megamenu{
+		margin-left: -235px !important;
+		max-width: 445px !important;
+		width: 445px !important;
+	}
 	/*END HEADER*/
 	
 	/*HOMEPAGE*/
@@ -2722,6 +2728,7 @@ font-weight:normal;
 	.caroufredsel_wrapper div.ccItem .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{
 		width: 480px;
 	}
+	.featuredCategories div.catNav{overflow:hidden;}
 	/*END HOMEPAGE*/
 	/*FOOTER*/
 	div#footer div#footerContent div#footerLinks > ul{
@@ -2742,6 +2749,15 @@ font-weight:normal;
 		background-image:url(images/button-footer-subscribe-mobile.png);	
 	}
 	/*END FOOTER*/
+	
+	/*SEARCH PAGE*/
+	#resultsProductListContainer{
+		float: left !important;
+		margin-right: 0 !important;
+		padding: 0;
+		width: 480px !important;
+	}
+	/*END SEARCH PAGE*/
 }
 /*END 480 X 320 CELLPHONE*/
 
