@@ -160,10 +160,10 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                         <span class="loginShow username" onClick="return showContent('customer',{'show':'myaccount'});" ></span> <span class="loginShow"> <a href="#" onClick="app.ext.myRIA.u.handleLogoutActions(); return false;">Log Out</a></span>
                         <span class="loginHide">Guest! <a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Login  </a><span>or</span> <a href="#customer?show=myaccount" class='bindByAnchor' id="account">Sign-Up</a></span>
                     </span>
-                    <img src="images/view-cart-icon.png" alt="View Cart" />
-                    <p><span class="cartItemCount">0</span> Items in your Shopping Cart <a href="#" onClick="return showContent('cart',{});">VIEW CART</a></p>
-                    <img src="images/contact-us-icon.png" alt="Contact Us">
-                    <p><a href="#" onClick="return showContent('company',{'show':'contact'});">CONTACT US</a></p>
+                    <a href="#" onClick="return showContent('cart',{});"><img class="cartIcon" src="images/view-cart-icon.png" alt="View Cart" /> <span class="cartItemCount displayNone fourEightyReso">0</span></a>
+                    <p class="headerQuestions2"><span class="cartItemCount">0</span> Items in your Shopping Cart <a href="#" onClick="return showContent('cart',{});">VIEW CART</a></p>
+                    <img class="headerQuestions2" src="images/contact-us-icon.png" alt="Contact Us">
+                    <p class="headerQuestions2"><a href="#" onClick="return showContent('company',{'show':'contact'});">CONTACT US</a></p>
                     <img class="headerQuestions" src="images/questions-icon.png" alt="Questions">
                     <p class="headerQuestions">Questions? <a href="#" onClick="return showContent('company',{'show':'faq'});">VISIT THE FAQs</a></p>
 				</div>

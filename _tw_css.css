@@ -2631,8 +2631,128 @@ font-weight:normal;
 
 
 
-/*320 X 480 CELLPHONE*/
+/*BEGIN 480 X 320 CELLPHONE*/
 @media screen and (max-width: 790px) {
+	
+	body, html{
+		min-width:480px;
+	}
+	div.container{
+		max-width: 480px;
+	}
+	/*APP PREVIEW*/
+	div#appPreView{
+		margin: 50px auto;
+		padding:0;
+	}
+	/*END APP PREVIEW*/
+	/*HEADER*/
+	.headerQuestions2{
+		display:none;
+	}
+	.fourEightyReso{
+		color: #FFFFFF;
+		display: block;
+		line-height: 30px;
+		text-decoration: underline;
+	}
+	div#topNav div#topNavContent div.container a img.cartIcon{
+		margin-left: 120px;
+	}
+	
+	div#header div#headerContent{
+		max-width:480px;
+	}
+	.headert1{
+		margin: 11px 0 0 8px;
+	}
+	.headert2{
+		margin: 65px 0 0 5px;
+	}
+	div#header div#headerContent input#txtSearch{
+		width:100px;
+	}
+	.headert3{
+		display:none;
+	}
+	
+	div.nav div.navContent > ul > li{
+		 padding-left: 8px;
+    	padding-right: 7px;
+	}
+	div.nav div.navContent > ul > li > a{
+		font-size: 18px;
+	}
+	/*END HEADER*/
+	
+	/*HOMEPAGE*/
+	.sliderM{
+		display:none;
+	}
+	.midmain div.rightB{
+		margin-left: 90px;
+		margin-bottom:10px;
+	}
+	.homeProdSearchBestSellerCont{
+		margin-left:10px;
+	}
+	.homeProdSearchPreorderCont{
+		margin-left:10px;
+	}
+	
+	.featuredCategories div.catNav{
+		width: 480px;
+	}
+	.featuredCategories div.catNavContent p:not(:last-child){
+		width: 160px;
+	}
+	.btnCatNext{
+		right: 145px !important;
+	}
+	.btnCatBack{
+		margin-left: 150px;
+	}
+	.featuredCategories div.caroufredsel_wrapper{
+		height: 1000px !important;
+	}
+	.caroufredsel_wrapper div.ccItem{
+		margin-left: 3px;
+    	width: 480px;
+	}
+	.caroufredsel_wrapper div.ccItem .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{
+		width: 480px;
+	}
+	/*END HOMEPAGE*/
+	/*FOOTER*/
+	div#footer div#footerContent div#footerLinks > ul{
+		margin-left: 10px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	div#footer div#footerContent div#footerLinks div#footerSubscribe{
+		margin-left:0;
+		width: 155px;
+	}
+	.userInfo input{
+		width: 145px;
+	}
+	.btnFooterSubscribe{
+		width: 155px !important;
+		height: 30px !important;
+		background-image:url(images/button-footer-subscribe-mobile.png);	
+	}
+	/*END FOOTER*/
+}
+/*END 480 X 320 CELLPHONE*/
+
+
+
+
+
+
+
+/*320 X 480 CELLPHONE*/
+@media screen and (max-width: 479px) {
 	
 	div.container{
 		margin: 0 auto;
@@ -2646,7 +2766,6 @@ font-weight:normal;
 	/*APP PREVIEW*/
 	div#appPreView{
 		margin: 100px auto;
-    	padding: 20px;
 		width:100%;
 	}
 	div#appPreView table{
@@ -3011,7 +3130,7 @@ font-weight:normal;
 	}
 	/**END CUSTOMER PAGES**/	
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 310px) {
 	div#appPreView{
 		padding:0;
 	}
