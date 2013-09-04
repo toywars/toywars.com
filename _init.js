@@ -464,15 +464,31 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	carouselPPContent = foo2;
 	setTimeout(carouselPPContent, 2000);
 	
+	var carouselPPTitleMobile =
+	function(){ $(".prodPageCarouselTitlesMobile").carouFredSel
+	({
+		width   : 476,
+		height	: 60,
+		align: "left",
+		items   : 1,
+		scroll: 1,
+		infinite: true,
+		auto : false
+	});
+	}
+	setTimeout(carouselPPTitleMobile, 2000);
+	
 	
 	
 	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL
 	$(".nextPPCaro").click(function() {
     	$(".prodPageCarouselTitles").trigger("next", 1);
+		$(".prodPageCarouselTitlesMobile").trigger("next", 1);
 		$(".prodPageCarouselContent").trigger("next", 1);
     });
 	$(".prevPPCaro").click(function() {
     	$(".prodPageCarouselTitles").trigger("prev", 1);
+		$(".prodPageCarouselTitlesMobile").trigger("prev", 1);
 		$(".prodPageCarouselContent").trigger("prev", 1);
     });
 	

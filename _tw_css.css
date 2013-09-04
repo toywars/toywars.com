@@ -2758,6 +2758,108 @@ font-weight:normal;
 		width: 480px !important;
 	}
 	/*END SEARCH PAGE*/
+	
+	/*PRODUCT PAGE*/
+	.imageContainer{
+		margin-left: 10px;
+		margin-right: 10px;
+		padding: 0;
+		width: 300px;
+	}
+	.prodSummaryContainer{
+		height:auto;
+		float: right;
+    	width: 160px;
+	}
+	.RightPcol{
+		float: left;
+		margin-left: 10px;
+		margin-top: 10px;
+		padding: 20px 53px;
+		width: 195px;
+	}
+	
+	.prodPageCaroTitleCont{
+		overflow: hidden;
+    	width: 476px;
+	}
+	.prodPageCaroTitleCont div.caroufredsel_wrapper:first-child{
+		display:none;
+	}
+	.prodPageCaroTitleCont div.caroufredsel_wrapper:last-child{
+		display:block;
+	}
+	.prodPageCarouselTitlesMobile {
+		display:block;
+	}
+	.prodPageCarouselTitlesMobile h2{
+		color: #FFFFFF;
+		float: left;
+		font-size: 26px;
+		line-height: 60px;
+		text-align: center;
+		width: 476px;
+	}
+	.nextPPCaro{
+		right: 50px;
+	}
+	.prevPPCaro{
+		left: 50px;
+	}
+	.ppCarousel{
+		height: 1595px;
+	}
+	.prodPageCarouselContentCont{
+		width:480px;
+		height: 1510px;
+		margin-left: 20px;
+	}
+	.prodPageCarouselContentCont div.caroufredsel_wrapper{
+		width: 460px !important;
+		height: 1510px !important;
+	}
+	.prodPageCarouselContent{
+		width: 460px !important;
+		height: 1510px !important;
+	}
+	#recentlyViewedItemsContainer{
+		width: 460px;
+		height: 1760px;
+	}
+	.placeholderCaroCat{
+		height: 1510px;
+    	width: 460px;
+	}
+	.placeholderCaroCat ul{
+		height: 1510px;
+    	width: 460px;
+	}
+	#recentlyViewedItemsContainer div ul{
+		width: 480px;
+		height: 1510px;
+	}
+	div.caroufredsel_wrapper ul li.ProductListStyles{
+		margin-left: 0;
+	}
+	.prodlistRelatedContainer{
+		height: 1510px;
+    	width: 460px;
+	}
+	.prodlistRelatedContainer h1{
+		height: 1510px;
+    	width: 460px;
+		font-size: 14px;
+    	line-height: 230px;
+	}
+	.prodlistRelatedContainer div.displayNone{
+		height: 1510px;
+    	width: 460px;
+	}
+	.prodlistRelatedContainer ul{
+		height: 1510px;
+    	width: 460px;
+	}
+	/*END PRODUCT PAGE*/
 }
 /*END 480 X 320 CELLPHONE*/
 
