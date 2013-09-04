@@ -1,5 +1,5 @@
 /***TRANFERRED CODE FROM OLD CSS BEFORE FRAMEWORK RESTORE**/
-body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif; min-width:1200px;}
+body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif; min-width:970px;}
 
 @font-face{font-family:'Anton'; font-style:normal; font-weight:400; src:local('Anton'), url(http://themes.googleusercontent.com/static/fonts/anton/v3/tilmJBBU81h1G7ZsdY3Hmw.woff) format('woff');}
 @font-face{font-family:'Conv_BebasNeue'; src: url('fonts/BebasNeue.eot'); src: url('fonts/BebasNeue.otf'); src: local('☺'), url('fonts/BebasNeue.woff') format('woff'), url('fonts/BebasNeue.ttf') format('truetype'), url('fonts/BebasNeue.svg') format('svg'); font-weight:normal; font-style:normal;}
@@ -2372,13 +2372,12 @@ font-weight:normal;
 
 
 /*800 X 480 TABLET*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 970px) {
 	.container{
 		width:800px;
 	}
 	div.container{
 		max-width:800px;
-		margin: 0;
 	}
 	body, html{
 		min-width: 800px;
@@ -2386,13 +2385,12 @@ font-weight:normal;
 	
 	/*APPVIEW*/
 	div#appPreView{
-		margin: 100px auto 100px 60px;
+		width:100%;
 	}
 	/*END APPVIEW*/
 	/*HEADER*/
 	div#topNav div#topNavContent{
 		max-width: 800px;
-		margin: 0 0 0 35px;
 	}
 	.headerQuestions{
 		display:none;
@@ -2634,7 +2632,7 @@ font-weight:normal;
 
 
 /*320 X 480 CELLPHONE*/
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 790px) {
 	
 	div.container{
 		margin: 0 auto;
@@ -2647,14 +2645,17 @@ font-weight:normal;
 	
 	/*APP PREVIEW*/
 	div#appPreView{
-		margin: 0;
-    	padding: 0;
+		margin: 100px auto;
+    	padding: 20px;
+		width:100%;
 	}
 	div#appPreView table{
-		float:left;
+		
+	}
+	div#appPreView table tbody{
 	}
 	div#appPreView table tbody tr td{
-	width:320px;
+		width:320px;
 	}
 	div#appPreView table tbody tr td img{
 		margin: 10px 2px 50px 0 !important;
@@ -2684,7 +2685,6 @@ font-weight:normal;
 	div#topNav div#topNavContent {
 		max-width: 320px;
 		overflow: hidden;
-		margin: 0 0 0 25px;
 	}
 	.headert1{
 		 margin: 10px 0 0 40px;
@@ -3010,5 +3010,10 @@ font-weight:normal;
 		width:100%;
 	}
 	/**END CUSTOMER PAGES**/	
+}
+@media screen and (max-width: 760px) {
+	div#appPreView{
+		padding:0;
+	}
 }
 /*END 320 X 480 CELLPHONE*/
