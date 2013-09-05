@@ -2911,6 +2911,40 @@ font-weight:normal;
 		width:214px;
 	}
 	/**END CART PAGE**/
+	
+	/*LOGIN PAGE*/
+	#loginFormForModal{
+		height: 130px;
+	}
+	/*END LOGIN PAGE*/
+	
+	/*CUSTOMER PAGE*/
+	#mainContentArea_customer div.mainColumn{
+		margin-left: 0;
+	}
+	.sideline{
+		margin: 30px 40px;
+	}
+	/*END CUSTOMER PAGE*/
+	
+	/*COMPANY PAGE*/
+	.mainColumn{
+		margin-left: 0;
+    	width: 63%;
+	}
+	#mainContentArea_company div.sideline{
+		float: left;
+    	margin: 30px 0;
+	}
+	#companyNav ul{
+		margin-left: 15px;
+		padding: 10px;
+		width: 135px;
+	}
+	#contactContent{
+		padding: 0 0 0 25px;
+	}
+	/*END COMPANY PAGE*/
 }
 /*END 480 X 320 CELLPHONE*/
 
