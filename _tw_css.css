@@ -2860,6 +2860,57 @@ font-weight:normal;
     	width: 460px;
 	}
 	/*END PRODUCT PAGE*/
+	
+	/*CART PAGE*/
+	#modalCart{
+		height: 160px !important;
+	}
+	#cartTemplateForm{
+		margin-left: -12px;
+		min-height: 167px;
+		min-width: 384px;
+		width: 384px;
+	}
+	.cartSummaryTotalsContainer .cartSummaryContainer{
+		padding: 0;
+	}
+	.cartSummaryTotalsContainer{
+		float: right;
+		margin-left: 0;
+		margin-right: 0;
+		margin-top: -6px;
+		padding: 0;
+		width: 170px;
+	}
+	.cartStuffContainer{
+		border-top: none;
+		margin-top: -7px;
+		padding: 0;
+		width: 210px;
+	}
+	#cartStuffList{
+		margin: 0 0 0 -12px;
+    	width: 222px;
+	}
+	.lineItemProdlist > li{
+		width:214px !important;
+	}
+	#cartStuffList li h4{
+		width: 214px !important;
+	}
+	.qtyInput{
+		width: 65px !important;
+	}
+	.cartBottomArea{
+		width:213px;
+	}
+	.cartBottomArea div.right{
+		display:none;
+	}
+	div.cartStuffContainer .left{
+		width:214px;
+	}
+	/**END CART PAGE**/
 }
 /*END 480 X 320 CELLPHONE*/
 
