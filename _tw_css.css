@@ -1,5 +1,5 @@
 /***TRANFERRED CODE FROM OLD CSS BEFORE FRAMEWORK RESTORE**/
-body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif; min-width:1200px;}
+body,html{font-size:100%; background:#B7A58B; margin:0px; padding:0px; font-family:'Conv_HelveticaNeueLTPro-Roman',Sans-Serif; min-width:960px;}
 
 @font-face{font-family:'Anton'; font-style:normal; font-weight:400; src:local('Anton'), url(http://themes.googleusercontent.com/static/fonts/anton/v3/tilmJBBU81h1G7ZsdY3Hmw.woff) format('woff');}
 @font-face{font-family:'Conv_BebasNeue'; src: url('fonts/BebasNeue.eot'); src: url('fonts/BebasNeue.otf'); src: local('☺'), url('fonts/BebasNeue.woff') format('woff'), url('fonts/BebasNeue.ttf') format('truetype'), url('fonts/BebasNeue.svg') format('svg'); font-weight:normal; font-style:normal;}
@@ -69,7 +69,7 @@ and offMenu is toggle off, hiding the change button.
 .rightB img{width:100%;} 
 #couponCode{height:15px; width:124px; margin:0 -6px 0 0; padding:2px 6px;}
 #addCouponBtn{background:none !important; border:none !important; margin:-2px 0 0 0px;}
-div.container{margin:0px auto; position:relative; max-width:1020px;}
+div.container{margin:0px auto; position:relative; max-width:960px;}
 div#topNav{background: url(images/background-top-nav.png) repeat-x; height: 30px; position: relative; width: 100%;}
 div#topNav div#topNavContent{color: #FFFFFF; font-family: Helvetica; height: 30px; margin: 0px auto; position: relative; max-width: 960px;}
 div#topNav div#topNavContent img, div#topNav div#topNavContent p{float:left; position: relative;}
@@ -329,7 +329,13 @@ PRODUCT DETAIL PAGE (productTemplate)
 .prodSummaryContainer{width:382px;}
 .prodSummaryContainer h1{ font-size:18px; margin-bottom:14px;}
 .basePrice span{ font-size:10px; color:#000000;}
-.RightPcol{background:#fff; padding:20px; width:180px;float: left;}
+.RightPcol{ 
+	background: none repeat scroll 0 0 #FFFFFF;
+    float: right;
+    margin-right: 20px;
+    padding: 20px;
+    width: 180px;
+	}
 .RightPcol h4{float:right; text-align:center;font-size:18px; padding:0 16px 0 0; font-weight:bold;}
 .RightPcol h5{float:left;text-align:center;font-size:18px; color:#999999; text-decoration:line-through;}
 .RightPcol .prodMSRP span{font-size:10px; color:#999999;}
@@ -1501,14 +1507,16 @@ div.container div#footer{
 .imageContainer{
 	width:30%;
 	position:relative;
+	float:left;
 }
 .imageCont{
 	height: 340px;
     width: 300px;
 }
 .prodSummaryContainer{
-	width:auto;
-	height:auto;
+	float: left;
+    height: auto;
+    width: 43%;
 }
 .prodViewerContainer .addToCartButton{
     border: 2px outset #9A0000 !important;
@@ -1841,7 +1849,9 @@ div.container div.nav div.navContent > ul > li{
 	height: 574px;
     width: 100%;
 	background-image:
-	url(images/pp_caro_background.png)
+	url(images/pp_caro_background.png);
+	float:left;
+	margin-top:20px;
 }
 .prodPageCaroTitleCont{
 	height: 60px;
@@ -1969,7 +1979,7 @@ div.container div.nav div.navContent > ul > li{
 	width:20%;
 	text-align:center;
 }
-.caroufredsel_wrapper div.ccItem #carCat1, #carCat2, #carCat3, #carCat4, #carCat5{
+.caroufredsel_wrapper div.ccItem .carCat1, .carCat2, .carCat3, .carCat4, .carCat5{
 	padding-left:0;
 }
 
