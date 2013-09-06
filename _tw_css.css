@@ -319,7 +319,7 @@ PRODUCT DETAIL PAGE (productTemplate)
 
 ***************************************************/
 .container{ max-width:1000px; margin:0px auto;}
-.prodViewerContainer{width:660px; margin:20px auto 28px;}
+.prodViewerContainer{width:100%; margin:20px auto 28px;}
 .breadAndAddThisContainer{margin-bottom:8px; padding-bottom:8px; border-bottom:1px dotted #b6b6b6;}
 
 /* primary image and thumbnails */
@@ -329,7 +329,7 @@ PRODUCT DETAIL PAGE (productTemplate)
 .prodSummaryContainer{width:382px;}
 .prodSummaryContainer h1{ font-size:18px; margin-bottom:14px;}
 .basePrice span{ font-size:10px; color:#000000;}
-.RightPcol{background:#fff; padding:20px; width:180px;}
+.RightPcol{background:#fff; padding:20px; width:180px;float: left;}
 .RightPcol h4{float:right; text-align:center;font-size:18px; padding:0 16px 0 0; font-weight:bold;}
 .RightPcol h5{float:left;text-align:center;font-size:18px; color:#999999; text-decoration:line-through;}
 .RightPcol .prodMSRP span{font-size:10px; color:#999999;}
