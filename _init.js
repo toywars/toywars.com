@@ -195,7 +195,56 @@ app.rq.push(['templateFunction','homepageTemplate','onCompletes',function(P) {
 	$(".btnCatNext").mouseout(function()
 	{
 		$(this).css("opacity","1");
-	});		
+	});	
+	
+	//**HOMEPAGE BOTTOM CATEGORY CAROUSEL - MOBILE**
+	var carouselBottomCatsMobile;
+	function foo9(){ $(".catCarouselMobile").carouFredSel({
+			auto : false,
+			items   : 1,
+			scroll: 1
+	});}
+	carouselBottomCatsMobile = foo9;
+	setTimeout(carouselBottomCatsMobile, 2000);
+	
+	var carouselBottomCatTitlesMobile;
+	function foo10(){ $(".catNavContentMobile").carouFredSel({
+			auto : false,
+			items   : 1,
+			height: 63,
+			scroll: 1
+	});}
+	carouselBottomCatTitlesMobile = foo10;
+	setTimeout(carouselBottomCatTitlesMobile, 2000);
+	
+	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL - MOBILE
+	$(".btnCatNextMobile").click(function() {
+    	$(".catNavContentMobile").trigger("next", 1);
+		$(".catCarouselMobile").trigger("next", 1);
+    });
+	$(".btnCatBackMobile").click(function() {
+    	$(".catNavContentMobile").trigger("prev", 1);
+		$(".catCarouselMobile").trigger("prev", 1);
+    });
+	
+	$(".btnCatBackMobile").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".btnCatNextMobile").mouseover(function()
+	{
+		$(this).css("opacity",".65");
+	});	
+	$(".btnCatBackMobile").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});	
+	$(".btnCatNextMobile").mouseout(function()
+	{
+		$(this).css("opacity","1");
+	});	
+	
+		
 	
 }]);
 
@@ -449,16 +498,32 @@ app.rq.push(['templateFunction','productTemplate','onCompletes',function(P) {
 	carouselPPContent = foo2;
 	setTimeout(carouselPPContent, 2000);
 	
+	var carouselPPTitleMobile =
+	function(){ $(".prodPageCarouselTitlesMobile").carouFredSel
+	({
+		width   : 476,
+		height	: 60,
+		align: "left",
+		items   : 1,
+		scroll: 1,
+		infinite: true,
+		auto : false
+	});
+	}
+	setTimeout(carouselPPTitleMobile, 2000);
+	
 	
 	
 	//SCROLLING FUNCTION FOR BOTTOM CAROUSEL
 	$(".nextPPCaro").click(function() {
     	$(".prodPageCarouselTitles").trigger("next", 1);
 		$(".prodPageCarouselContent").trigger("next", 1);
+		$(".prodPageCarouselTitlesMobile").trigger("next", 1);
     });
 	$(".prevPPCaro").click(function() {
     	$(".prodPageCarouselTitles").trigger("prev", 1);
 		$(".prodPageCarouselContent").trigger("prev", 1);
+		$(".prodPageCarouselTitlesMobile").trigger("prev", 1);
     });
 	
 	$(".nextPPCaro").mouseover(function()

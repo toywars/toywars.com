@@ -160,12 +160,12 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                         <span class="loginShow username" onClick="return showContent('customer',{'show':'myaccount'});" ></span> <span class="loginShow"> <a href="#" onClick="app.ext.myRIA.u.handleLogoutActions(); return false;">Log Out</a></span>
                         <span class="loginHide">Guest! <a href="#" onClick="return showContent('customer',{'show':'myaccount'});">Login  </a><span>or</span> <a href="#customer?show=myaccount" class='bindByAnchor' id="account">Sign-Up</a></span>
                     </span>
-                    <img src="images/view-cart-icon.png" alt="View Cart" />
-                    <p><span class="cartItemCount">0</span> Items in your Shopping Cart <a href="#" onClick="return showContent('cart',{});">VIEW CART</a></p>
-                    <img src="images/contact-us-icon.png" alt="Contact Us">
-                    <p><a href="#" onClick="return showContent('company',{'show':'contact'});">CONTACT US</a></p>
-                    <img src="images/questions-icon.png" alt="Questions">
-                    <p>Questions? <a href="#" onClick="return showContent('company',{'show':'faq'});">VISIT THE FAQs</a></p>
+                    <a href="#" onClick="return showContent('cart',{});"><img class="cartIcon" src="images/view-cart-icon.png" alt="View Cart" /> <span class="cartItemCount displayNone fourEightyReso">0</span></a>
+                    <p class="headerQuestions2"><span class="cartItemCount">0</span> Items in your Shopping Cart <a href="#" onClick="return showContent('cart',{});">VIEW CART</a></p>
+                    <img class="headerQuestions2" src="images/contact-us-icon.png" alt="Contact Us">
+                    <p class="headerQuestions2"><a href="#" onClick="return showContent('company',{'show':'contact'});">CONTACT US</a></p>
+                    <img class="headerQuestions" src="images/questions-icon.png" alt="Questions">
+                    <p class="headerQuestions">Questions? <a href="#" onClick="return showContent('company',{'show':'faq'});">VISIT THE FAQs</a></p>
 				</div>
             </div>
 		</div>
@@ -192,7 +192,11 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
                         <a id="btnSocialYoutube"  target="_blank" href="#"><img src="images/youtube.png" alt="Youtube"></a>
                         <a id="btnSocialMail" onClick="return showContent('company',{'show':'contact'});"><img src="images/mail.png" alt="Mail"></a></div>
                     </div>
-                </div>
+                	<div class="headert4Mobile displayNone" href="#" onClick="return showContent('cart',{});">
+                        <img src="images/view-cart-icon.png" alt="View Cart" />
+                        <p><span class="cartItemCount">0</span> Items in your Shopping Cart</p>
+                    </div>
+				</div>
             </div>
 		</div>
         <div class="nav">
@@ -513,7 +517,7 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 	<div class="container">
 			<div id="footerContent">
 				<div id="footerLinks">
-					<ul>
+					<ul class="footerNeedHelp">
 						<li>NEED HELP?</li>
 						<li><a href="#" onClick="return showContent('homepage',{});">Home</a></li>
 						<li><a href="#" onClick="return showContent('company',{'show':'about'});">About</a></li>
@@ -523,7 +527,7 @@ div#container div.nav div.navContent > ul > li:hover{background: url(images/back
 						<li><a href="#" onClick="return showContent('company',{'show':'faq'});">FAQs</a></li>
 						<!--<li><a href="#">Blog</a></li>-->
 					</ul>
-					<ul>
+					<ul class="footerFindItHere">
 						<li>FIND IT HERE</li>
 						<li>Coming Soon!</li>
 						<!--<li><a href="#" onClick="return showContent('homepage',{});">All Categories</a></li>	
@@ -666,34 +670,69 @@ the homepageTemplate template is loaded into mainContentArea by default when the
             <img class="btnCatBack catButton" src="images/button-featured-cat-nav-back.png" alt="Back" style="display:block; position:absolute; left: 0; top: 15px;" />
                 <!--<img id="featuredNav" src="site/images/banner-featured-categories.png" alt="Featured Categories" />-->
         </div>
-            <div class="catCarousel">
-                <div class="ccItem">
-                    <h2>THE HOBBIT</h2>
-                    <ul id="carCat1" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'>
-                    </ul>
-                     <!--<p align="center"><img class="btnViewAllCategories" src="images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories"/></p>-->
-                </div>
-                <div class="ccItem">
-                    <h2>STAR WARS</h2>
-                    <ul id="carCat2" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-                </div>
-                <div class="ccItem">
-                    <h2>DOCTOR WHO</h2>
-                    <ul id="carCat3" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-                </div>
-                <div class="ccItem">
-                    <h2>WALKING DEAD</h2>
-                    <ul id="carCat4" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-                </div>	
-                <div class="ccItem">
-                    <h2>AVENGERS</h2>
-                    <ul id="carCat5" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>
-                </div>
+        <div class="catCarousel">
+            <div class="ccItem">
+                <h2>THE HOBBIT</h2>
+                <ul id="carCat1" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat1'></ul>
+                 <!--<p align="center"><img class="btnViewAllCategories" src="images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories"/></p>-->
             </div>
+            <div class="ccItem">
+                <h2>STAR WARS</h2>
+                <ul id="carCat2" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat2'></ul>
+            </div>
+            <div class="ccItem">
+                <h2>DOCTOR WHO</h2>
+                <ul id="carCat3" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat3'></ul>
+            </div>
+            <div class="ccItem">
+                <h2>WALKING DEAD</h2>
+                <ul id="carCat4" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat4'></ul>
+            </div>	
+            <div class="ccItem">
+                <h2>AVENGERS</h2>
+                <ul id="carCat5" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat5'></ul>
+            </div>
+        </div>
             <!--<ul data-bind='var: elastic-native({"size":"4","mode":"elastic-native","query":{"query_string":{"query":"featured"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>-->
             <!--<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>-->
             <!--<img class="btnViewAllCategories" src="site/images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories" />-->
     </div>
+    <div class="featuredCategoriesMobile displayNone">
+        <div class="catNav">
+            <div class="catNavContentMobile">
+                <p class="currentCat">THE HOBBIT</p>
+                <p class="currentCat">STAR WARS</p>
+                <p class="currentCat">DOCTOR WHO</p>
+                <p class="currentCat">WALKING DEAD</p>
+                <p class="currentCat">AVENGERS</p>
+            </div>
+            <img class="btnCatNextMobile catButton" src="images/button-featured-cat-nav-next.png" alt="Next" style="display:block; position:absolute; right: 50px; top: 15px;" />
+            <img class="btnCatBackMobile catButton" src="images/button-featured-cat-nav-back.png" alt="Back" style="display:block; position:absolute; left: 50px; top: 15px;" />
+                <!--<img id="featuredNav" src="site/images/banner-featured-categories.png" alt="Featured Categories" />-->
+        </div>
+        <div class="catCarouselMobile">
+            <div class="ccItem">
+                <ul id="carCat1Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"hobbit weta"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat1'></ul>
+                 <!--<p align="center"><img class="btnViewAllCategories" src="images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories"/></p>-->
+            </div>
+            <div class="ccItem">
+                <ul id="carCat2Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"star wars prop"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat2'></ul>
+            </div>
+            <div class="ccItem">
+                <ul id="carCat3Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"sonic screwdriver"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat3'></ul>
+            </div>
+            <div class="ccItem">
+                <ul id="carCat4Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"walking dead"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat4'></ul>
+            </div>	
+            <div class="ccItem">
+                <ul id="carCat5Mobile" data-bind='var: elastic-native({"size":"8","mode":"elastic-native","query":{"query_string":{"query":"avengers figure"}},"filter":{"not":{"term":{"tags":"IS_DISCONTINUED"}}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:;' class='listStyleNone fluidList clearfix noPadOrMargin productList carCat5'></ul>
+
+                <!--<ul data-bind='var: elastic-native({"size":"4","mode":"elastic-native","query":{"query_string":{"query":"featured"}}}); format: productSearch; extension: myRIA; loadsTemplate: productListTemplateResultsNoPreview; before:<h2>Best Sellers</h2>;' class='listStyleNone fluidList clearfix noPadOrMargin productList'></ul>-->
+                <!--<ul data-bind="var: category(@subcategoryDetail); format: categoryList; extension: store_navcats; loadsTemplate: categoryListTemplate; detail:max;" class='listStyleNone fluidList clearfix noPadOrMargin categoryList'></ul>-->
+                <!--<img class="btnViewAllCategories" src="site/images/button-view-all-categories.png" onClick="return showContent('category',{'navcat' : '.'});" alt="View All Categories" />-->
+            </div>
+        </div>
+	</div>
 </div>
 <!--
 used to organize content when a category is clicked.
@@ -863,9 +902,9 @@ this will likely become more flexible in the future. ###
 -->
 <div id='productTemplate' class='productPage'>
     <ul class='clearfix noPadOrMargin fluidList breadcrumb' data-bind='var: session(session.recentCategories.0); format:breadcrumb; extension:store_navcats; loadsTemplate: breadcrumbTemplate;'></ul>
-    <table class='prodViewerContainer'>
-        <tr>
-            <td class='imageContainer' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
+    <div class='prodViewerContainer'>
+        <div>
+            <div class='imageContainer' data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;'>
         		<div class="imageInnerCont">
             <!--	<img src='blank.gif' id='bobWasHere' class='prodBigImage' data-bind='var: product(zoovy:prod_image1); format: magicZoomPlus; extension: magicToolBox_mzp;' width='340' height='340' /> -->
             
@@ -907,8 +946,8 @@ this will likely become more flexible in the future. ###
                         <li><img src="images/grayb.gif" width="20" height="21" style="margin:-2px 8px 2px 0;">Marvel Super Hero Chess Limited Edition</li>
                     -->
                 </div>
-            </td>
-            <td class='prodSummaryContainer marginBottom no_underline'>
+            </div>
+            <div class='prodSummaryContainer marginBottom no_underline'>
                 <div style="background:#c9bca8; padding:20px; margin-right:20px;"><h1 data-bind='var: product(zoovy:prod_name); format:text;'></h1>
                     <hgroup class='marginBottom'>
                         <!--<h5 class='stid' data-bind='var: product(pid); format:text; pretext: Sku: ;'></h5>-->
@@ -922,8 +961,8 @@ this will likely become more flexible in the future. ###
                
                 
                 
-            </td>
-            <td class="RightPcol">
+            </div>
+            <div class="RightPcol">
                 <div class='priceContainer marginBottom'>
                     <h4 class='basePrice' data-bind='var: product(zoovy:base_price); format:money; currencySign: $;  hideZero:true; pretext: <span>NOW</span><br> ;'></h4>
                     <h5 class='prodMSRP' data-bind='var: product(zoovy:prod_msrp); format:money; currencySign: $;  hideZero:true; pretext: <span>WAS</span><br> ;'></h5>
@@ -937,7 +976,7 @@ this will likely become more flexible in the future. ###
 					<span data-bind='var: reviews(reviews.average); format:addClass; className:review_;' class='reviewSprite'></span>
 					<span data-bind='var: reviews(reviews.total); format:text;posttext: from ;posttext: reviews; className:numReviews;'></span>
 				</section>
-                <menu data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' class='CRMButtonMenu'>
+                <menu data-bind='var:product(pid);format:assignAttribute; attribute:data-pid;' class='CRMButtonMenu CRMButtonMenuMobile'>
                     <a href='#' onClick='app.ext.store_crm.u.showReviewFrmInModal({"pid":$(this).parent().attr("data-pid"),"templateID":"reviewFrmTemplate"}); return ;'>See reviews or write one!</a>
                 </menu>
                 <div class="socialLinks">
@@ -975,12 +1014,12 @@ this will likely become more flexible in the future. ###
                     <li data-bind='var: product(is:shipfree); format:showIfSet;' class="displayNone"><img src="images/grayalert.gif" width="20" height="17" />Eligible for FREE Shipping</li>
                     <li data-bind='var: product(user:prod_storepickup); format:showIfSet;' class="displayNone"><img src="images/grayalert.gif" width="20" height="17">Available for Store Pick-up</li>
                 </ul>
-            </td>
-        </tr>
+            </div>
+        </div>
         
-        <tr>
+        <div>
         	
-            <td colspan='2' class="tabbedProductContentTD">
+            <div colspan='2' class="tabbedProductContentTD">
                 <!--
                 the tabs are built in an onComplete.  ID's are added based on sku AND index, so the index (order) of the tabs MUST match the order of the tabContent divs
                 or the tab clicked won't open the right content.
@@ -1017,9 +1056,9 @@ this will likely become more flexible in the future. ###
                 <ul class='listStyleNone fluidList clearfix noPadOrMargin lineItemProdlist' data-bind="var: product(zoovy:accessory_products); format:productList; extension:store_prodlist;loadsTemplate:productListTemplateATC;hide_pagination:true;hide_summary:true; withReviews:1; withInventory:1; withVariations:1;"></ul>
                     </div>
                 </div>-->
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+    </div>
     <!--BEGIN CAROUSEL CODE-->
         <div class="ppCarousel">
             <div class="prodPageCaroTitleCont">
@@ -1033,6 +1072,14 @@ this will likely become more flexible in the future. ###
                 </div>
                 <img class="prevPPCaro" src="images/carousel_left.png" />
                 <img class="nextPPCaro" src="images/carousel_right.png" />
+            </div>
+			<div class="prodPageCarouselTitlesMobile displayNone">
+                <h2>Recently Viewed Items</h2>
+                <h2>Suggested Items</h2>
+                <h2>Hot Items</h2>
+                <h2>Recently Viewed Items</h2>
+                <h2>Suggested Items</h2>
+                <h2>Hot Items</h2>
             </div>
             <div class="prodPageCarouselContentCont">
                 <div class="prodPageCarouselContent">
@@ -1121,31 +1168,31 @@ if you change these, you should move them above this comment so that when you (o
 </ul>
 <!-- loadingBG needed on this for app init (content may take a moment to load) -->
 <div id='companyTemplate' class='clearfix loadingBG'>
-<div class='sideline' >
-    <nav id='companyNav'>
-    <ul class='listStyleNone noPadOrMargin'>
-        <h1>NEED HELP?</h1>
-        <li><a href='#company?show=about'>About Us</a></li>
-        <li><a href='#company?show=contact'>Contact Us</a></li>
-        <li><a href='#company?show=faq'>FAQ</a></li>
-        <li><a href='#company?show=payment'>Payment Policy</a></li>
-        <li><a href='#company?show=privacy'>Privacy Statement</a></li>
-        <li><a href='#company?show=return'>Return Policy</a></li>
-        <li><a href='#company?show=shipping'>Shipping Information</a></li>
-    </ul>
-    <div style="clear: both;"></div>
-    <br />
-    <ul class='listStyleNone noPadOrMargin'>
-        <h1>My Account</h1>
-        <li><a href='#customer?show=myaccount'>Login Or Sign Up</a></li>
-        <li><a href='#customer?show=myaccount'>View My Account</a></li>
-        <li><a href='#cart?show=cart'>View Shopping Cart</a></li>
-        <li><a href='#cart?show=cart'>Checkout</a></li>
-        <li><a href="#" data-bind="var: session(recentlyViewedItems); format: productList; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; hide_pagination:1; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>Recently Viewed Items</a></li>
-        <li><a href="#customer?show=orders">Previous Orders</a></li>
-        </ul>
-    </nav>
-</div>
+      <div class='sideline' >
+	    <nav id='companyNav'>
+	    <ul class='listStyleNone noPadOrMargin'>
+	        <h1>NEED HELP?</h1>
+	        <li><a href='#company?show=about'>About Us</a></li>
+	        <li><a href='#company?show=contact'>Contact Us</a></li>
+	        <li><a href='#company?show=faq'>FAQ</a></li>
+	        <li><a href='#company?show=payment'>Payment Policy</a></li>
+	        <li><a href='#company?show=privacy'>Privacy Statement</a></li>
+	        <li><a href='#company?show=return'>Return Policy</a></li>
+	        <li><a href='#company?show=shipping'>Shipping Information</a></li>
+	    </ul>
+	    <div style="clear: both;"></div>
+	    <br />
+	    <ul class='listStyleNone noPadOrMargin'>
+	        <h1>My Account</h1>
+	        <li><a href='#customer?show=myaccount'>Login Or Sign Up</a></li>
+	        <li><a href='#customer?show=myaccount'>View My Account</a></li>
+	        <li><a href='#cart?show=cart'>View Shopping Cart</a></li>
+	        <li><a href='#cart?show=cart'>Checkout</a></li>
+	        <li><a href="#" data-bind="var: session(recentlyViewedItems); format: productList; extension: store_prodlist; loadsTemplate: productListTemplate; hide_summary:1; hide_pagination:1; withReviews:1;" class='listStyleNone fluidList clearfix noPadOrMargin productList'>Recently Viewed Items</a></li>
+	        <li><a href="#customer?show=orders">Previous Orders</a></li>
+	        </ul>
+	    </nav>
+	</div>
 	<div class='mainColumn'>
 <!-- .textContentArea is used as a selector in quickstart.js because article tag type isn't ie8 friendly -->
 		<div id='aboutArticle' class='textContentArea article'>
@@ -1499,37 +1546,38 @@ So the cart template should contain these two elements and the extension should 
 -->
 <div id='cartTemplate' class='loadingBG'>
 <form id='cartTemplateForm' action='#' onSubmit='return false'>
-<table class='cartContainer'>
-<tr>
-	<td class='cartStuffContainer'>
-	<ul id='cartStuffList' data-bind="var: cart(@ITEMS); format:stuffList; loadsTemplate:productListTemplateCart;" class='listStyleNone fluidList clearfix noPadOrMargin productList lineItemProdlist' >
-    <div class='tabContent' data-anytab-content='prodDesc'>
-		<div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
+<div class='cartContainer'>
+<div>
+	<div class='cartStuffContainer'>
+		<ul id='cartStuffList' data-bind="var: cart(@ITEMS); format:stuffList; loadsTemplate:productListTemplateCart;" class='listStyleNone fluidList clearfix noPadOrMargin productList lineItemProdlist' >
+	    <div class='tabContent' data-anytab-content='prodDesc'>
+			<div data-bind='var: product(zoovy:prod_desc); format:wiki; wikiFormats:myRIA;'></div>
+		</div>
+	     </ul>
+	   <div class="cartBottomArea" style="border-top:#897c68 solid 1px; margin:10px 0 0;">
+	   <div class="right">
+			<p>HELPFUL LINKS</p>
+			<ul>
+				<li><a onClick="return showContent('company',{'show':'contact'});" href="#">Contact Us</a></li>
+				<li><a onClick="return showContent('company',{'show':'shipping'});" href="#">Shipping Policy</a></li>
+				<li><a onClick="return showContent('company',{'show':'return'});" href="#">Return Policy</a></li>
+				<li><a onClick="return showContent('company',{'show':'payment'});" href="#">Payment Policy</a></li>
+				<li><a onClick="return showContent('company',{'show':'privacy'});" href="#">Privacy Policy</a></li>
+				<li><a onClick="return showContent('company',{'show':'faq'});" href="#">FAQs</a></li>
+			</ul>
+		</div>
+	    <div class="left"><p>
+			<span>FREE Shipping on all orders over $50</span><br>
+			All orders of $50 and more qualify for free standard shipping. Applicable only to address in the continental United States (HI and AK are not included). Free shipping does not apply to orders shipped to PO Boxes or international destinations. Not applicable to eBay or Amazon purchases.
+		</p>
+		<p>
+			<span>Preorders</span><br>
+			All preorders paid with a credit card will be charged at the time of shipment. All preorders paid with Google Checkout, Paypal or Amazon Payments will be charged when your order is placed. If you do not wish to pay for your preorder until it ships then you must use the checkout button and pay with a credit card. Orders that have both preorder and instock items we be shipped at the same time in one shipment. We recommend that you do not order in stock items with preorder items. 
+		</p></div>
+	   </div>
 	</div>
-     </ul>
-   <div class="cartBottomArea" style="border-top:#897c68 solid 1px; margin:10px 0 0;">
-   <div class="right">
-		<p>HELPFUL LINKS</p>
-		<ul>
-			<li><a onClick="return showContent('company',{'show':'contact'});" href="#">Contact Us</a></li>
-			<li><a onClick="return showContent('company',{'show':'shipping'});" href="#">Shipping Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'return'});" href="#">Return Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'payment'});" href="#">Payment Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'privacy'});" href="#">Privacy Policy</a></li>
-			<li><a onClick="return showContent('company',{'show':'faq'});" href="#">FAQs</a></li>
-		</ul>
-	</div>
-    <div class="left"><p>
-		<span>FREE Shipping on all orders over $50</span><br>
-		All orders of $50 and more qualify for free standard shipping. Applicable only to address in the continental United States (HI and AK are not included). Free shipping does not apply to orders shipped to PO Boxes or international destinations. Not applicable to eBay or Amazon purchases.
-	</p>
-	<p>
-		<span>Preorders</span><br>
-		All preorders paid with a credit card will be charged at the time of shipment. All preorders paid with Google Checkout, Paypal or Amazon Payments will be charged when your order is placed. If you do not wish to pay for your preorder until it ships then you must use the checkout button and pay with a credit card. Orders that have both preorder and instock items we be shipped at the same time in one shipment. We recommend that you do not order in stock items with preorder items. 
-	</p></div>
-   </div>
-	</td>
-	<td class='cartSummaryTotalsContainer'>
+		
+	<div class='cartSummaryTotalsContainer'>
 	<div class='ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'>
 		<h2 class='ui-widget-header ui-helper-clearfix ui-corner-all ui-header'>Cart Totals</h2>
 		<div class='cartSummaryContainer'>
@@ -1584,9 +1632,9 @@ So the cart template should contain these two elements and the extension should 
 </section>
 		</div>
 	</div>
-	</td>
-</tr>
-</table>
+	</div>
+</div>
+</div>
 </form>
 </div><!-- /cartTemplate -->
 <!-- cart line-item template -->
